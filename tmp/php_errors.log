@@ -1,0 +1,586 @@
+[06-Aug-2024 08:37:32 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[06-Aug-2024 08:37:44 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 08:40:01 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 08:40:12 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 08:41:10 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[06-Aug-2024 08:41:36 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 08:41:57 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[06-Aug-2024 09:14:52 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[06-Aug-2024 09:15:01 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ",", expecting identifier or variable or "{" or "$" in C:\xampp\htdocs\patrimonio\app\control\geral\MovimentacaodepreciacaoReport.php on line 239
+[06-Aug-2024 09:15:03 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ",", expecting identifier or variable or "{" or "$" in C:\xampp\htdocs\patrimonio\app\control\geral\MovimentacaodepreciacaoReport.php on line 239
+[06-Aug-2024 09:16:09 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:20:15 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:20:20 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[06-Aug-2024 09:20:26 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:21:19 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:21:19 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 27
+[06-Aug-2024 09:21:19 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[06-Aug-2024 09:21:24 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:23:19 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:31:29 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:31:35 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:31:55 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 22
+[06-Aug-2024 09:32:12 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:32:21 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:32:36 America/Sao_Paulo] PHP Warning:  Undefined array key "Patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:32:43 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:38:01 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:38:11 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:38:25 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:38:45 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonios" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 09:38:51 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 10:20:18 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 15:16:25 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 15:27:26 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 15:27:31 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 15:29:22 America/Sao_Paulo] PHP Fatal error:  Cannot use [] for reading in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[06-Aug-2024 15:29:31 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 27
+[06-Aug-2024 15:29:31 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[06-Aug-2024 15:29:38 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 08:27:52 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 08:30:42 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:31:05 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 08:31:12 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:43:30 America/Sao_Paulo] PHP Warning:  Undefined variable $param in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:43:30 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:43:38 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:44:20 America/Sao_Paulo] PHP Warning:  Undefined array key "y" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 34
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 34
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 36
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "Descricao" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 36
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 38
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "CentrodeCusto" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 38
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "CentroCusto" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 38
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 40
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "Local" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 40
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 42
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "responsavel" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 42
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 44
+[07-Aug-2024 08:44:30 America/Sao_Paulo] PHP Warning:  Attempt to read property "chapa" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 44
+[07-Aug-2024 08:44:41 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:46:52 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 08:55:22 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 08:56:00 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 09:00:56 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 09:01:22 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 31
+[07-Aug-2024 09:01:37 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 09:01:45 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 09:02:14 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:07:37 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:07:42 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:07:57 America/Sao_Paulo] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:08:03 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:09:16 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:09:16 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 27
+[07-Aug-2024 09:09:16 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[07-Aug-2024 09:09:27 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 09:43:45 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[07-Aug-2024 09:44:14 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 09:46:06 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 10:58:06 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 10:58:32 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 10:59:04 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 10:59:04 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 10:59:17 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 11:00:10 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 11:00:10 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 11:00:16 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[07-Aug-2024 11:02:08 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 11:02:15 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "=" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 17
+[07-Aug-2024 11:08:06 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 11:10:19 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 32
+[07-Aug-2024 11:10:30 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 11:13:31 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 11:14:37 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 30
+[07-Aug-2024 14:34:49 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[07-Aug-2024 14:35:21 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[07-Aug-2024 14:35:23 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[07-Aug-2024 14:41:27 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\app\control\geral\CentrodecustoList.php on line 191
+[07-Aug-2024 14:41:27 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\app\control\geral\CentrodecustoList.php on line 200
+[08-Aug-2024 13:50:56 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Este host nï¿½o ï¿½ conhecido.  in C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php:116
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php(116): PDO->__construct('mysql:host=Cont...', '', '', Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php(47): Adianti\Database\TConnection::openArray(Array)
+#2 C:\xampp\htdocs\patrimonio\lib\adianti\database\TTransaction.php(63): Adianti\Database\TConnection::open('log')
+#3 C:\xampp\htdocs\patrimonio\app\service\log\SystemAccessLogService.class.php(59): Adianti\Database\TTransaction::open('log')
+#4 C:\xampp\htdocs\patrimonio\app\control\admin\LoginForm.php(371): SystemAccessLogService::registerLogout()
+#5 [internal function]: LoginForm::onLogout(Array)
+#6 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#7 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#8 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#9 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Este host não é conhecido.  in C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php:116
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php(116): PDO->__construct('mysql:host=Cont...', '', '', Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php(47): Adianti\Database\TConnection::openArray(Array)
+#2 C:\xampp\htdocs\patrimonio\lib\adianti\database\TTransaction.php(63): Adianti\Database\TConnection::open('log')
+#3 C:\xampp\htdocs\patrimonio\app\service\log\SystemAccessLogService.class.php(59): Adianti\Database\TTransaction::open('log')
+#4 C:\xampp\htdocs\patrimonio\app\control\admin\LoginForm.php(371): SystemAccessLogService::registerLogout()
+#5 [internal function]: LoginForm::onLogout(Array)
+#6 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#7 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#8 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#9 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\database\TConnection.php on line 116
+[08-Aug-2024 13:55:24 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ",", expecting identifier or variable or "{" or "$" in C:\xampp\htdocs\patrimonio\app\control\geral\MovimentacaodepreciacaoReport.php on line 239
+[08-Aug-2024 13:57:23 America/Sao_Paulo] PHP Warning:  Undefined variable $id in C:\xampp\htdocs\patrimonio\app\control\geral\MovimentacaodepreciacaoReport.php on line 35
+[08-Aug-2024 14:17:26 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ",", expecting identifier or variable or "{" or "$" in C:\xampp\htdocs\patrimonio\app\control\geral\MovimentacaodepreciacaoReport.php on line 242
+[08-Aug-2024 14:17:33 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected single-quoted string "left", expecting identifier or variable or "{" or "$" in C:\xampp\htdocs\patrimonio\app\control\geral\MovimentacaodepreciacaoReport.php on line 242
+[12-Aug-2024 07:52:42 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 22 does not match ')' in C:\xampp\htdocs\patrimonio\app\control\geral\CentrodecustoList.php on line 88
+[12-Aug-2024 09:39:34 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:51:14 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:51:28 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:51:56 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:52:04 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:53:52 America/Sao_Paulo] PHP Warning:  Undefined array key "Leitor" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:54:01 America/Sao_Paulo] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:54:09 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:55:08 America/Sao_Paulo] PHP Warning:  Undefined array key "class=Leitor&method=onShow" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:55:12 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:55:30 America/Sao_Paulo] PHP Warning:  Undefined array key "Patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:55:36 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 09:57:43 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 19
+[12-Aug-2024 09:58:21 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 66
+[12-Aug-2024 09:58:29 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 58
+[12-Aug-2024 09:58:36 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 52
+[12-Aug-2024 09:58:48 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "Leitor" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('Leitor')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[12-Aug-2024 09:59:50 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:00:02 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:00:12 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:00:17 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:00:36 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:15:59 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:16:28 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected identifier "patrimonio", expecting ";" or "{" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 17
+[12-Aug-2024 10:16:53 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected identifier "patrimonio", expecting ";" or "{" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 17
+[12-Aug-2024 10:17:10 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:17:18 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:19:05 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "??" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:19:10 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:22:08 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 10:22:30 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 10:22:40 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 22
+[12-Aug-2024 10:22:50 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:27:48 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$search_array", expecting ";" or "{" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 17
+[12-Aug-2024 10:29:02 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 80
+[12-Aug-2024 10:29:18 America/Sao_Paulo] PHP Fatal error:  Cannot use try without catch or finally in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 19
+[12-Aug-2024 10:29:42 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 28
+[12-Aug-2024 10:29:58 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 78
+[12-Aug-2024 10:30:43 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 21
+[12-Aug-2024 10:49:57 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 10:56:41 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 10:57:21 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 25
+[12-Aug-2024 10:57:28 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 25
+[12-Aug-2024 10:59:05 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 11:02:59 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 26
+[12-Aug-2024 11:05:05 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 11:10:56 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 11:41:16 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 14
+[12-Aug-2024 11:41:27 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:14:51 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[12-Aug-2024 14:15:36 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[12-Aug-2024 14:17:28 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:17:43 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:17:47 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[12-Aug-2024 14:18:01 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:18:55 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:19:03 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:19:16 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:20:55 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:21:32 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:29:13 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:29:31 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:35:28 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 20
+[12-Aug-2024 14:35:52 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "Leitor" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('Leitor')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[12-Aug-2024 14:38:32 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 14:54:15 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "catch", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 52
+[12-Aug-2024 14:58:28 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 58
+[12-Aug-2024 15:06:11 America/Sao_Paulo] PHP Warning:  Undefined array key "onShow" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[12-Aug-2024 15:06:21 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[13-Aug-2024 08:46:59 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[13-Aug-2024 08:47:16 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[13-Aug-2024 08:47:23 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[13-Aug-2024 11:06:28 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[13-Aug-2024 11:38:56 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[13-Aug-2024 11:39:32 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[13-Aug-2024 13:38:31 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[13-Aug-2024 14:24:24 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[13-Aug-2024 14:46:38 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 3 in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 145
+[13-Aug-2024 14:47:00 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[13-Aug-2024 14:53:08 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 3 in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 107
+[13-Aug-2024 15:00:47 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 70
+[13-Aug-2024 15:02:10 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 70
+[13-Aug-2024 15:03:07 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 70
+[13-Aug-2024 15:03:25 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 71
+[13-Aug-2024 15:03:44 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 71
+[13-Aug-2024 15:03:53 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 70
+[13-Aug-2024 15:15:13 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 38
+[13-Aug-2024 15:19:44 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[13-Aug-2024 15:26:00 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[13-Aug-2024 15:26:59 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[13-Aug-2024 15:28:50 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 43
+[13-Aug-2024 15:28:53 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 43
+[14-Aug-2024 08:29:50 America/Sao_Paulo] PHP Warning:  Undefined variable $Local in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 43
+[14-Aug-2024 08:33:26 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[14-Aug-2024 08:35:57 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 16 does not match ')' in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 32
+[14-Aug-2024 08:38:24 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 32
+[14-Aug-2024 08:38:33 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 32
+[14-Aug-2024 08:40:07 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 32
+[14-Aug-2024 08:40:14 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 32
+[14-Aug-2024 08:50:59 America/Sao_Paulo] PHP Fatal error:  LerCodigoQR and Adianti\Base\AdiantiStandardListTrait define the same property ($loaded) in the composition of LerCodigoQR. However, the definition differs and is considered incompatible. Class was composed in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 3
+[14-Aug-2024 08:51:19 America/Sao_Paulo] PHP Fatal error:  LerCodigoQR and Adianti\Base\AdiantiStandardListTrait define the same property ($limit) in the composition of LerCodigoQR. However, the definition differs and is considered incompatible. Class was composed in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 3
+[14-Aug-2024 08:52:41 America/Sao_Paulo] PHP Fatal error:  LerCodigoQR and Adianti\Base\AdiantiStandardListTrait define the same property ($database) in the composition of LerCodigoQR. However, the definition differs and is considered incompatible. Class was composed in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 3
+[14-Aug-2024 09:17:48 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$vbox" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 31
+[14-Aug-2024 09:20:41 America/Sao_Paulo] PHP Warning:  Undefined variable $dropbox in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 34
+[14-Aug-2024 09:24:51 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 24
+[14-Aug-2024 09:39:12 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 6: parser error : Extra content at the end of the document in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:12 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): &lt;menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:12 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:12 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:47 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 182: parser error : Extra content at the end of the document in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:47 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): &lt;!DOCTYPE html&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:47 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:39:47 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 7: parser error : Opening and ending tag mismatch: menu line 6 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): 		&lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): 		           ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 67: parser error : Opening and ending tag mismatch: menuitem line 6 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():     &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():            ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 63: parser error : Opening and ending tag mismatch: menuitem line 48 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():     &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():            ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 64: parser error : Opening and ending tag mismatch: menu line 48 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():              ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 176: parser error : Opening and ending tag mismatch: menuitem line 48 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():        ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 178: parser error : EndTag: '&lt;/' not found in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():  in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 62: parser error : Opening and ending tag mismatch: menuitem line 47 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():     &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():            ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 63: parser error : Opening and ending tag mismatch: menu line 47 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():              ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 175: parser error : Opening and ending tag mismatch: menuitem line 47 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():        ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 177: parser error : EndTag: '&lt;/' not found in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():  in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:47:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[14-Aug-2024 09:55:23 America/Sao_Paulo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 85999616 bytes) in C:\xampp\htdocs\patrimonio\lib\adianti\widget\base\TElement.php on line 392
+[14-Aug-2024 10:08:20 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare LerCodigoQR::__construct() in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 34
+[14-Aug-2024 10:08:36 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare LerCodigoQR::__construct() in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 34
+[14-Aug-2024 10:11:06 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[14-Aug-2024 10:13:10 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 24
+[14-Aug-2024 10:13:22 America/Sao_Paulo] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\patrimonio\lib\adianti\control\TAction.php on line 148
+[14-Aug-2024 10:13:40 America/Sao_Paulo] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\patrimonio\lib\adianti\control\TAction.php on line 148
+[14-Aug-2024 10:14:44 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 24
+[14-Aug-2024 10:14:50 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\patrimonio\lib\adianti\control\TAction.php on line 36
+[14-Aug-2024 10:14:50 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\patrimonio\lib\adianti\control\TAction.php on line 405
+[14-Aug-2024 10:14:50 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\patrimonio\lib\adianti\control\TAction.php on line 405
+[14-Aug-2024 11:37:36 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$panel" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 25
+[14-Aug-2024 11:40:20 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$sql" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 42
+[15-Aug-2024 09:13:30 America/Sao_Paulo] PHP Fatal error:  LerCodigoQR cannot use Adianti\Widget\Wrapper\TDBCombo - it is not a trait in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 3
+[15-Aug-2024 09:29:06 America/Sao_Paulo] PHP Warning:  Undefined variable $container in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 39
+[15-Aug-2024 09:44:28 America/Sao_Paulo] PHP Warning:  Undefined variable $container in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 30
+[15-Aug-2024 11:40:49 America/Sao_Paulo] PHP Warning:  Undefined variable $message in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 50
+[15-Aug-2024 14:14:27 America/Sao_Paulo] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 49
+[15-Aug-2024 14:14:27 America/Sao_Paulo] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 51
+[15-Aug-2024 14:14:27 America/Sao_Paulo] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 51
+[15-Aug-2024 14:14:57 America/Sao_Paulo] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 48
+[15-Aug-2024 14:14:57 America/Sao_Paulo] PHP Warning:  Undefined variable $message in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 53
+[15-Aug-2024 14:15:31 America/Sao_Paulo] PHP Warning:  Undefined variable $dropdown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 49
+[15-Aug-2024 14:17:11 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[15-Aug-2024 14:50:14 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[15-Aug-2024 15:00:11 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_patrimonioId in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 57
+[15-Aug-2024 15:00:11 America/Sao_Paulo] PHP Warning:  Undefined variable $container in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 75
+[15-Aug-2024 15:00:39 America/Sao_Paulo] PHP Warning:  Undefined variable $containers2 in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 73
+[15-Aug-2024 15:03:30 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[15-Aug-2024 15:03:31 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[15-Aug-2024 15:03:44 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[15-Aug-2024 15:06:36 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "}" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 55
+[15-Aug-2024 15:16:29 America/Sao_Paulo] PHP Warning:  Undefined variable $dropdown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 54
+[15-Aug-2024 15:21:14 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[15-Aug-2024 15:25:51 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[15-Aug-2024 15:26:14 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[15-Aug-2024 15:30:57 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[15-Aug-2024 15:31:05 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[15-Aug-2024 15:31:49 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[15-Aug-2024 15:42:23 America/Sao_Paulo] PHP Warning:  Undefined variable $dropdown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 71
+[15-Aug-2024 16:47:09 America/Sao_Paulo] PHP Warning:  Undefined variable $container in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 94
+[15-Aug-2024 16:47:31 America/Sao_Paulo] PHP Warning:  Undefined variable $container in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 94
+[15-Aug-2024 16:48:41 America/Sao_Paulo] PHP Warning:  Undefined variable $container in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 95
+[15-Aug-2024 16:52:44 America/Sao_Paulo] PHP Warning:  Undefined variable $dropdown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 92
+[15-Aug-2024 16:52:52 America/Sao_Paulo] PHP Warning:  Undefined variable $dropdown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 92
+[15-Aug-2024 16:53:14 America/Sao_Paulo] PHP Warning:  Undefined variable $dropdown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 92
+[15-Aug-2024 16:54:41 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_patrimonioId in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 92
+[15-Aug-2024 16:55:09 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "->" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 92
+[16-Aug-2024 08:27:41 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_fk_patrimonioId_id in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 60
+[16-Aug-2024 08:32:29 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[16-Aug-2024 08:37:14 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\CadastraMovimentacaoForm.php on line 170
+[16-Aug-2024 08:56:18 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[16-Aug-2024 09:35:26 America/Sao_Paulo] PHP Warning:  Undefined variable $Local_id in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 90
+[16-Aug-2024 09:58:50 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$row7" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 90
+[16-Aug-2024 10:22:48 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:22:48 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:24:16 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:24:16 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:24:17 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:24:18 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:25:03 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:25:03 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:25:47 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:25:48 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:29:45 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:29:45 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:30:47 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:30:47 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:30:55 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 10:30:55 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 129
+[16-Aug-2024 10:31:08 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 11:39:59 America/Sao_Paulo] PHP Warning:  Undefined array key "localAntigo" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 11:40:35 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 11:41:21 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 11:46:49 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 109
+[16-Aug-2024 11:51:22 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "=" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 46
+[16-Aug-2024 11:52:30 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "new", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 46
+[16-Aug-2024 13:47:05 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 116
+[16-Aug-2024 14:22:40 America/Sao_Paulo] PHP Parse error:  Unclosed '[' does not match ')' in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 46
+[16-Aug-2024 14:36:01 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected identifier "s", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 102
+[16-Aug-2024 14:52:55 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$data" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 150
+[16-Aug-2024 14:53:12 America/Sao_Paulo] PHP Fatal error:  LerCodigoQR and Adianti\Base\AdiantiStandardListTrait define the same property ($database) in the composition of LerCodigoQR. However, the definition differs and is considered incompatible. Class was composed in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 6
+[16-Aug-2024 14:54:49 America/Sao_Paulo] PHP Fatal error:  LerCodigoQR and Adianti\Base\AdiantiStandardListTrait define the same property ($activeRecord) in the composition of LerCodigoQR. However, the definition differs and is considered incompatible. Class was composed in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 6
+[16-Aug-2024 15:33:30 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected single-quoted string "backgroud:#90ee90" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 112
+[16-Aug-2024 16:41:12 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 124 does not match ')' in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 126
+[20-Aug-2024 14:47:05 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 47
+[20-Aug-2024 14:47:22 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 47
+[20-Aug-2024 14:48:08 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 47
+[20-Aug-2024 14:49:23 America/Sao_Paulo] PHP Warning:  Undefined variable $btnGenerateForm in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 47
+[20-Aug-2024 14:49:27 America/Sao_Paulo] PHP Warning:  Undefined variable $btnGenerateForm in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 47
+[20-Aug-2024 14:51:30 America/Sao_Paulo] PHP Warning:  Undefined variable $vbox in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 65
+[20-Aug-2024 14:53:15 America/Sao_Paulo] PHP Warning:  Undefined variable $vbox in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 65
+[20-Aug-2024 14:54:25 America/Sao_Paulo] PHP Warning:  Undefined variable $vbox in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 64
+[20-Aug-2024 15:02:14 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[20-Aug-2024 15:08:28 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[20-Aug-2024 15:27:20 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[21-Aug-2024 08:58:34 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[21-Aug-2024 08:58:52 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[21-Aug-2024 09:09:43 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 24
+[21-Aug-2024 09:09:57 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 24
+[21-Aug-2024 09:28:20 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "AbrirCamera" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('AbrirCamera')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[21-Aug-2024 11:47:32 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[21-Aug-2024 11:56:12 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[22-Aug-2024 08:57:51 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 08:57:57 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 08:58:02 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 09:28:41 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 09:28:52 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 09:45:16 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 09:45:28 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 09:53:00 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[22-Aug-2024 09:53:14 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\database\TRecord.php on line 780
+[22-Aug-2024 09:53:32 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[22-Aug-2024 09:53:33 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[22-Aug-2024 09:53:35 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[22-Aug-2024 09:59:37 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 19
+[22-Aug-2024 09:59:45 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 19
+[22-Aug-2024 10:03:22 America/Sao_Paulo] PHP Warning:  Undefined variable $btnGenerateForm in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 48
+[22-Aug-2024 10:13:36 America/Sao_Paulo] PHP Warning:  Undefined variable $result in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 19
+[22-Aug-2024 10:13:36 America/Sao_Paulo] PHP Warning:  Attempt to read property "descricao" on null in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 19
+[22-Aug-2024 14:17:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Class "Tpage" not found in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php:4
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiApplicationLoader.php(109): require_once()
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreLoader.php(78): Adianti\Core\AdiantiApplicationLoader::autoload('ChamarCadastroM...')
+#2 [internal function]: Adianti\Core\AdiantiCoreLoader::autoload('ChamarCadastroM...')
+#3 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('ChamarCadastroM...')
+#4 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#5 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#6 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 4
+[22-Aug-2024 14:17:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Class "Tpage" not found in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php:4
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiApplicationLoader.php(109): require_once()
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreLoader.php(78): Adianti\Core\AdiantiApplicationLoader::autoload('ChamarCadastroM...')
+#2 [internal function]: Adianti\Core\AdiantiCoreLoader::autoload('ChamarCadastroM...')
+#3 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('ChamarCadastroM...')
+#4 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#5 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#6 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 4
+[22-Aug-2024 15:09:16 America/Sao_Paulo] PHP Warning:  Undefined array key "localAtual" in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 115
+[22-Aug-2024 15:14:25 America/Sao_Paulo] PHP Warning:  Undefined array key "localAtual" in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 115
+[22-Aug-2024 15:35:20 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 171
+[22-Aug-2024 15:35:45 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 171
+[23-Aug-2024 11:59:41 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 118
+[23-Aug-2024 13:58:03 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 118
+[23-Aug-2024 13:59:04 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 118
+[23-Aug-2024 14:04:31 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 118
+[23-Aug-2024 14:06:11 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "else" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 121
+[23-Aug-2024 14:21:05 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 92
+[23-Aug-2024 14:30:18 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[23-Aug-2024 14:39:06 America/Sao_Paulo] PHP Warning:  Undefined variable $formName in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 120
+[23-Aug-2024 14:41:06 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[23-Aug-2024 14:41:25 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_patrimonioId in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 15
+[23-Aug-2024 14:41:27 America/Sao_Paulo] PHP Warning:  Undefined array key "dropdown" in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 33
+[23-Aug-2024 15:14:44 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Adianti\Widget\Form\TCombo::find() in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:39
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown1(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 39
+[23-Aug-2024 15:16:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function getWidget() on null in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:40
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown1(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 40
+[23-Aug-2024 15:22:14 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 171
+[26-Aug-2024 09:28:19 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 172
+[26-Aug-2024 09:46:01 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[26-Aug-2024 09:46:45 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[26-Aug-2024 09:53:46 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[26-Aug-2024 12:12:54 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare AbrirCamera::onShow() in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 155
+[26-Aug-2024 12:13:12 America/Sao_Paulo] PHP Fatal error:  Declaration of AbrirCamera::show($param) must be compatible with Adianti\Control\TPage::show() in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 155
+[26-Aug-2024 15:15:46 America/Sao_Paulo] PHP Warning:  Undefined variable $EnterButto in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 23
+[27-Aug-2024 07:48:58 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[27-Aug-2024 07:50:14 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[27-Aug-2024 08:07:08 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[27-Aug-2024 08:07:38 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[27-Aug-2024 08:07:42 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[27-Aug-2024 08:07:45 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[27-Aug-2024 08:08:14 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[27-Aug-2024 08:22:36 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[27-Aug-2024 08:48:37 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[27-Aug-2024 08:53:47 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Class "Sale" not found in C:\xampp\htdocs\patrimonio\app\control\geral\MoVimentacaoPatrimonial.php:228
+Stack trace:
+#0 [internal function]: MoVimentacaoPatrimonial::onSave(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\MoVimentacaoPatrimonial.php on line 228
+[27-Aug-2024 08:53:55 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Class "Sale" not found in C:\xampp\htdocs\patrimonio\app\control\geral\MoVimentacaoPatrimonial.php:228
+Stack trace:
+#0 [internal function]: MoVimentacaoPatrimonial::onSave(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\MoVimentacaoPatrimonial.php on line 228
+[27-Aug-2024 08:55:08 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 172
+[27-Aug-2024 08:55:12 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 172
+[27-Aug-2024 08:55:16 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 172
+[27-Aug-2024 09:09:48 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[27-Aug-2024 14:39:05 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
