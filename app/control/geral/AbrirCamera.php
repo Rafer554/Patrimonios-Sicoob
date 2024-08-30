@@ -136,7 +136,6 @@ public static function alteraDados($param = null)
 
         $repository = new TRepository('Patrimonio');
         $results = $repository->load($criteria);
-
         if (!empty($results)) {
             $result = $results[0]; 
 			
