@@ -584,3 +584,22 @@ Stack trace:
 [27-Aug-2024 08:55:16 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 172
 [27-Aug-2024 09:09:48 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
 [27-Aug-2024 14:39:05 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[29-Aug-2024 08:45:21 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[29-Aug-2024 08:45:27 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[29-Aug-2024 08:45:32 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[29-Aug-2024 08:45:40 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 172
+[29-Aug-2024 09:22:39 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\ChamarCadastroMovimentacao.php on line 172
+[29-Aug-2024 09:40:18 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 120
+[29-Aug-2024 09:40:18 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 140
+[29-Aug-2024 09:40:18 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 120
+[29-Aug-2024 09:40:19 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 140
+[29-Aug-2024 09:40:22 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 120
+[29-Aug-2024 09:40:22 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 140
+[29-Aug-2024 09:40:22 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 120
+[29-Aug-2024 09:40:22 America/Sao_Paulo] PHP Warning:  Undefined variable $obj in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 140
+[29-Aug-2024 09:42:48 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 119
+[29-Aug-2024 09:42:48 America/Sao_Paulo] PHP Warning:  Undefined array key "pesquisaPatrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 119
+[29-Aug-2024 11:06:15 America/Sao_Paulo] PHP Warning:  Undefined variable $fk_patrimonioId_id in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 40
+[29-Aug-2024 11:08:02 America/Sao_Paulo] PHP Warning:  Undefined variable $fk_patrimonioId_id in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 40
+[29-Aug-2024 13:55:14 America/Sao_Paulo] PHP Warning:  Undefined variable $fk_patrimonioId_id_display in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 60
+[30-Aug-2024 15:05:35 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$imagem in C:\xampp\htdocs\patrimonio\lib\adianti\base\AdiantiFileSaveTrait.php on line 30

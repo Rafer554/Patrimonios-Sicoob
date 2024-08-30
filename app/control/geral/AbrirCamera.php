@@ -35,26 +35,33 @@ class AbrirCamera extends TPage
         $criteria_localAtual = new TCriteria();
 
         $criteria_fk_patrimonioId_id->setProperty('order', 'descricao asc');
-
+		
         $fk_patrimonioId_id = new TDBSeekButton('fk_patrimonioId_id', 'controlepatrimonio', self::$formName, 'Patrimonio', 'CodigodoPatrimonio', 'fk_patrimonioId_id', 'fk_patrimonioId_id_display', $criteria_fk_patrimonioId_id);
+		
+		
         $fk_patrimonioId_id_display = new TEntry('fk_patrimonioId_id_display');
         $pesquisaPatrimonioId = new TEntry('pesquisaPatrimonioId');
+		
         $localAntigo = new TDBUniqueSearch('localAntigo', 'controlepatrimonio', 'Local', 'id', 'id','id asc' , $criteria_localAntigo );
+		
         $patrimonioId = new TDBUniqueSearch('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', 'CodigodoPatrimonio','CodigodoPatrimonio asc' , $criteria_patrimonioId );
+		
+			
         $dataInspecao = new TDate('dataInspecao');
         $localAtual = new TDBUniqueSearch('localAtual', 'controlepatrimonio', 'Local', 'id', 'Descricao','id asc' , $criteria_localAtual );
         $Descricao = new THtmlEditor('Descricao');
-        $imagem = new TFile('imagem');
+        $imagem = new TFile('Escolha uma Imagem');
 
-        $fk_patrimonioId_id->setExitAction(new TAction([$this,'alteraDados']));
-        $pesquisaPatrimonioId->setExitAction(new TAction([$this,'PesquisaPatrimonio']));
+        $fk_patrimonioId_id->setExitAction(new TAction([$this,'alteraDados']));   
+		
+		//$pesquisaPatrimonioId ->setEditable(false);
 
         $localAntigo->addValidation("LocalAntigo", new TRequiredValidator()); 
         $patrimonioId->addValidation("PatrimonioId", new TRequiredValidator()); 
         $dataInspecao->addValidation("DataInspecao", new TRequiredValidator()); 
 
         $fk_patrimonioId_id->setDisplayMask('{descricao}');
-        $fk_patrimonioId_id->setAuxiliar($fk_patrimonioId_id_display);
+        //$fk_patrimonioId_id->setAuxiliar($fk_patrimonioId_id_display);
         $fk_patrimonioId_id_display->setEditable(false);
         $dataInspecao->setDatabaseMask('yyyy-mm-dd');
         $imagem->enableFileHandling();
@@ -73,19 +80,22 @@ class AbrirCamera extends TPage
         $localAntigo->setSize('70%');
         $patrimonioId->setSize('70%');
         $Descricao->setSize('70%', 110);
-        $fk_patrimonioId_id->setSize(70);
-        $pesquisaPatrimonioId->setSize('70%');
-        $fk_patrimonioId_id_display->setSize(200);
+        $fk_patrimonioId_id->setSize(110);
+        $pesquisaPatrimonioId->setSize('8.9%');
+        $fk_patrimonioId_id_display->setSize(110);  
 		 
-        $row1 = $this->form->addFields([new TLabel("Patrimônio:", null, '14px', null)],[$fk_patrimonioId_id]);
-        $row2 = $this->form->addFields([new TLabel("Código Patrimônio:", null, '14px', null)],[$pesquisaPatrimonioId]);
-        $row3 = $this->form->addFields([new TLabel("          ", null, '14px', null, '100%')],[]);
-        $row4 = $this->form->addFields([new TLabel("Local Antigo:", '#ff0000', '14px', null)],[$localAntigo]);
-        $row5 = $this->form->addFields([new TLabel("Id Patrimonio:", '#ff0000', '14px', null)],[$patrimonioId]);
-        $row6 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)],[$dataInspecao]);
-        $row7 = $this->form->addFields([new TLabel("Local Atual:", null, '14px', null)],[$localAtual]);
-        $row8 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)],[$Descricao]);
-        $row9 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)],[$imagem]);
+        $row1 = $this->form->addFields([new TLabel("ID:", null, '14px', null)],[$pesquisaPatrimonioId]);
+        $row2 = $this->form->addFields([new TLabel("Código Patrimônio:", null, '14px', null)],[$fk_patrimonioId_id]);
+		$row3 = $this->form->addFields([new TLabel("Nome:", null, '14px', null)], [$fk_patrimonioId_id_display]);
+		
+        $row4 = $this->form->addFields([new TLabel("          ", null, '14px', null, '100%')],[]);
+  		
+        $row5 = $this->form->addFields([new TLabel("Código do Patrimonio:", '#ff0000', '14px', null)],[$patrimonioId]);
+		$row6 = $this->form->addFields([new TLabel("Local Antigo:", '#ff0000', '14px', null)],[$localAntigo]);
+        $row7 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)],[$dataInspecao]);
+        $row8 = $this->form->addFields([new TLabel("Local Atual:", null, '14px', null)],[$localAtual]);
+        $row9 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)],[$Descricao]);
+        $row10 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)],[$imagem]);
 
         // create the form actions
         $btn_onsave = $this->form->addAction("Salvar", new TAction([$this, 'onSave']), 'far:save #ffffff');
@@ -111,73 +121,83 @@ class AbrirCamera extends TPage
     
     }
 	
-	public static function alteraDados($param = null) 
+public static function alteraDados($param = null) 
+{
+    try 
     {
-        try 
-        {
-            //code here
-              $data = $param['fk_patrimonioId_id']; 
-            //  new TMessage('info',$data);
-            TTransaction::open('controlepatrimonio');
+        
+        $codigoPatrimonio = $param['fk_patrimonioId_id']; 
 
-           $patrimoniotemp= new Patrimonio($data);
-           $obj = new StdClass;
+        TTransaction::open('controlepatrimonio');
 
-           $obj->{'patrimonioId'}=$patrimoniotemp->id;
-            $obj->{'localAntigo'}=$patrimoniotemp->Local_id;
-            $obj->{'localAtual'}=$patrimoniotemp->Local_id;
-            $obj->{'dataInspecao'}=date('d/m/Y');
+        
+        $criteria = new TCriteria;
+        $criteria->add(new TFilter('CodigodoPatrimonio', '=', $codigoPatrimonio));
 
-        TForm::sendData('form_Movimentacao', $obj);
+        $repository = new TRepository('Patrimonio');
+        $results = $repository->load($criteria);
 
-          // $DataInspecao=date('Y-m_d');
-           //$patrimonioId=$patrimoniotemp->CodigodoPatrimonio;
-          //  new TMessage('info', $patrimoniotemp->descricao);
+        if (!empty($results)) {
+            $result = $results[0]; 
+			
+            $obj = new StdClass;
+			$obj->{'pesquisaPatrimonioId'} = $result-> id;
+			$obj->{'fk_patrimonioId_id_display'} = $result-> descricao;
+            $obj->{'patrimonioId'} = $result->id;
+            $obj->{'localAntigo'} = $result->Local_id;
+            $obj->{'localAtual'} = $result->Local_id;
+            $obj->{'dataInspecao'} = date('d/m/Y');
 
-            TTransaction::close();
+            TForm::sendData('form_Movimentacao', $obj);
+		}
 
-        }
-        catch (Exception $e) 
-        {
-            new TMessage('error', $e->getMessage());    
-        }
-    }
-
-    public static function PesquisaPatrimonio($param = null) 
-    {
-        try 
-        {
-            //code here
-         //code here
-              $data = $param['pesquisaPatrimonioId']; 
-
-            TTransaction::open('controlepatrimonio');
-            $criterio= new TCriteria;
-            $criterio->add(new TFilter('CodigodoPatrimonio','=',$data));
-
-            $repositorio= new TRepository('Patrimonio');
-            $resultados=$repositorio->load($criterio);
-
-            foreach ($resultados as $result) {
-                 $obj = new StdClass;
-
-           $obj->{'patrimonioId'}=$result->id;
-            $obj->{'localAntigo'}=$result->Local_id;
-            $obj->{'localAtual'}=$result->Local_id;
-            $obj->{'dataInspecao'}=date('d/m/Y');
-            }
-
-         //  $patrimoniotemp= new Patrimonio($data);
-
-        TForm::sendData('form_Movimentacao', $obj);
         TTransaction::close();
-
-        }
-        catch (Exception $e) 
-        {
-            new TMessage('error', $e->getMessage());    
-        }
     }
+    catch (Exception $e) 
+    {
+        new TMessage('error', $e->getMessage());    
+    }
+}
+
+
+   public static function PesquisaPatrimonio($param = null) 
+{
+    try 
+    {
+        
+        $codigoPatrimonio = $param['pesquisaPatrimonioId']; 
+
+        TTransaction::open('controlepatrimonio');
+
+        
+        $criteria = new TCriteria;
+        $criteria->add(new TFilter('CodigodoPatrimonio', '=', $codigoPatrimonio));
+
+        $repository = new TRepository('Patrimonio');
+        $results = $repository->load($criteria);
+
+        if (!empty($results)) {
+            $result = $results[0]; 
+
+            $obj = new StdClass;
+            $obj->{'patrimonioId'} = $result->id;
+            $obj->{'localAntigo'} = $result->Local_id;
+            $obj->{'localAtual'} = $result->Local_id;
+            $obj->{'dataInspecao'} = date('d/m/Y');
+
+            TForm::sendData('form_Movimentacao', $obj);
+        } else {
+            new TMessage('error', 'Patrimônio não encontrado.');
+        }
+
+        TTransaction::close();
+    }
+    catch (Exception $e) 
+    {
+        new TMessage('error', $e->getMessage());    
+    }
+}
+
 
     public function onSave($param = null) 
     {
@@ -272,6 +292,10 @@ class AbrirCamera extends TPage
         $this->form->clear(true);
 
     }
+	
+	public function ModalPersonalizada($param = null){
+		
+	}
 
     public function onShowCadMov($param = null)
     {
@@ -286,11 +310,6 @@ class AbrirCamera extends TPage
         return self::$formName;
     }
 	
-	
-
-    public function onClick($param){
-        new TMessage('info', "funcionou paizao");
-    }
 
     public function onShow($param = null) {
 ?>
