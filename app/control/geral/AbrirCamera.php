@@ -50,11 +50,12 @@ class AbrirCamera extends TPage
         $dataInspecao = new TDate('dataInspecao');
         $localAtual = new TDBUniqueSearch('localAtual', 'controlepatrimonio', 'Local', 'id', 'Descricao','id asc' , $criteria_localAtual );
         $Descricao = new THtmlEditor('Descricao');
+		$Descricao->setId('Descricao');
         $imagem = new TFile('Escolha uma Imagem');
 
         $fk_patrimonioId_id->setExitAction(new TAction([$this,'alteraDados']));   
 		
-		//$pesquisaPatrimonioId ->setEditable(false);
+		$pesquisaPatrimonioId ->setEditable(false);
 
         $localAntigo->addValidation("LocalAntigo", new TRequiredValidator()); 
         $patrimonioId->addValidation("PatrimonioId", new TRequiredValidator()); 
@@ -63,6 +64,9 @@ class AbrirCamera extends TPage
         $fk_patrimonioId_id->setDisplayMask('{descricao}');
         //$fk_patrimonioId_id->setAuxiliar($fk_patrimonioId_id_display);
         $fk_patrimonioId_id_display->setEditable(false);
+		$fk_patrimonioId_id->setId('fk_patrimonioId_id');
+		
+		
         $dataInspecao->setDatabaseMask('yyyy-mm-dd');
         $imagem->enableFileHandling();
         $localAtual->setMinLength(2);
@@ -117,7 +121,7 @@ class AbrirCamera extends TPage
         $container->add($this->form);
 
         parent::add($container);
-
+		
     
     }
 	
@@ -125,30 +129,29 @@ public static function alteraDados($param = null)
 {
     try 
     {
-        
         $codigoPatrimonio = $param['fk_patrimonioId_id']; 
 
         TTransaction::open('controlepatrimonio');
 
-        
         $criteria = new TCriteria;
         $criteria->add(new TFilter('CodigodoPatrimonio', '=', $codigoPatrimonio));
 
         $repository = new TRepository('Patrimonio');
         $results = $repository->load($criteria);
+
         if (!empty($results)) {
             $result = $results[0]; 
-			
+
             $obj = new StdClass;
-			$obj->{'pesquisaPatrimonioId'} = $result-> id;
-			$obj->{'fk_patrimonioId_id_display'} = $result-> descricao;
+            $obj->{'pesquisaPatrimonioId'} = $result->id;
+            $obj->{'fk_patrimonioId_id_display'} = $result->descricao;
             $obj->{'patrimonioId'} = $result->id;
             $obj->{'localAntigo'} = $result->Local_id;
             $obj->{'localAtual'} = $result->Local_id;
             $obj->{'dataInspecao'} = date('d/m/Y');
 
-            TForm::sendData('form_Movimentacao', $obj);
-		}
+            TForm::sendData(self::$formName, $obj);  // Atualize os dados no formulário
+        }
 
         TTransaction::close();
     }
@@ -157,6 +160,7 @@ public static function alteraDados($param = null)
         new TMessage('error', $e->getMessage());    
     }
 }
+
 
 
    public static function PesquisaPatrimonio($param = null) 
@@ -414,20 +418,27 @@ public static function alteraDados($param = null)
                 }
             });
 
-            Quagga.onDetected(function (result) {
-                console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
-                // Atualiza o input
-                document.querySelector('input[name="fk_patrimonioId_id"]').value = result.codeResult.code;
-                // Para o Scanner pós leitura
-                Quagga.stop();
-                _scannerIsRunning = false;
-                
-                // Simula o clique no botão "Enter"
-                var enterButton = document.getElementById('EnterButton');
-                if (enterButton) {
-                    enterButton.click();
-                }
-            });
+           Quagga.onDetected(function (result) {
+    console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
+
+    // Atualiza o input
+    var patrimonioInput = document.querySelector('input[name="fk_patrimonioId_id"]');
+    patrimonioInput.value = result.codeResult.code;
+
+    // Foco no campo 'Código Patrimônio'
+    patrimonioInput.focus();		  
+			   
+   
+			   
+    // Para o Scanner pós leitura
+			   Quagga.stop();
+    _scannerIsRunning = false;
+			 setTimeout(function() {
+        patrimonioInput.blur();  // Remove o foco do campo
+    }, 500)
+});
+
+
         }
 
         // Encerra o Scanner on action
