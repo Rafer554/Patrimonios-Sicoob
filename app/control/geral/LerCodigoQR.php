@@ -36,9 +36,6 @@ class LerCodigoQR extends TPage{
 			$dropdown->setChangeAction(new TAction([$this, 'onChangeDropdown']));
 		
 		$input = new TEntry('input');
-
-		
-		$row2 = $this->form->addFields([new TLabel("Teste:", null, '14px', null)], [$input]);
 		
 		$row1 = $this->form->addFields([new TLabel("Local:", null, '14px', null)], [$dropdown]);
 		
@@ -48,8 +45,10 @@ class LerCodigoQR extends TPage{
 		
 		$this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
 		
-		//Button insertion
-		$btnAbrirCamera = $this->form->addAction("Ler código", new TAction(['AbrirCamera', 'onShow']), 'fa:camera fa-fw #000000');
+		//Button insertion        
+		
+		
+		$btnAbrirCamera = $this->form->addAction("Ler código", new TAction([$this, 'Redirecionar']), 'fa:camera fa-fw #000000');
         $this->btnAbrirCamera = $btnAbrirCamera;
 		
 		$btnManualForm = $this->form->addAction("Registrar manualmente", new TAction([ 'ChamarCadastroMovimentacao', 'onShowCadMov']), 'far:file-alt #000000');
@@ -98,6 +97,7 @@ class LerCodigoQR extends TPage{
 
 	public function onShow($param )
     {
+		
 
     }
 	public function show()
@@ -116,16 +116,24 @@ class LerCodigoQR extends TPage{
         }
         parent::show();
     }
-	public static function onChangeDropDown($param){
-		 {
-			 // Verifica se o valor selecionado está presente no parâmetro
-        if (isset($param['Local'])) {
-            $selected_value = $param['Local'];
+	public static function onChangeDropdown($param){
+    if (isset($param['Local'])) {
+        $selected_value = $param['Local'];
 
-            // Atualiza o campo de input com o valor selecionado
-            TForm::sendData('formReport_IdentificadorDeLocal', (object) ['input' => $selected_value]);
+      
+        TSession::setValue('selected_local', $selected_value);
+    }
+}
+	public function Redirecionar($param)
+{
+    try {
+        $selected_local = TSession::getValue('selected_local');
 
-        	}
-		}
+        // Redirect to AbrirCamera page with the selected local
+        AdiantiCoreApplication::loadPage('AbrirCamera', 'onShow', ['localAtual' => $selected_local]);
+    } catch (Exception $e) {
+        new TMessage('error', $e->getMessage());
+    }
 	}
+
 }

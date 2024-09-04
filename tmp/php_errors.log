@@ -603,3 +603,63 @@ Stack trace:
 [29-Aug-2024 11:08:02 America/Sao_Paulo] PHP Warning:  Undefined variable $fk_patrimonioId_id in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 40
 [29-Aug-2024 13:55:14 America/Sao_Paulo] PHP Warning:  Undefined variable $fk_patrimonioId_id_display in C:\xampp\htdocs\patrimonio\app\control\geral\AbrirCamera.php on line 60
 [30-Aug-2024 15:05:35 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$imagem in C:\xampp\htdocs\patrimonio\lib\adianti\base\AdiantiFileSaveTrait.php on line 30
+[03-Sep-2024 11:27:44 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$imagem in C:\xampp\htdocs\patrimonio\lib\adianti\base\AdiantiFileSaveTrait.php on line 30
+[03-Sep-2024 11:28:05 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$imagem in C:\xampp\htdocs\patrimonio\lib\adianti\base\AdiantiFileSaveTrait.php on line 30
+[04-Sep-2024 09:36:10 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare LerCodigoQR::onShowCadMov() in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 128
+[04-Sep-2024 09:36:50 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:121
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 121
+[04-Sep-2024 09:48:45 America/Sao_Paulo] PHP Warning:  Undefined variable $action in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:48:45 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function setParameter() on null in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:127
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:49:44 America/Sao_Paulo] PHP Warning:  Undefined variable $action in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:49:44 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function setParameter() on null in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:127
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:49:47 America/Sao_Paulo] PHP Warning:  Undefined variable $action in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:49:47 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function setParameter() on null in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:127
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:49:54 America/Sao_Paulo] PHP Warning:  Undefined variable $action in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:49:54 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function setParameter() on null in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:127
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 09:50:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function setParameter() in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php:127
+Stack trace:
+#0 [internal function]: LerCodigoQR::onChangeDropdown(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 127
+[04-Sep-2024 10:38:24 America/Sao_Paulo] PHP Warning:  Undefined variable $selected_value in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 101
+[04-Sep-2024 10:38:27 America/Sao_Paulo] PHP Warning:  Undefined variable $selected_value in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 101
+[04-Sep-2024 10:38:29 America/Sao_Paulo] PHP Warning:  Undefined variable $selected_value in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 101
+[04-Sep-2024 10:40:23 America/Sao_Paulo] PHP Warning:  Undefined property: Adianti\Wrapper\BootstrapFormBuilder::$AdiantiCoreApplication in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 54
+[04-Sep-2024 10:40:52 America/Sao_Paulo] PHP Warning:  Undefined variable $selected_value in C:\xampp\htdocs\patrimonio\app\control\geral\LerCodigoQR.php on line 54

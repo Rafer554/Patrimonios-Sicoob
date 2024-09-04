@@ -76,6 +76,11 @@ class AbrirCamera extends TPage
         $fk_patrimonioId_id->setSize(110);
         $pesquisaPatrimonioId->setSize('8.9%');
         $fk_patrimonioId_id_display->setSize(110);
+		
+		if (isset($param['localAtual'])) {
+        $localAtualValue = $param['localAtual'];
+        $localAtual->setValue($localAtualValue);
+    }
 
         // Add fields to form
         $this->form->addFields([new TLabel("ID:", null, '14px', null)], [$pesquisaPatrimonioId]);
@@ -132,7 +137,6 @@ class AbrirCamera extends TPage
                 $obj->{'fk_patrimonioId_id_display'} = $result->descricao;
                 $obj->{'patrimonioId'} = $result->id;
                 $obj->{'localAntigo'} = $result->Local_id;
-                $obj->{'localAtual'} = $result->Local_id;
                 $obj->{'dataInspecao'} = date('d/m/Y');
 
                 TForm::sendData(self::$formName, $obj);  // Atualize os dados no formulário
