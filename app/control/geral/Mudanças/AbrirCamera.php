@@ -14,47 +14,56 @@ class AbrirCamera extends TPage {
             $this->adianti_target_container = $param['target_container'];
         }
         
+		//Criando o Formulário:
         $this->form = new BootstrapFormBuilder(self::$formName);
-        $this->form->setFormTitle("Teste");
+        $this->form->setFormTitle("Registrar movimentação");
         
+		//Definindo os criterios:
         $criteriaprocura_patrimonio = new TCriteria();
-        $criteriaprocura_patrimonio->setProperty('order', 'descricao asc');
+        	$criteriaprocura_patrimonio->setProperty('order', 'descricao asc');
         
         $criteria_localAntigo = new TCriteria();
         $criteria_patrimonioId = new TCriteria();
         $criteria_localAtual = new TCriteria();
-        
+       
+		//Botão que procura o patrimonio:
         $procura_patrimonio = new TDBSeekButton('procura_patrimonio', 'controlepatrimonio', self::$formName, 'Patrimonio', 'CodigodoPatrimonio', 'procura_patrimonio', 'procura_patrimonio_display', $criteriaprocura_patrimonio);
         $procura_patrimonio->setExitAction(new TAction([$this, 'alteraDados']));
         $procura_patrimonio->setDisplayMask('{descricao}');
         $procura_patrimonio->setId('procura_patrimonio');
         $procura_patrimonio->setSize(110);
         
+		//Display que mostra o nome registrado ao patrimonio buscado:
         $procura_patrimonio_display = new TEntry('procura_patrimonio_display');
         $procura_patrimonio_display->setEditable(false);
         $procura_patrimonio_display->setSize(110);
         
+		//Busca o ID vinculado ao patrimonio escolhido:
+		$patrimonioId = new TDBUniqueSearch('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', 'CodigodoPatrimonio', 'CodigodoPatrimonio asc', $criteria_patrimonioId);
+        $patrimonioId->addValidation("PatrimonioId", new TRequiredValidator());
+        $patrimonioId->setMinLength(2);
+        $patrimonioId->setMask('{CodigodoPatrimonio}');
+        $patrimonioId->setSize('40%');
+		
+		//Mostra o patrimonio pesquisado
         $pesquisaPatrimonioId = new TEntry('pesquisaPatrimonioId');
         $pesquisaPatrimonioId->setEditable(false);
         $pesquisaPatrimonioId->setSize('8.9%');
         
+		//Busca o local no qual o patrimonio está registrado no momento:
         $localAntigo = new TDBUniqueSearch('localAntigo', 'controlepatrimonio', 'Local', 'id', 'id', 'id asc', $criteria_localAntigo);
         $localAntigo->addValidation("LocalAntigo", new TRequiredValidator());
         $localAntigo->setMinLength(2);
         $localAntigo->setMask('{Descricao}');
         $localAntigo->setSize('40%');
         
-        $patrimonioId = new TDBUniqueSearch('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', 'CodigodoPatrimonio', 'CodigodoPatrimonio asc', $criteria_patrimonioId);
-        $patrimonioId->addValidation("PatrimonioId", new TRequiredValidator());
-        $patrimonioId->setMinLength(2);
-        $patrimonioId->setMask('{CodigodoPatrimonio}');
-        $patrimonioId->setSize('40%');
-        
+        //Seta a data atual:
         $dataInspecao = new TDate('dataInspecao');
         $dataInspecao->addValidation("DataInspecao", new TRequiredValidator());
         $dataInspecao->setDatabaseMask('yyyy-mm-dd');
         $dataInspecao->setSize(110);
         
+		//Mostra os locais para a movimentação:
         $localAtual = new TDBUniqueSearch('localAtual', 'controlepatrimonio', 'Local', 'id', 'Descricao', 'id asc', $criteria_localAtual);
         $localAtual->setMinLength(2);
         $localAtual->setMask('{Descricao}');
@@ -63,17 +72,25 @@ class AbrirCamera extends TPage {
 				$localAtualValue = $param['localAtual'];
 				$localAtual->setValue($localAtualValue);}
         
+		//Campo para adicionar descrição
         $Descricao = new THtmlEditor('Descricao');
         $Descricao->setSize('40%', 110);
         
+		//Campo para acrescentar imagem
         $imagem = new TFile('Escolha uma Imagem');
         $imagem->enableFileHandling();
         $imagem->setSize('40%');
         
+		
+		//Definição de ordem e campos do formulário
         $row1 = $this->form->addFields([new TLabel("ID:", null, '14px', null)], [$pesquisaPatrimonioId]);
         $row2 = $this->form->addFields([new TLabel("Código Patrimônio:", null, '14px', null)], [$procura_patrimonio]);
         $row3 = $this->form->addFields([new TLabel("Nome:", null, '14px', null)], [$procura_patrimonio_display]);
+		
+		//Espaçamento visando melhor visualização Userside
         $row4 = $this->form->addFields([new TLabel(" ", null, '14px', null, '100%')],[]);
+		
+		//Continuação da definição:
         $row5 = $this->form->addFields([new TLabel("Código do Patrimonio:", '#ff0000', '14px', null)], [$patrimonioId]);
         $row6 = $this->form->addFields([new TLabel("Local Antigo:", '#ff0000', '14px', null)], [$localAntigo]);
         $row7 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)], [$dataInspecao]);
@@ -82,6 +99,7 @@ class AbrirCamera extends TPage {
         $row10 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)], [$imagem]);
         
 		
+		//Declaração e implementação dos botões
         $btn_onsave = $this->form->addAction("Salvar", new TAction([$this, 'onSave']), 'far:save #ffffff');
         $this->btn_onsave = $btn_onsave;
         $btn_onsave->addStyleClass('btn-primary'); 
@@ -91,12 +109,12 @@ class AbrirCamera extends TPage {
         
         $btnBack = $this->form->addAction("Voltar", new TAction(['LerCodigoQR', 'onShowBack']), 'fa-backward fa-fw #000000');
         
-       
+		//Adicionando o estilo e o formulario na box principal da página
         $container = new TVBox;
         $container->style = 'width: 100%';
         $container->class = 'form-container';
         if (empty($param['target_container'])) {
-            $container->add(TBreadCrumb::create(["Geral", "CadastraMovimentação"]));
+            $container->add(TBreadCrumb::create(["Geral", "Registrar movimentação Patrimonial"]));
         }
         $container->add($this->form);
 
@@ -179,6 +197,7 @@ class AbrirCamera extends TPage {
     public function onShowBack($param = null) {
         // Código para voltar para a página anterior, se necessário
     }
+	
 
     public function onShow($param = null) {
 ?>
@@ -186,7 +205,7 @@ class AbrirCamera extends TPage {
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>Leitor de Código de Barras</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
@@ -197,6 +216,22 @@ class AbrirCamera extends TPage {
             left: 0;
             top: 0;
         }
+        #scanner-container {
+			right: 525px;
+			top: 225px;
+            width: 0px;
+            height: 0px;
+            position: absolute;
+			z-index: 9998;
+        }
+		#btn{
+			right: 45px;
+			top: 195px;
+            width: 100px;
+            height: 25px;
+            position: absolute;
+			z-index: 9999;
+		}
     </style>
 </head>
 
@@ -204,9 +239,6 @@ class AbrirCamera extends TPage {
     <!-- Div to show the scanner -->
     <div id="scanner-container"></div>
     <input type="button" id="btn" value="Iniciar Leitura" />
-
-    <!-- Include the image-diff library -->
-    <script src="quagga.min.js"></script>
 
     <script>
         var _scannerIsRunning = false;
@@ -287,7 +319,6 @@ class AbrirCamera extends TPage {
                     }
                 }
             });
-
 
             Quagga.onDetected(function (result) {
                 console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);

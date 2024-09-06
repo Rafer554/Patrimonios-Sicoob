@@ -738,3 +738,12 @@ Stack trace:
 #3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
 #4 {main}
   thrown in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 227
+[06-Sep-2024 11:49:04 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TesteJavaScript" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TesteJavaScript')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[06-Sep-2024 15:59:12 America/Sao_Paulo] PHP Warning:  Undefined variable $bnt_LerCodigo in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\LerCodigoQR.php on line 57
+[06-Sep-2024 16:23:39 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761

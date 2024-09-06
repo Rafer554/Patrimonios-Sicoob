@@ -45,14 +45,16 @@ class LerCodigoQR extends TPage{
 		
 		$this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
 		
-		//Button insertion        
 		
-		
-		$btnAbrirCamera = $this->form->addAction("Ler código", new TAction([$this, 'Redirecionar']), 'fa:camera fa-fw #000000');
+		//Button insertion       
+		$btnAbrirCamera = $this->form->addAction("<i class='fa-solid fa-camera-retro'></i> Ler código", new TAction([$this, 'Redirecionar']), '#000000');
         $this->btnAbrirCamera = $btnAbrirCamera;
 		
-		$btnManualForm = $this->form->addAction("Registrar manualmente", new TAction([ 'ChamarCadastroMovimentacao', 'onShowCadMov']), 'far:file-alt #000000');
+		$btnManualForm = $this->form->addAction("<i class='fa-solid fa-file-lines'></i> Registrar manualmente", new TAction([ 'ChamarCadastroMovimentacao', 'onShowCadMov']), '#000000');
 		$this->btnManualForm = $btnManualForm;
+		
+		$btn_LerCodigo = $this->form->addAction("<i class='fa-solid fa-eye'></i> Verificar Código",new TAction(['Visualizar', 'onLerCodigo']), 'fa-eye fa-fw #000000');
+		$this->btn_LerCodigo = $btn_LerCodigo;
 		
 		//Wrapper Container
 		$container = new TVBox;
@@ -89,8 +91,11 @@ class LerCodigoQR extends TPage{
 			 	
 		}
     }
-	 public function onClear( $param )
-    {
+	public function onLerCodigo($param){
+		
+	}
+	
+	 public function onClear( $param ){
         $this->form->clear(true);
 
     }
@@ -98,7 +103,7 @@ class LerCodigoQR extends TPage{
 	public function onShow($param )
     {
 		
-
+		
     }
 	public function show()
     {
