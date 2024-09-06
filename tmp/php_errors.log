@@ -721,3 +721,20 @@ Stack trace:
 [05-Sep-2024 14:46:59 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "public" in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 125
 [05-Sep-2024 14:47:42 America/Sao_Paulo] PHP Warning:  Undefined variable $Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 108
 [05-Sep-2024 15:12:31 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 4 in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 363
+[06-Sep-2024 09:16:36 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 3 in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 230
+[06-Sep-2024 09:23:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Adianti\Control\TPage::onShow() in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php:186
+Stack trace:
+#0 [internal function]: TesteJavaScript::onShow(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 186
+[06-Sep-2024 09:24:04 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php:227
+Stack trace:
+#0 [internal function]: TesteJavaScript::onShow(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\TesteJavaScript.php on line 227
