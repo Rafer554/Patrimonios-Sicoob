@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+
+
+
+<body>
+	
+    <div id="resultado">
+    
+    </div>
+    <div id="camera" style="width=100px; height=100px"></div>
+
+    <script src="quagga.min.js"></script>
+
+    <script>
+        Quagga.init({
+            inputStream: {
+                name: "Live",
+                type: "LiveStream",
+                target: document.querySelector('#camera')    // Or '#yourElement' (optional)
+            },
+            decoder: {
+                //readers: ["code_128_reader"]
+                readers:["i2of5_reader"]
+            }
+        }, function (err) {
+            if (err) {
+                console.log(err);
+                return
+            }
+            console.log("Initialization finished. Ready to start");
+            Quagga.start();
+        });
+        Quagga.onDetected(function (data) {
+            console.log(data.codeResult.code);
+            document.querySelector('#resultado').innerText = data.codeResult.code;
+			window.location.href = "index.php?class=Leitor&method=onShow&patrimonio=" + data.codeResult.code; 
+            
+        });
+    </script>
+
+</body>
+
+</html>
