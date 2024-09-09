@@ -224,21 +224,32 @@ class AbrirCamera extends TPage {
             position: absolute;
 			z-index: 9998;
         }
-		#btn{
-			right: 45px;
-			top: 195px;
-            width: 100px;
-            height: 25px;
-            position: absolute;
-			z-index: 9999;
-		}
+		#btn {
+            width: 12vh;
+            height: 3vh;
+            position: fixed;
+            bottom:  91px;
+            right: 124vh;
+            background-color: #1f91f3;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            font-size: 14px;
+            cursor: pointer;
+            z-index: 9999;
+			box-shadow: 5px 5px;
+
+        }
+        #btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
 <body>
     <!-- Div to show the scanner -->
     <div id="scanner-container"></div>
-    <input type="button" id="btn" value="Iniciar Leitura" />
+    <input type="button" id="btn" value="Iniciar Camera" />
 
     <script>
         var _scannerIsRunning = false;
