@@ -807,3 +807,22 @@ Stack trace:
   thrown in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php on line 59
 [08-Sep-2024 18:10:46 America/Sao_Paulo] PHP Warning:  Undefined variable $LocalAtual in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\Visualizar.php on line 74
 [08-Sep-2024 18:23:38 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_patrimonioId in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\Visualizar.php on line 42
+[09-Sep-2024 11:43:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "ValorAtual" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\Visualizar.php:146
+Stack trace:
+#0 [internal function]: Visualizar::alteraDados(Array)
+#1 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\Visualizar.php on line 146
+[09-Sep-2024 11:46:10 America/Sao_Paulo] PHP Warning:  Undefined variable $DataEntrada in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\Visualizar.php on line 103
+[09-Sep-2024 11:46:28 America/Sao_Paulo] PHP Warning:  Undefined variable $DataRegistro in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\Visualizar.php on line 103
+[09-Sep-2024 11:57:10 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[09-Sep-2024 11:57:12 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[09-Sep-2024 11:57:30 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
