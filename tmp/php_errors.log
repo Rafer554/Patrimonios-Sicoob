@@ -747,3 +747,63 @@ Stack trace:
   thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
 [06-Sep-2024 15:59:12 America/Sao_Paulo] PHP Warning:  Undefined variable $bnt_LerCodigo in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\LerCodigoQR.php on line 57
 [06-Sep-2024 16:23:39 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[08-Sep-2024 16:46:44 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[08-Sep-2024 16:47:21 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[08-Sep-2024 16:48:27 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[08-Sep-2024 16:55:49 America/Sao_Paulo] PHP Warning:  Undefined array key "fk_patrimonioId_id" in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 128
+[08-Sep-2024 16:55:50 America/Sao_Paulo] PHP Warning:  Undefined array key "fk_patrimonioId_id" in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 128
+[08-Sep-2024 16:55:50 America/Sao_Paulo] PHP Warning:  Undefined array key "fk_patrimonioId_id" in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 128
+[08-Sep-2024 17:02:09 America/Sao_Paulo] PHP Warning:  Undefined array key "fk_patrimonioId_id" in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 128
+[08-Sep-2024 17:02:09 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Adianti\Widget\Form\TForm::getForm() in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php:144
+Stack trace:
+#0 [internal function]: AbrirCamera::alteraDados(Array)
+#1 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 144
+[08-Sep-2024 17:02:09 America/Sao_Paulo] PHP Warning:  Undefined array key "fk_patrimonioId_id" in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 128
+[08-Sep-2024 17:02:09 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Adianti\Widget\Form\TForm::getForm() in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php:144
+Stack trace:
+#0 [internal function]: AbrirCamera::alteraDados(Array)
+#1 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 144
+[08-Sep-2024 17:02:09 America/Sao_Paulo] PHP Warning:  Undefined array key "fk_patrimonioId_id" in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 128
+[08-Sep-2024 17:02:09 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Adianti\Widget\Form\TForm::getForm() in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php:144
+Stack trace:
+#0 [internal function]: AbrirCamera::alteraDados(Array)
+#1 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(82): call_user_func(Array, Array)
+#2 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#3 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#4 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\AbrirCamera.php on line 144
+[08-Sep-2024 17:03:28 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\Patrimonios\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\Patrimonios\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\Patrimonios\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[08-Sep-2024 18:10:46 America/Sao_Paulo] PHP Warning:  Undefined variable $LocalAtual in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\Visualizar.php on line 74
+[08-Sep-2024 18:23:38 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_patrimonioId in C:\xampp\htdocs\Patrimonios\app\control\geral\Mudanças\Visualizar.php on line 42
