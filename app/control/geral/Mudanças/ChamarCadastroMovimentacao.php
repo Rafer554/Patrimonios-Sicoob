@@ -26,7 +26,7 @@ class ChamarCadastroMovimentacao extends TPage {
         $criteria_localAtual = new TCriteria();
        
 		//Botão que procura o patrimonio:
-        $procura_patrimonio = new TDBSeekButton('procura_patrimonio', 'controlepatrimonio', self::$formName, 'Patrimonio', 'CodigodoPatrimonio', 'procura_patrimonio', 'procura_patrimonio_display', $criteriaprocura_patrimonio);
+        $procura_patrimonio = new TDBSeekButton('procura_patrimonio', 'controlepatrimonio', self::$formName, 'Patrimonio', 'CodigodoPatrimonio', 'procura_patrimonio', $criteriaprocura_patrimonio);
         $procura_patrimonio->setExitAction(new TAction([$this, 'alteraDados']));
         $procura_patrimonio->setDisplayMask('{descricao}');
         $procura_patrimonio->setId('procura_patrimonio');
