@@ -4,7 +4,7 @@
   <menuitem label="Geral">
     <icon>fas:archive fa-fw </icon>
     <menu>
-		<menuitem label="Movimentação Patrimonial">
+		<menuitem label="Registrar movimentação Patrimonial">
         <icon>fa:exchange fa-fw</icon>
         <action>LerCodigoQR#method=onShow</action>
       </menuitem>
