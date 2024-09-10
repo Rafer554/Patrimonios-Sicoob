@@ -49,6 +49,9 @@ class Visualizar extends TPage {
 		$codPatrimonio->setSize(110);
         
 		
+		
+		//Essa parte toda tá assim pq vai que precisa de algum de volta seila
+		
 		/*
         // Busca o ID vinculado ao patrimônio escolhido:
         $patrimonioId = new TDBUniqueSearch('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', 'CodigodoPatrimonio', 'CodigodoPatrimonio asc', $criteria_patrimonioId);
@@ -129,7 +132,9 @@ class Visualizar extends TPage {
 		
 		//Declaração dos botões
 		
-		
+			/*O unico botão nessa página vai ser com o javascript porque é mais fácil de puxar a camera
+					porque relacionar isso no php como uma classe é muito mais complicado que simplesmente declarar um JS pra
+					interegir na página pra mim, pelo menos, eu acho. */
 		
 		
         // Adicionando o estilo e o formulário na box principal da página
@@ -143,7 +148,9 @@ class Visualizar extends TPage {
 
         parent::add($container);
     }
-
+	/*Essa função vai alterar os dados automaticamente quando um patrimonio for escolhido la pelo 'procura_patrimonio', então se algum tiver algum problma com 
+	o comando estar puxando errado em alguma futura atualização do PHP provavelmente é entre esses dois o problema.*/
+	
     public static function alteraDados($param) {
         try {
             $codigoPatrimonio = $param['procura_patrimonio']; 

@@ -18,11 +18,12 @@ class EscolhaRegistro extends TPage{
 		
 		parent::__construct();
 		
-		//Form caller
+		//Cria o formulário
 		$this->form = new BootstrapFormBuilder(self::$formName);
-		//Form Tittle Setter
+		//Titulo
 		$this->form->setFormTitle('Escolha o local para registro:');
-		//Local choose form
+		
+		//Declara os criterios
 		$criteria_patrimonioId = new TCriteria();
 		$criteria_fk_patrimonioId_id = new TCriteria();
         $criteria_localAntigo = new TCriteria();
@@ -31,22 +32,23 @@ class EscolhaRegistro extends TPage{
 
         $criteria_fk_patrimonioId_id->setProperty('order', 'descricao asc');
 		
+		
+		//Cria o dropDown
 		  $dropdown = new TDBCombo('Local', 'controlepatrimonio', 'local', 'id', '{Descricao}', 'Local', $criteria_patrimonioId);
 			$dropdown->setSize('70%');
 			$dropdown->setChangeAction(new TAction([$this, 'onChangeDropdown']));
 		
-		$input = new TEntry('input');
-		
+		//Insere o mesmo no formulário
 		$row1 = $this->form->addFields([new TLabel("Local:", null, '14px', null)], [$dropdown]);
 		
 		//require input in Web Form
 		$dropdown->addValidation("Local", new TRequiredValidator()); 
 		
-		
+		//Reseta o WebForm 
 		$this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
 		
 		
-		//Button insertion       
+		//Declaração dos botões     
 		$btnAbrirCamera = $this->form->addAction("<i class='fa-solid fa-camera-retro'></i> Ler código", new TAction([$this, 'Redirecionar']), '#000000');
         $this->btnAbrirCamera = $btnAbrirCamera;
 		
@@ -55,7 +57,7 @@ class EscolhaRegistro extends TPage{
 		
 		
 		
-		//Wrapper Container
+		//Declara e insere o container do form principal na página
 		$container = new TVBox;
         $container->style = 'width: 100%';
         $container->class = 'form-container';
@@ -66,13 +68,7 @@ class EscolhaRegistro extends TPage{
 
 
     }
-	public function onShowCadMov($param){
-		
-		
-	}
-	public function onShowBack($param){
-		
-	}
+	//função que salva
 	 public function onSave($param = null) 
     {
         try{
@@ -90,21 +86,15 @@ class EscolhaRegistro extends TPage{
 			 	
 		}
     }
-	public function onLerCodigo($param){
-		
-	}
 	
+	//limpa o form
 	 public function onClear( $param ){
         $this->form->clear(true);
 		 
 		 TSession::setValue('selected_local', null);
     }
-
-	public function onShow($param )
-    {
-		
-		
-    }
+	
+	
 	public function show()
     {
         // check if the datagrid is already loaded
@@ -121,6 +111,7 @@ class EscolhaRegistro extends TPage{
     }
         parent::show();
     }
+	//Esse cara aqui vai enteder quando o dropDown Mudar
 	public static function onChangeDropdown($param){
     if (isset($param['Local'])) {
         $selected_value = $param['Local'];
@@ -129,6 +120,7 @@ class EscolhaRegistro extends TPage{
         TSession::setValue('selected_local', $selected_value);
     }
 }
+	//Esse vai redirecionar para a página e puxar com ele o que mudou no dropDown no campo de 'localAtual'
 	public function Redirecionar($param)
 {
     $selected_local = TSession::getValue('selected_local');
@@ -139,16 +131,16 @@ class EscolhaRegistro extends TPage{
     }
 
     try {
-        // Redireciona para a página com o local selecionado
+        //Redireciona para a página com o local selecionado
         AdiantiCoreApplication::loadPage('AbrirCamera', 'onShow', ['localAtual' => $selected_local]);
 
-        // Limpa o valor da sessão após o redirecionamento
+        //Limpa o valor da sessão após o redirecionamento
         TSession::setValue('selected_local', null);
     } catch (Exception $e) {
         new TMessage('error', $e->getMessage());
     }
 }
-
+		//Mesma coisa do de cima mas com o botão dois
 public function Redirecionar2($param)
 {
     $selected_local = TSession::getValue('selected_local');
@@ -168,4 +160,18 @@ public function Redirecionar2($param)
         new TMessage('error', $e->getMessage());
     	}
 	}
+
+//Redirecionadores, simplesmente estão aqui pra puxar as páginas.
+public function onShowCadMov($param){
+		
+	}
+public function onShowBack($param){
+		
+	}
+public function onLerCodigo($param){
+		
+	}
+public function onShow($param ){
+	
+    }
 }

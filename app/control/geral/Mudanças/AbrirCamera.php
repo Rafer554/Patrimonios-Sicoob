@@ -120,7 +120,8 @@ class AbrirCamera extends TPage {
 
         parent::add($container);
     }
-    
+    	/*Essa função vai alterar os dados automaticamente quando um patrimonio for escolhido la pelo 'procura_patrimonio', então se algum tiver algum problma com o comando estar puxando errado em alguma futura atualização do PHP provavelmente é entre esses dois o problema.*/
+	
     public static function alteraDados($param) {
         try {
             $codigoPatrimonio = $param['procura_patrimonio']; 
@@ -153,6 +154,7 @@ class AbrirCamera extends TPage {
         }
     }
     
+	//função que vai salvar:
     public function onSave($param = null) {
         try {
             TTransaction::open(self::$database); 
