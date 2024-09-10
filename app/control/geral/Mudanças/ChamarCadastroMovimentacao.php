@@ -106,7 +106,7 @@ class ChamarCadastroMovimentacao extends TPage {
         $btn_onclear = $this->form->addAction("Limpar formulário", new TAction([$this, 'onClear']), 'fas:eraser #dd5a43');
         $this->btn_onclear = $btn_onclear;
         
-        $btnBack = $this->form->addAction("Voltar", new TAction(['LerCodigoQR', 'onShowBack']), 'fa-backward fa-fw #000000');
+        $btnBack = $this->form->addAction("Voltar", new TAction(['EscolhaRegistro', 'onShowBack']), 'fa-backward fa-fw #000000');
         
 		//Adicionando o estilo e o formulario na box principal da página
         $container = new TVBox;

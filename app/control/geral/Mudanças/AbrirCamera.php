@@ -107,7 +107,7 @@ class AbrirCamera extends TPage {
         $btn_onclear = $this->form->addAction("Limpar formulário", new TAction([$this, 'onClear']), 'fas:eraser #dd5a43');
         $this->btn_onclear = $btn_onclear;
         
-        $btnBack = $this->form->addAction("Voltar", new TAction(['LerCodigoQR', 'onShowBack']), 'fa-backward fa-fw #000000');
+        $btnBack = $this->form->addAction("Voltar", new TAction(['EscolhaRegistro', 'onShowBack']), 'fa-backward fa-fw #000000');
         
 		//Adicionando o estilo e o formulario na box principal da página
         $container = new TVBox;
@@ -192,6 +192,8 @@ class AbrirCamera extends TPage {
     
     public function onClear($param) {
         $this->form->clear(true);
+		
+		TSession::setValue('selected_local', null);
     }
     
     public function onShowBack($param = null) {
@@ -225,11 +227,11 @@ class AbrirCamera extends TPage {
 			z-index: 9998;
         }
 		#btn {
-            width: 12vh;
+           width: 12vh;
             height: 3vh;
             position: fixed;
-            bottom:  91px;
-            right: 124vh;
+            top: 200px;
+            left: 340px;
             background-color: #1f91f3;
             color: #fff;
             border: none;
@@ -237,7 +239,7 @@ class AbrirCamera extends TPage {
             font-size: 14px;
             cursor: pointer;
             z-index: 9999;
-			box-shadow: 5px 5px;
+            box-shadow: 5px 5px;
 
         }
         #btn:hover {

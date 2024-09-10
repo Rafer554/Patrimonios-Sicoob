@@ -3,7 +3,7 @@
 use Adianti\Widget\Wrapper\TDBCombo;
 
 
-class LerCodigoQR extends TPage{
+class EscolhaRegistro extends TPage{
 		
    private $form; // form
    private $datagrid; // listing
@@ -50,11 +50,10 @@ class LerCodigoQR extends TPage{
 		$btnAbrirCamera = $this->form->addAction("<i class='fa-solid fa-camera-retro'></i> Ler código", new TAction([$this, 'Redirecionar']), '#000000');
         $this->btnAbrirCamera = $btnAbrirCamera;
 		
-		$btnManualForm = $this->form->addAction("<i class='fa-solid fa-file-lines'></i> Registrar manualmente", new TAction([ 'ChamarCadastroMovimentacao', 'onShowCadMov']), '#000000');
+		$btnManualForm = $this->form->addAction("<i class='fa-solid fa-file-lines'></i> Registrar manualmente", new TAction([ $this, 'Redirecionar2']), '#000000');
 		$this->btnManualForm = $btnManualForm;
 		
-		$btn_LerCodigo = $this->form->addAction("<i class='fa-solid fa-eye'></i> Verificar Código",new TAction(['Visualizar', 'onLerCodigo']), 'fa-eye fa-fw #000000');
-		$this->btn_LerCodigo = $btn_LerCodigo;
+		
 		
 		//Wrapper Container
 		$container = new TVBox;
@@ -97,7 +96,8 @@ class LerCodigoQR extends TPage{
 	
 	 public function onClear( $param ){
         $this->form->clear(true);
-
+		 
+		 TSession::setValue('selected_local', null);
     }
 
 	public function onShow($param )
@@ -108,17 +108,17 @@ class LerCodigoQR extends TPage{
 	public function show()
     {
         // check if the datagrid is already loaded
-        if (!$this->loaded AND (!isset($_GET['method']) OR !(in_array($_GET['method'],  $this->showMethods))) )
+          if (!$this->loaded AND (!isset($_GET['method']) OR !(in_array($_GET['method'],  $this->showMethods))) )
+    {
+        if (func_num_args() > 0)
         {
-            if (func_num_args() > 0)
-            {
-                $this->onReload( func_get_arg(0) );
-            }
-            else
-            {
-                $this->onReload();
-            }
+            $this->onReload( func_get_arg(0) );
         }
+        else
+        {
+            $this->onReload();
+        }
+    }
         parent::show();
     }
 	public static function onChangeDropdown($param){
@@ -131,14 +131,41 @@ class LerCodigoQR extends TPage{
 }
 	public function Redirecionar($param)
 {
-    try {
-        $selected_local = TSession::getValue('selected_local');
+    $selected_local = TSession::getValue('selected_local');
 
-        // Redirect to AbrirCamera page with the selected local
+    if (!$selected_local) {
+        new TMessage('error', 'Por favor, selecione um local antes de continuar.');
+        return;
+    }
+
+    try {
+        // Redireciona para a página com o local selecionado
         AdiantiCoreApplication::loadPage('AbrirCamera', 'onShow', ['localAtual' => $selected_local]);
+
+        // Limpa o valor da sessão após o redirecionamento
+        TSession::setValue('selected_local', null);
     } catch (Exception $e) {
         new TMessage('error', $e->getMessage());
     }
-	}
+}
 
+public function Redirecionar2($param)
+{
+    $selected_local = TSession::getValue('selected_local');
+
+    if (!$selected_local) {
+        new TMessage('error', 'Por favor, selecione um local antes de continuar.');
+        return;
+    }
+
+    try {
+        // Redireciona para a página com o local selecionado
+        AdiantiCoreApplication::loadPage('ChamarCadastroMovimentacao', 'onShowCardMov', ['localAtual' => $selected_local]);
+
+        // Limpa o valor da sessão após o redirecionamento
+        TSession::setValue('selected_local', null);
+    } catch (Exception $e) {
+        new TMessage('error', $e->getMessage());
+    	}
+	}
 }

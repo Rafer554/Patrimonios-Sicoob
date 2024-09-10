@@ -6,12 +6,12 @@
     <menu>
 		<menuitem label="Movimentação Patrimonial">
         <icon>fa:exchange fa-fw</icon>
-        <action>LerCodigoQR#method=onShow</action>
+        <action>EscolhaRegistro#method=onShow</action>
       </menuitem>
-      <menuitem label="Cadastro de Movimentação">
-        <icon>fa: fa-address-card</icon>
-        <action>ChamarCadastroMovimentacao#method=onShowCadMov</action>
-      </menuitem>
+      <menuitem label="Visualizar Patrimônio">
+  		<icon>fa:eye fa-fw</icon>	
+  		<action>Visualizar#method=onLerCodigo</action>
+	  </menuitem>
       <menuitem label="Movimentacaodepreciacaos">
         <icon>far:circle fa-fw </icon>
         <action>MovimentacaodepreciacaoList#method=onShow</action>

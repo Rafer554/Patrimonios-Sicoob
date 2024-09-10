@@ -827,3 +827,45 @@ Stack trace:
 #3 {main}
   thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
 [09-Sep-2024 13:32:05 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\LocalFormView.php on line 29
+[10-Sep-2024 09:08:30 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[10-Sep-2024 09:08:46 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 12: parser error : Opening and ending tag mismatch: icon line 12 and i in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():         &lt;icon&gt;fa-solid fa-eye&lt;/i&gt;&lt;/icon&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():                                  ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 12: parser error : Opening and ending tag mismatch: menuitem line 12 and icon in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():         &lt;icon&gt;fa-solid fa-eye&lt;/i&gt;&lt;/icon&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():                                         ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 14: parser error : Opening and ending tag mismatch: menu line 12 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():       &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():                  ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 67: parser error : Opening and ending tag mismatch: menuitem line 12 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():     &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():            ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 68: parser error : Opening and ending tag mismatch: menu line 12 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():              ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 69: parser error : Extra content at the end of the document in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   &lt;menuitem label=&quot;_t{Administration}&quot;&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 09:20:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[10-Sep-2024 11:21:06 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare EscolhaRegistro::Redirecionar2() in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\EscolhaRegistro.php on line 171

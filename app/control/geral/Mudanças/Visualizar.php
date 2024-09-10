@@ -110,7 +110,7 @@ class Visualizar extends TPage {
 		
 		
 		//Declaração das linhas:
-        $row1 = $this->form->addFields([new TLabel("Código Patrimônio:", null, '14px', null)], [$procura_patrimonio]);
+        $row1 = $this->form->addFields([new TLabel("Busca:", null, '14px', null)], [$procura_patrimonio]);
         $row2 = $this->form->addFields([new TLabel("Nome:", null, '14px', null)], [$procura_patrimonio_display]);
 		$row3 = $this->form->addFields([new TLabel("Patrimônio:", null, '14px', null)], [$codPatrimonio]);
 		
@@ -128,7 +128,7 @@ class Visualizar extends TPage {
 		
 		
 		//Declaração dos botões
-		$btnBack = $this->form->addAction("Voltar", new TAction(['LerCodigoQR', 'onShowBack']), 'fa-backward fa-fw #000000');
+		
 		
 		
 		
@@ -188,49 +188,57 @@ class Visualizar extends TPage {
     }
 	
 	public function onLerCodigo ($param){
-		?>
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Leitor de Código de Barras</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
     <style>
+        /* In order to place the tracking correctly */
         canvas.drawing, canvas.drawingBuffer {
             position: absolute;
             left: 0;
             top: 0;
         }
         #scanner-container {
-            width: 100%;
-            height: 100%;
+            left: 330px;
+            top: 400px;
+            width: 0px;
+            height: 0px;
             position: absolute;
             z-index: 9998;
-			top:575px;
+			
         }
         #btn {
-            width: 150px;
-            height: 50px;
+            width: 12vh;
+            height: 3vh;
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #32CD32;
+            top: 200px;
+            left: 340px;
+            background-color: #1f91f3;
             color: #fff;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 2px;
+            font-size: 14px;
             cursor: pointer;
             z-index: 9999;
+            box-shadow: 5px 5px;
         }
         #btn:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
+    <!-- Div to show the scanner -->
     <div id="scanner-container"></div>
-    <button id="btn">Iniciar Leitura</button>
+    <input type="button" id="btn" value="Iniciar Camera" />
 
     <script>
         var _scannerIsRunning = false;
@@ -258,40 +266,84 @@ class Visualizar extends TPage {
                         "upc_reader",
                         "upc_e_reader",
                         "i2of5_reader"
-                    ]
-                }
+                    ],
+                    debug: {
+                        showCanvas: true,
+                        showPatches: true,
+                        showFoundPatches: true,
+                        showSkeleton: true,
+                        showLabels: true,
+                        showPatchLabels: true,
+                        showRemainingPatchLabels: true,
+                        boxFromPatches: {
+                            showTransformed: true,
+                            showTransformedBox: true,
+                            showBB: true
+                        }
+                    }
+                },
+
             }, function (err) {
                 if (err) {
                     console.log(err);
-                    return;
+                    return
                 }
 
                 console.log("Initialization finished. Ready to start");
                 Quagga.start();
 
+                // Set flag to is running
                 _scannerIsRunning = true;
+            });
+
+            Quagga.onProcessed(function (result) {
+                var drawingCtx = Quagga.canvas.ctx.overlay,
+                drawingCanvas = Quagga.canvas.dom.overlay;
+
+                if (result) {
+                    if (result.boxes) {
+                        drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
+                        result.boxes.filter(function (box) {
+                            return box !== result.box;
+                        }).forEach(function (box) {
+                            Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, { color: "green", lineWidth: 2 });
+                        });
+                    }
+
+                    if (result.box) {
+                        Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "#00F", lineWidth: 2 });
+                    }
+
+                    if (result.codeResult && result.codeResult.code) {
+                        Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 3 });
+                    }
+                }
             });
 
             Quagga.onDetected(function (result) {
                 console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
 
+                // Atualiza o input
                 var patrimonioInput = document.querySelector('input[name="procura_patrimonio"]');
                 patrimonioInput.value = result.codeResult.code;
 
+                // Foco no campo 'Código Patrimônio'
                 patrimonioInput.focus();
 
-                Quagga.stop();
-                _scannerIsRunning = false;
-
+                // Continue the Scanner
+                Quagga.start();
+                
+                // Remove o foco do campo
                 setTimeout(function() {
                     patrimonioInput.blur();  
                 }, 100);
             });
         }
 
+        // Encerra o Scanner on action
         document.getElementById("btn").addEventListener("click", function () {
             if (_scannerIsRunning) {
-                Quagga.stop();
+                Quagga.stop();  
                 _scannerIsRunning = false;
             } else {
                 startScanner();
@@ -304,4 +356,5 @@ class Visualizar extends TPage {
     }
 }
 ?>
+
 
