@@ -61,7 +61,7 @@ class AbrirCamera extends TPage {
         $dataInspecao = new TDate('dataInspecao');
         $dataInspecao->addValidation("DataInspecao", new TRequiredValidator());
         $dataInspecao->setDatabaseMask('yyyy-mm-dd');
-        $dataInspecao->setSize(110);
+        $dataInspecao->setSize('40%');
         
 		//Mostra os locais para a movimentação:
         $localAtual = new TDBUniqueSearch('localAtual', 'controlepatrimonio', 'Local', 'id', 'Descricao', 'id asc', $criteria_localAtual);
@@ -223,25 +223,25 @@ class AbrirCamera extends TPage {
         #scanner-container {
 			right: 525px;
 			top: 225px;
-            width: 0px;
-            height: 0px;
+            width: 100%;
+    		height: 100vh
             position: absolute;
 			z-index: 9998;
         }
 		#btn {
-           width: 12vh;
-            height: 3vh;
-            position: fixed;
-            top: 200px;
-            left: 340px;
-            background-color: #1f91f3;
-            color: #fff;
-            border: none;
-            border-radius: 2px;
-            font-size: 14px;
-            cursor: pointer;
-            z-index: 9999;
-            box-shadow: 5px 5px;
+			width: 12vh;
+			height: 5vh;
+			position: fixed; /* Faz o botão ficar fixo na tela */
+			top: 70px; /* Posição vertical do botão */
+			left: 310px; /* Posição horizontal do botão */
+			background-color: #8bc34a;
+			color: #fff;
+			border: none;
+			border-radius: 2px;
+			font-size: 14px;
+			cursor: pointer;
+            z-index: 3;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 
         }
         #btn:hover {
@@ -265,8 +265,8 @@ class AbrirCamera extends TPage {
                     type: "LiveStream",
                     target: document.querySelector('#scanner-container'),
                     constraints: {
-                        width: 480,
-                        height: 320,
+                        width: 300,
+                        height: 300,
                         facingMode: "environment"
                     },
                 },

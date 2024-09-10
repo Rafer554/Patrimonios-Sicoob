@@ -869,3 +869,10 @@ Stack trace:
 #5 {main}
   thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
 [10-Sep-2024 11:21:06 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare EscolhaRegistro::Redirecionar2() in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\EscolhaRegistro.php on line 171
+[10-Sep-2024 14:29:59 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "LerCodigoQR" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('LerCodigoQR')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
