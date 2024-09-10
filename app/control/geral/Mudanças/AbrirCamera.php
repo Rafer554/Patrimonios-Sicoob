@@ -253,7 +253,7 @@ class AbrirCamera extends TPage {
 <body>
     <!-- Div to show the scanner -->
     <div id="scanner-container"></div>
-    <input type="button" id="btn" value="Iniciar Camera" />
+    <input type="button" id="btn" value="Iniciar Câmera" />
 
     <script>
         var _scannerIsRunning = false;

@@ -12,6 +12,10 @@
   		<icon>fa:eye fa-fw</icon>	
   		<action>Visualizar#method=onLerCodigo</action>
 	  </menuitem>
+		 <menuitem label="Listagem de Patrimônios">
+        <icon>fa:address-book fa-fw </icon>
+        <action>PatrimonioList#method=onShow</action>
+      </menuitem>
       <menuitem label="Movimentacaodepreciacaos">
         <icon>far:circle fa-fw </icon>
         <action>MovimentacaodepreciacaoList#method=onShow</action>
@@ -31,10 +35,6 @@
       <menuitem label="Locals">
         <icon>far:circle fa-fw </icon>
         <action>LocalList#method=onShow</action>
-      </menuitem>
-      <menuitem label="Patrimonios">
-        <icon>far:circle fa-fw </icon>
-        <action>PatrimonioList#method=onShow</action>
       </menuitem>
       <menuitem label="Movimentacaos">
         <icon>far:circle fa-fw </icon>
