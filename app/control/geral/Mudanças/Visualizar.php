@@ -20,7 +20,7 @@ class Visualizar extends TPage {
         
         // Criando o Form:
         $this->form = new BootstrapFormBuilder(self::$formName);
-        $this->form->setFormTitle("Registrar movimentação");
+        $this->form->setFormTitle("Visualizar Patrimonio");
         
         // Definindo os critérios:
         $criteriaprocura_patrimonio = new TCriteria();
@@ -215,10 +215,11 @@ class Visualizar extends TPage {
         #scanner-container {
             left: 330px;
             top: 400px;
-            width: 0px;
-            height: 0px;
+            width: 480px;
+            height: 320px;
             position: absolute;
             z-index: 9998;
+            
 			
         }
         #btn {

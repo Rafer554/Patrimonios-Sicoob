@@ -114,7 +114,7 @@ class AbrirCamera extends TPage {
         $container->style = 'width: 100%';
         $container->class = 'form-container';
         if (empty($param['target_container'])) {
-            $container->add(TBreadCrumb::create(["Geral", "Registrar movimentação Patrimonial"]));
+            $container->add(TBreadCrumb::create(["Geral", "---Registrar movimentação Patrimonial"]));
         }
         $container->add($this->form);
 
@@ -212,7 +212,7 @@ class AbrirCamera extends TPage {
     <title>Leitor de Código de Barras</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+    <script src="C:\xampp\htdocs\patrimonio\app\control\geral\QuaggaJS\quagga.min.js"></script>
     <style>
         /* In order to place the tracking correctly */
         canvas.drawing, canvas.drawingBuffer {
@@ -265,8 +265,8 @@ class AbrirCamera extends TPage {
                     type: "LiveStream",
                     target: document.querySelector('#scanner-container'),
                     constraints: {
-                        width: 300,
-                        height: 300,
+                        width: 480,
+                        height: 320,
                         facingMode: "environment"
                     },
                 },

@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu>
-  <menuitem label="Geral">
-    <icon>fas:archive fa-fw </icon>
-    <menu>
-		<menuitem label="Movimentação Patrimonial">
+  <menuitem label="Patrimonio">
+    <icon>fas:barcode fa-fw </icon>
+  <menu> 
+  <menuitem label="Cadastrar Patrimônio">
+        <icon>fa:plus fa-fw</icon>
+        <action>PatrimonioForm#method=onShow</action>
+      </menuitem>
+
+    <menuitem label="Visualizar Patrimônio">
+  		 <icon>fa:eye fa-fw</icon>	
+  		 <action>Visualizar#method=onLerCodigo</action>
+	  </menuitem>
+
+		 <menuitem label="Listagem de Patrimônios">
+        <icon>fa:book fa-fw </icon>
+        <action>PatrimonioList#method=onShow</action>
+      </menuitem>
+
+      <menuitem label="Movimentação Patrimonial">
         <icon>fa:exchange fa-fw</icon>
         <action>EscolhaRegistro#method=onShow</action>
       </menuitem>
-      <menuitem label="Visualizar Patrimônio">
-  		<icon>fa:eye fa-fw</icon>	
-  		<action>Visualizar#method=onLerCodigo</action>
-	  </menuitem>
-		 <menuitem label="Listagem de Patrimônios">
-        <icon>fa:address-book fa-fw </icon>
-        <action>PatrimonioList#method=onShow</action>
+
+    <menuitem label="Listagem de Movimentações">
+        <icon>fa:book fa-fw </icon>
+        <action>MovimentacaoList#method=onShow</action>
       </menuitem>
-      <menuitem label="Movimentacaodepreciacaos">
+
+   </menu>
+</menuitem>
+
+  <menuitem label = "Depreciação">
+  <icon>fa:arrow-trend-down fa-fw</icon>
+  <menu> 
+
+      <menuitem label="Movimentação de Depreciação">
         <icon>far:circle fa-fw </icon>
         <action>MovimentacaodepreciacaoList#method=onShow</action>
       </menuitem>
@@ -36,18 +56,29 @@
         <icon>far:circle fa-fw </icon>
         <action>LocalList#method=onShow</action>
       </menuitem>
-      <menuitem label="Movimentacaos">
-        <icon>far:circle fa-fw </icon>
-        <action>MovimentacaoList#method=onShow</action>
-      </menuitem>
+
+  </menu>
+  </menuitem>
+
+<menuitem label = "Relatórios">
+  <icon>fa:book-open fa-fw</icon>
+  <menu>
+
       <menuitem label="RelatorioPatrimonio">
-        <icon>far:circle fa-fw </icon>
+        <icon>fa:circle fa-fw </icon>
         <action>PatrimonioReport#method=onShow</action>
       </menuitem>
       <menuitem label="Relatório depreciação ">
-        <icon>far:circle fa-fw </icon>
+        <icon>fa:square fa-fw </icon>
         <action>MovimentacaodepreciacaoReport#method=onShow</action>
       </menuitem>
+
+  </menu>
+  </menuitem>
+
+<menuitem label = "Testes">
+  <icon>far:circle fa-fw </icon>
+  <menu> 
       <menuitem label="LeitorCod">
         <icon>fa:adjust fa-fw #6a2c2c</icon>
         <action>Leitor#method=onShow</action>

@@ -31,7 +31,7 @@ class MovimentacaodepreciacaoList extends TPage
         $this->form = new BootstrapFormBuilder(self::$formName);
 
         // define the form title
-        $this->form->setFormTitle("Listagem de movimentacaodepreciacaos");
+        $this->form->setFormTitle("Listagem movimentacao depreciação");
         $this->limit = 20;
 
         $criteria_patrimonioId = new TCriteria();

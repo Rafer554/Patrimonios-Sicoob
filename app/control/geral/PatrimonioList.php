@@ -73,9 +73,9 @@ class PatrimonioList extends TPage
         $column_ativo = new TDataGridColumn('ativo', "Ativo", 'left');
         $column_descricao = new TDataGridColumn('descricao', "Descrição", 'left');
         $column_responsavel = new TDataGridColumn('responsavel', "Responsavel", 'left');
-        $column_ValorOriginal = new TDataGridColumn('ValorOriginal', "ValorOriginal", 'left');
-        $column_DataEntrada = new TDataGridColumn('DataEntrada', "DataEntrada", 'left');
-        $column_ValorAtual = new TDataGridColumn('ValorAtual', "ValorAtual", 'left');
+        $column_ValorOriginal = new TDataGridColumn('ValorOriginal', "Valor Original", 'left');
+        $column_DataEntrada = new TDataGridColumn('DataEntrada', "Data Entrada", 'left');
+        $column_ValorAtual = new TDataGridColumn('ValorAtual', "Valor Atual", 'left');
 
         $order_CodigodoPatrimonio = new TAction(array($this, 'onReload'));
         $order_CodigodoPatrimonio->setParameter('order', 'CodigodoPatrimonio');
