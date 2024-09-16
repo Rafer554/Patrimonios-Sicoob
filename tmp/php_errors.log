@@ -1223,3 +1223,27 @@ Stack trace:
 #2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
 #3 {main}
   thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[12-Sep-2024 13:55:01 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "TipoBaixaList" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('TipoBaixaList')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[12-Sep-2024 13:57:55 America/Sao_Paulo] PHP Parse error:  Unclosed '(' on line 199 in C:\xampp\htdocs\patrimonio\app\control\geral\LocalList.php on line 200
+[12-Sep-2024 13:58:09 America/Sao_Paulo] PHP Parse error:  Unclosed '(' on line 199 does not match '}' in C:\xampp\htdocs\patrimonio\app\control\geral\LocalList.php on line 200
+[12-Sep-2024 14:03:06 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in C:\xampp\htdocs\patrimonio\app\control\geral\LocalList.php on line 232
+[12-Sep-2024 15:32:19 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[16-Sep-2024 08:06:17 America/Sao_Paulo] PHP Warning:  Undefined variable $localatual in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 74
+[16-Sep-2024 08:20:07 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Leitor.php on line 24
+[16-Sep-2024 09:21:04 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "new" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 30
+[16-Sep-2024 09:21:17 America/Sao_Paulo] PHP Warning:  Undefined variable $criteria_fk_patrimonioId_id in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 30
+[16-Sep-2024 09:21:21 America/Sao_Paulo] PHP Warning:  Undefined array key "procura_patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 135
+[16-Sep-2024 09:21:21 America/Sao_Paulo] PHP Warning:  Undefined array key "procura_patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 135
+[16-Sep-2024 09:21:39 America/Sao_Paulo] PHP Warning:  Undefined array key "procura_patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 135
+[16-Sep-2024 09:21:41 America/Sao_Paulo] PHP Warning:  Undefined array key "procura_patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 135
+[16-Sep-2024 09:21:41 America/Sao_Paulo] PHP Warning:  Undefined array key "procura_patrimonio" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 135
+[16-Sep-2024 09:34:39 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare AbrirCamera::onClear() in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 191
+[16-Sep-2024 09:36:14 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 172
+[16-Sep-2024 09:36:14 America/Sao_Paulo] PHP Warning:  Undefined array key "dataInspecao" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 175
+[16-Sep-2024 09:36:14 America/Sao_Paulo] PHP Warning:  Undefined array key "Descricao" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176

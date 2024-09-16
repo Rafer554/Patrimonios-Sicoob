@@ -61,7 +61,7 @@ class AbrirCamera extends TPage {
         $dataInspecao = new TDate('dataInspecao');
         $dataInspecao->addValidation("DataInspecao", new TRequiredValidator());
         $dataInspecao->setDatabaseMask('yyyy-mm-dd');
-        $dataInspecao->setSize('40%');
+        $dataInspecao->setSize(110);
         
 		//Mostra os locais para a movimentação:
         $localAtual = new TDBUniqueSearch('localAtual', 'controlepatrimonio', 'Local', 'id', 'Descricao', 'id asc', $criteria_localAtual);
@@ -91,12 +91,12 @@ class AbrirCamera extends TPage {
         $row4 = $this->form->addFields([new TLabel(" ", null, '14px', null, '100%')],[]);
 		
 		//Continuação da definição:
-        $row5 = $this->form->addFields([new TLabel("Código do Patrimonio:", '#ff0000', '14px', null)], [$patrimonioId]);
+       //$row5 = $this->form->addFields([new TLabel("Código do Patrimonio:", '#ff0000', '14px', null)], [$patrimonioId]);
         $row6 = $this->form->addFields([new TLabel("Local Antigo:", '#ff0000', '14px', null)], [$localAntigo]);
-        $row7 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)], [$dataInspecao]);
+       //$row7 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)], [$dataInspecao]);
         $row8 = $this->form->addFields([new TLabel("Local Atual:", null, '14px', null)], [$localAtual]);
-        $row9 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)], [$Descricao]);
-        $row10 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)], [$imagem]);
+       //$row9 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)], [$Descricao]);
+       //$row10 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)], [$imagem]);
         
 		
 		//Declaração e implementação dos botões
@@ -114,7 +114,7 @@ class AbrirCamera extends TPage {
         $container->style = 'width: 100%';
         $container->class = 'form-container';
         if (empty($param['target_container'])) {
-            $container->add(TBreadCrumb::create(["Geral", "---Registrar movimentação Patrimonial"]));
+            $container->add(TBreadCrumb::create(["Geral", "Registrar movimentação Patrimonial"]));
         }
         $container->add($this->form);
 
@@ -158,31 +158,28 @@ class AbrirCamera extends TPage {
     public function onSave($param = null) {
         try {
             TTransaction::open(self::$database); 
-
+    
             $messageAction = null;
-
+    
             $this->form->validate(); 
-
+    
             $object = new Movimentacao(); 
-
+    
             $data = $this->form->getData(); 
-
+    
             $object->fromArray((array) $data); 
             $patrimonio = new Patrimonio($object->patrimonioId);
             $patrimonio->Local_id = $param['localAtual'];
             $patrimonio->store();
-
-            $imagem_dir = 'imagens';  
-
-            $object->store(); 
-
-            $this->saveFile($object, $data, 'imagem', $imagem_dir); 
-
+    
+            // Remova ou comente a linha abaixo se não for salvar arquivos
+            // $this->saveFile($object, $data, 'imagem', $imagem_dir); 
+    
             $data->id = $object->id; 
-
+    
             $this->form->setData($data); 
             TTransaction::close(); 
-
+    
             new TMessage('info', AdiantiCoreTranslator::translate('Record saved'), $messageAction);
         }
         catch (Exception $e) {
@@ -191,11 +188,18 @@ class AbrirCamera extends TPage {
             TTransaction::rollback(); 
         }
     }
+	
+	
     
     public function onClear($param) {
-        $this->form->clear(true);
-		
-		TSession::setValue('selected_local', null);
+        $script = "
+        <script type='text/javascript'>
+            window.location.reload();
+        </script>
+    ";
+    
+    // Adiciona o script ao final do HTML da página
+    parent::add($script);
     }
     
     public function onShowBack($param = null) {
@@ -208,7 +212,7 @@ class AbrirCamera extends TPage {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>  
     <title>Leitor de Código de Barras</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -351,8 +355,14 @@ class AbrirCamera extends TPage {
                 
                 // Remove o foco do campo
                 setTimeout(function() {
-                    patrimonioInput.blur();  
-                }, 100);
+        patrimonioInput.blur();
+        
+        // Aciona o clique no botão "Salvar"
+        var saveButton = document.getElementById('btn_onsave');
+        if (saveButton) {
+            saveButton.click();
+        }
+    }, 100);
             });
         }
 

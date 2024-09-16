@@ -9,7 +9,7 @@
         <action>PatrimonioForm#method=onShow</action>
       </menuitem>
 
-    <menuitem label="Visualizar Patrimônio">
+    <menuitem label="Ler Código de Patrimônio">
   		 <icon>fa:eye fa-fw</icon>	
   		 <action>Visualizar#method=onLerCodigo</action>
 	  </menuitem>
@@ -32,8 +32,8 @@
    </menu>
 </menuitem>
 
-  <menuitem label = "Depreciação">
-  <icon>fa:arrow-trend-down fa-fw</icon>
+  <menuitem label = "Funções">
+  <icon>fa:scroll fa-fw</icon>
   <menu> 
 
       <menuitem label="Movimentação de Depreciação">

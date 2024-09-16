@@ -155,31 +155,28 @@ class ChamarCadastroMovimentacao extends TPage {
     public function onSave($param = null) {
         try {
             TTransaction::open(self::$database); 
-
+    
             $messageAction = null;
-
+    
             $this->form->validate(); 
-
+    
             $object = new Movimentacao(); 
-
+    
             $data = $this->form->getData(); 
-
+    
             $object->fromArray((array) $data); 
             $patrimonio = new Patrimonio($object->patrimonioId);
             $patrimonio->Local_id = $param['localAtual'];
             $patrimonio->store();
-
-            $imagem_dir = 'imagens';  
-
-            $object->store(); 
-
-            $this->saveFile($object, $data, 'imagem', $imagem_dir); 
-
+    
+            // Remova ou comente a linha abaixo se não for salvar arquivos
+            // $this->saveFile($object, $data, 'imagem', $imagem_dir); 
+    
             $data->id = $object->id; 
-
+    
             $this->form->setData($data); 
             TTransaction::close(); 
-
+    
             new TMessage('info', AdiantiCoreTranslator::translate('Record saved'), $messageAction);
         }
         catch (Exception $e) {
@@ -188,6 +185,7 @@ class ChamarCadastroMovimentacao extends TPage {
             TTransaction::rollback(); 
         }
     }
+    
     
     public function onClear($param) {
         $this->form->clear(true);
