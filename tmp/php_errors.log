@@ -1247,3 +1247,11 @@ Stack trace:
 [16-Sep-2024 09:36:14 America/Sao_Paulo] PHP Warning:  Undefined array key "patrimonioId" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 172
 [16-Sep-2024 09:36:14 America/Sao_Paulo] PHP Warning:  Undefined array key "dataInspecao" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 175
 [16-Sep-2024 09:36:14 America/Sao_Paulo] PHP Warning:  Undefined array key "Descricao" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
+[17-Sep-2024 10:05:54 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "catch", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\ChamarCadastroMovimentacao.php on line 185
+[17-Sep-2024 10:06:21 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\ChamarCadastroMovimentacao.php on line 195
+[17-Sep-2024 14:03:02 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$dataInspecao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
+[17-Sep-2024 14:03:02 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 177
+[17-Sep-2024 14:03:23 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$dataInspecao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 175
+[17-Sep-2024 14:03:23 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
+[17-Sep-2024 14:03:46 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
+[17-Sep-2024 14:11:30 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176

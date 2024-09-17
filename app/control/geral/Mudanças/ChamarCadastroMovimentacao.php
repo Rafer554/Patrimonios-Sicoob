@@ -140,7 +140,7 @@ class ChamarCadastroMovimentacao extends TPage {
                 $obj->{'procura_patrimonio_display'} = $result->descricao;
                 $obj->{'patrimonioId'} = $result->id;
                 $obj->{'localAntigo'} = $result->Local_id;
-                $obj->{'dataInspecao'} = date('d/m/Y');
+                $obj->{'dataInspecao'} = date('Y/m/d');
 
                 TForm::sendData(self::$formName, $obj);  // Atualize os dados no formulário
             }
@@ -152,40 +152,58 @@ class ChamarCadastroMovimentacao extends TPage {
         }
     }
     
+    
     public function onSave($param = null) {
         try {
-            TTransaction::open(self::$database); 
+            TTransaction::open(self::$database); // Abre a transação com o banco de dados
+            
+            $data = $this->form->getData(); // Obtém os dados do formulário
     
-            $messageAction = null;
-    
-            $this->form->validate(); 
-    
-            $object = new Movimentacao(); 
-    
-            $data = $this->form->getData(); 
-    
-            $object->fromArray((array) $data); 
-            $patrimonio = new Patrimonio($object->patrimonioId);
-            $patrimonio->Local_id = $param['localAtual'];
-            $patrimonio->store();
-    
-            // Remova ou comente a linha abaixo se não for salvar arquivos
-            // $this->saveFile($object, $data, 'imagem', $imagem_dir); 
-    
-            $data->id = $object->id; 
-    
-            $this->form->setData($data); 
+            // Verifica se o patrimônio existe antes de tentar criar uma movimentação
+            $patrimonio = new Patrimonio($data->patrimonioId);
+            
+            if (!$patrimonio->id) {
+                throw new Exception('O patrimônio selecionado não existe.');
+            }
+            
+            // Cria um objeto para a tabela Movimentacao
+            $movimentacao = new Movimentacao();
+            $movimentacao->localAntigo = $data->localAntigo;
+            $movimentacao->dataInspecao = $data->dataInspecao;
+            $movimentacao->Descricao = $data->Descricao;
+            $movimentacao->patrimonioId = $data->patrimonioId; 
+            
+            // Tratamento da imagem
+            if (isset($_FILES['Escolha uma Imagem']) && $_FILES['Escolha uma Imagem']['error'] == UPLOAD_ERR_OK) {
+                $imagemPath = 'path/to/your/upload/directory/' . $_FILES['Escolha uma Imagem']['name'];
+                move_uploaded_file($_FILES['Escolha uma Imagem']['tmp_name'], $imagemPath);
+                $movimentacao->imagem = $imagemPath; 
+            }
+            
+            // Salva o registro de movimentacao
+            $movimentacao->store();
+            
+            // Atualiza a tabela Patrimonio (se necessário)
+            $patrimonio->Local_id = $data->localAtual; 
+            $patrimonio->store(); 
+            
+            
+            // Fecha a transação
             TTransaction::close(); 
-    
-            new TMessage('info', AdiantiCoreTranslator::translate('Record saved'), $messageAction);
-        }
-        catch (Exception $e) {
-            new TMessage('error', $e->getMessage()); 
-            $this->form->setData($this->form->getData()); 
+            new TMessage('info', 'Dados salvos com sucesso!');
+
+            TApplication::loadPage('EscolhaRegistro', 'onShow');
+            
+        } catch (Exception $e) {
+            
             TTransaction::rollback(); 
+            
+            new TMessage('error', $e->getMessage()); 
         }
     }
     
+
+
     
     public function onClear($param) {
         $this->form->clear(true);

@@ -48,9 +48,9 @@ class MovimentacaoList extends TPage
         $localAntigo->setSize('70%');
         $patrimonioId->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("LocalAntigo:", null, '14px', null)],[$localAntigo]);
-        $row2 = $this->form->addFields([new TLabel("PatrimonioId:", null, '14px', null)],[$patrimonioId]);
-        $row3 = $this->form->addFields([new TLabel("DataInspecao:", null, '14px', null)],[$dataInspecao]);
+        $row1 = $this->form->addFields([new TLabel("Local Antigo:", null, '14px', null)],[$localAntigo]);
+        $row2 = $this->form->addFields([new TLabel("Patrimonio:", null, '14px', null)],[$patrimonioId]);
+        $row3 = $this->form->addFields([new TLabel("Data Inspecao:", null, '14px', null)],[$dataInspecao]);
 
         // keep the form filled during navigation with session data
         $this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );

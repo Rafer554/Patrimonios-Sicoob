@@ -5,7 +5,7 @@ class AbrirCamera extends TPage {
     private static $database = 'controlepatrimonio';
     private static $activeRecord = 'Movimentacao';
     private static $primaryKey = 'id';
-    private static $formName = 'form_teste';
+    private static $formName = 'form_Movimentacao';
     
     public function __construct($param) {
         parent::__construct();
@@ -44,7 +44,8 @@ class AbrirCamera extends TPage {
         $patrimonioId->setMinLength(2);
         $patrimonioId->setMask('{CodigodoPatrimonio}');
         $patrimonioId->setSize('40%');
-		
+		$patrimonioId->setEditable(false);
+
 		//Mostra o patrimonio pesquisado
         $pesquisaPatrimonioId = new TEntry('pesquisaPatrimonioId');
         $pesquisaPatrimonioId->setEditable(false);
@@ -56,7 +57,8 @@ class AbrirCamera extends TPage {
         $localAntigo->setMinLength(2);
         $localAntigo->setMask('{Descricao}');
         $localAntigo->setSize('40%');
-        
+        $localAntigo->setEditable(false);
+
         //Seta a data atual:
         $dataInspecao = new TDate('dataInspecao');
         $dataInspecao->addValidation("DataInspecao", new TRequiredValidator());
@@ -71,7 +73,8 @@ class AbrirCamera extends TPage {
 			if (isset($param['localAtual'])) {
 				$localAtualValue = $param['localAtual'];
 				$localAtual->setValue($localAtualValue);}
-        
+        $localAtual->setEditable(false);
+
 		//Campo para adicionar descrição
         $Descricao = new THtmlEditor('Descricao');
         $Descricao->setSize('40%', 110);
@@ -80,7 +83,6 @@ class AbrirCamera extends TPage {
         $imagem = new TFile('Escolha uma Imagem');
         $imagem->enableFileHandling();
         $imagem->setSize('40%');
-        
 		
 		//Definição de ordem e campos do formulário
         $row1 = $this->form->addFields([new TLabel("ID:", null, '14px', null)], [$pesquisaPatrimonioId]);
@@ -90,17 +92,18 @@ class AbrirCamera extends TPage {
 		//Espaçamento visando melhor visualização Userside
         $row4 = $this->form->addFields([new TLabel(" ", null, '14px', null, '100%')],[]);
 		
-		//Continuação da definição:
-       //$row5 = $this->form->addFields([new TLabel("Código do Patrimonio:", '#ff0000', '14px', null)], [$patrimonioId]);
-        $row6 = $this->form->addFields([new TLabel("Local Antigo:", '#ff0000', '14px', null)], [$localAntigo]);
-       //$row7 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)], [$dataInspecao]);
-        $row8 = $this->form->addFields([new TLabel("Local Atual:", null, '14px', null)], [$localAtual]);
-       //$row9 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)], [$Descricao]);
-       //$row10 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)], [$imagem]);
+	    //Continuação da definição:
+        $row5 = $this->form->addFields([new TLabel("Código do Patrimonio:", null, '14px', null)], [$patrimonioId]);
+        $row6 = $this->form->addFields([new TLabel("Movendo Patrimonio de:", null, '14px', null)], [$localAntigo]);
+        //$row7 = $this->form->addFields([new TLabel("Data da Inspecao:", '#ff0000', '14px', null)], [$dataInspecao]);
+        $row8 = $this->form->addFields([new TLabel("Para:", null, '14px', null)], [$localAtual]);
+        //$row9 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)], [$Descricao]);
+        //$row10 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)], [$imagem]);
         
 		
 		//Declaração e implementação dos botões
         $btn_onsave = $this->form->addAction("Salvar", new TAction([$this, 'onSave']), 'far:save #ffffff');
+        $btn_onsave->setId('btn_onsave');
         $this->btn_onsave = $btn_onsave;
         $btn_onsave->addStyleClass('btn-primary'); 
         
@@ -114,7 +117,7 @@ class AbrirCamera extends TPage {
         $container->style = 'width: 100%';
         $container->class = 'form-container';
         if (empty($param['target_container'])) {
-            $container->add(TBreadCrumb::create(["Geral", "Registrar movimentação Patrimonial"]));
+            $container->add(TBreadCrumb::create([""," "]));
         }
         $container->add($this->form);
 
@@ -135,7 +138,7 @@ class AbrirCamera extends TPage {
             $results = $repository->load($criteria);
 
             if (!empty($results)) {
-                $result = $results[0]; 
+                $result = $results[0];      
 
                 $obj = new StdClass;
                 $obj->{'pesquisaPatrimonioId'} = $result->id;
@@ -157,35 +160,48 @@ class AbrirCamera extends TPage {
 	//função que vai salvar:
     public function onSave($param = null) {
         try {
-            TTransaction::open(self::$database); 
+            TTransaction::open(self::$database); // Abre a transação com o banco de dados
+            
+            $data = $this->form->getData(); // Obtém os dados do formulário
     
-            $messageAction = null;
-    
-            $this->form->validate(); 
-    
-            $object = new Movimentacao(); 
-    
-            $data = $this->form->getData(); 
-    
-            $object->fromArray((array) $data); 
-            $patrimonio = new Patrimonio($object->patrimonioId);
-            $patrimonio->Local_id = $param['localAtual'];
-            $patrimonio->store();
-    
-            // Remova ou comente a linha abaixo se não for salvar arquivos
-            // $this->saveFile($object, $data, 'imagem', $imagem_dir); 
-    
-            $data->id = $object->id; 
-    
-            $this->form->setData($data); 
+            // Verifica se o patrimônio existe antes de tentar criar uma movimentação
+            $patrimonio = new Patrimonio($data->patrimonioId);
+            
+            if (!$patrimonio->id) {
+                throw new Exception('O patrimônio selecionado não existe.');
+            }
+            
+            // Cria um objeto para a tabela Movimentacao
+            $movimentacao = new Movimentacao();
+            $movimentacao->localAntigo = $data->localAntigo;
+            $movimentacao->patrimonioId = $data->patrimonioId; 
+            
+            // Tratamento da imagem
+            if (isset($_FILES['Escolha uma Imagem']) && $_FILES['Escolha uma Imagem']['error'] == UPLOAD_ERR_OK) {
+                $imagemPath = 'path/to/your/upload/directory/' . $_FILES['Escolha uma Imagem']['name'];
+                move_uploaded_file($_FILES['Escolha uma Imagem']['tmp_name'], $imagemPath);
+                $movimentacao->imagem = $imagemPath; 
+            }
+            
+            // Salva o registro de movimentacao
+            $movimentacao->store();
+            
+            // Atualiza a tabela Patrimonio (se necessário)
+            $patrimonio->Local_id = $data->localAtual; 
+            $patrimonio->store(); 
+            
+            // Fecha a transação
             TTransaction::close(); 
-    
-            new TMessage('info', AdiantiCoreTranslator::translate('Record saved'), $messageAction);
-        }
-        catch (Exception $e) {
-            new TMessage('error', $e->getMessage()); 
-            $this->form->setData($this->form->getData()); 
+            new TMessage('info', 'Dados salvos com sucesso!');
+            
+            //Redireciona para página de escolha
+            TApplication::loadPage('EscolhaRegistro', 'onShow');
+
+        } catch (Exception $e) {
+            
             TTransaction::rollback(); 
+            
+            new TMessage('error', $e->getMessage()); 
         }
     }
 	
@@ -250,7 +266,7 @@ class AbrirCamera extends TPage {
         }
         #btn:hover {
             background-color: #0056b3;
-        }
+        } 
     </style>
 </head>
 
@@ -344,28 +360,33 @@ class AbrirCamera extends TPage {
 
                 // Atualiza o input
                 var patrimonioInput = document.querySelector('input[name="procura_patrimonio"]');
-                patrimonioInput.value = result.codeResult.code;
-
-                // Foco no campo 'Código Patrimônio'
-                patrimonioInput.focus();
-               
-                // Para o Scanner pós leitura
-                Quagga.stop();
-                _scannerIsRunning = false;
-                
-                // Remove o foco do campo
-                setTimeout(function() {
-        patrimonioInput.blur();
-        
-        // Aciona o clique no botão "Salvar"
-        var saveButton = document.getElementById('btn_onsave');
-        if (saveButton) {
-            saveButton.click();
-        }
-    }, 100);
+                if (patrimonioInput) {
+                    patrimonioInput.value = result.codeResult.code;
+                    
+                    // Foco no campo 'Código Patrimônio'
+                    patrimonioInput.focus();
+                    
+                    // Para o Scanner pós leitura
+                    Quagga.stop();
+                    _scannerIsRunning = false;
+                    
+                    // Remove o foco do campo
+                    setTimeout(function() {
+                        patrimonioInput.blur();
+                        
+                        // Aciona o clique no botão "Salvar"
+                        var saveButton = document.getElementById('btn_onsave');
+                        if (saveButton) {
+                            saveButton.click();
+                        } else {
+                            console.error('Botão Salvar não encontrado');
+                        }
+                    }, 100);
+                } else {
+                    console.error('Campo procura_patrimonio não encontrado');
+                }
             });
         }
-
         // Encerra o Scanner on action
         document.getElementById("btn").addEventListener("click", function () {
             if (_scannerIsRunning) {
