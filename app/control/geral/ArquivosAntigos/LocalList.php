@@ -41,7 +41,7 @@ class LocalList extends TPage
         $CentrodeCusto_id = new TDBCombo('CentrodeCusto_id', 'controlepatrimonio', 'Centrodecusto', 'id', '{CentroCusto}','CentroCusto asc' , $criteria_CentrodeCusto_id );
         $Local = new TEntry('Local');
         $responsavel = new TEntry('responsavel');
-        $chapa = new TEntry('chapa');
+        $chapa = new TEntry('chapa');   
 
 
         $id->setSize(100);

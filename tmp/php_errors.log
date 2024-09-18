@@ -1255,3 +1255,11 @@ Stack trace:
 [17-Sep-2024 14:03:23 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
 [17-Sep-2024 14:03:46 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
 [17-Sep-2024 14:11:30 America/Sao_Paulo] PHP Warning:  Undefined property: stdClass::$Descricao in C:\xampp\htdocs\patrimonio\app\control\geral\Mudanças\AbrirCamera.php on line 176
+[18-Sep-2024 08:29:00 America/Sao_Paulo] PHP Warning:  Undefined variable $panel in C:\xampp\htdocs\patrimonio\app\control\geral\ArquivosAntigos\LocalList.php on line 142
+[18-Sep-2024 08:44:11 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\app\control\geral\ArquivosAntigos\LocalList.php on line 218
+[18-Sep-2024 08:44:11 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\app\control\geral\ArquivosAntigos\LocalList.php on line 227
+[18-Sep-2024 09:13:13 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[18-Sep-2024 09:17:47 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[18-Sep-2024 09:28:03 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[18-Sep-2024 09:29:31 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[18-Sep-2024 09:46:42 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
