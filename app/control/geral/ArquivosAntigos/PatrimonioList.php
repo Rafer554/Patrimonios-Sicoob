@@ -69,13 +69,13 @@ class PatrimonioList extends TPage
         $this->datagrid->style = 'width: 100%';
         $this->datagrid->setHeight(320);
 
-        $column_CodigodoPatrimonio = new TDataGridColumn('CodigodoPatrimonio', "Código do Patrimônio", 'left');
-        $column_ativo = new TDataGridColumn('ativo', "Ativo", 'left');
-        $column_descricao = new TDataGridColumn('descricao', "Descrição", 'left');
-        $column_responsavel = new TDataGridColumn('responsavel', "Responsavel", 'left');
-        $column_ValorOriginal = new TDataGridColumn('ValorOriginal', "Valor Original", 'left');
-        $column_DataEntrada = new TDataGridColumn('DataEntrada', "Data Entrada", 'left');
-        $column_ValorAtual = new TDataGridColumn('ValorAtual', "Valor Atual", 'left');
+        $column_CodigodoPatrimonio = new TDataGridColumn('CodigodoPatrimonio', "Código do Patrimônio", 'center');
+        $column_ativo = new TDataGridColumn('ativo', "Ativo", 'center');
+        $column_descricao = new TDataGridColumn('descricao', "Descrição", 'center');
+        $column_responsavel = new TDataGridColumn('responsavel', "Responsavel", 'center');
+        $column_ValorOriginal = new TDataGridColumn('ValorOriginal', "Valor Original", 'center');
+        $column_DataEntrada = new TDataGridColumn('DataEntrada', "Data Entrada", 'center');
+        $column_ValorAtual = new TDataGridColumn('ValorAtual', "Valor Atual", 'center');
 
         $order_CodigodoPatrimonio = new TAction(array($this, 'onReload'));
         $order_CodigodoPatrimonio->setParameter('order', 'CodigodoPatrimonio');

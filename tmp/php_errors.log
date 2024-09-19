@@ -1263,3 +1263,9 @@ Stack trace:
 [18-Sep-2024 09:28:03 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
 [18-Sep-2024 09:29:31 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
 [18-Sep-2024 09:46:42 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\patrimonio\lib\adianti\wrapper\BootstrapFormBuilder.php on line 761
+[19-Sep-2024 09:30:10 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "class", expecting variable in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 99
+[19-Sep-2024 10:24:19 America/Sao_Paulo] PHP Warning:  Undefined variable $column_ativo in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 77
+[19-Sep-2024 10:25:15 America/Sao_Paulo] PHP Warning:  Undefined variable $column_CodigodoPatrimonio in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 74
+[19-Sep-2024 10:34:03 America/Sao_Paulo] PHP Warning:  Undefined variable $column_CodigodoPatrimonio in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 74
+[19-Sep-2024 11:17:18 America/Sao_Paulo] PHP Warning:  Undefined variable $local in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 43
+[19-Sep-2024 13:38:45 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 171
