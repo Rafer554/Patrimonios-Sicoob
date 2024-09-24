@@ -1,6 +1,6 @@
 <?php
 
-class LocalList extends TPage
+class TipoBaixaList extends TPage
 {
     private $form; // form
     private $datagrid; // listing
@@ -8,9 +8,9 @@ class LocalList extends TPage
     private $loaded;
     private $filter_criteria;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Local';
+    private static $activeRecord = 'tipobaixa';
     private static $primaryKey = 'id';
-    private static $formName = 'formList_Local';
+    private static $formName = 'formList_TipoBaixa';
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
     private $limit = 20;
 
@@ -31,43 +31,21 @@ class LocalList extends TPage
         $this->form = new BootstrapFormBuilder(self::$formName);
 
         // define the form title
-        $this->form->setFormTitle("Listagem de locals");
+        $this->form->setFormTitle("Listagem de tipo baixas");
         $this->limit = 20;
-
-        $criteria_CentrodeCusto_id = new TCriteria();
 
         $id = new TEntry('id');
         $Descricao = new TEntry('Descricao');
-        $CentrodeCusto_id = new TDBCombo('CentrodeCusto_id', 'controlepatrimonio', 'Centrodecusto', 'id', '{CentroCusto}','CentroCusto asc' , $criteria_CentrodeCusto_id );
-        $Local = new TEntry('Local');
-        $responsavel = new TEntry('responsavel');
-        $chapa = new TEntry('chapa');   
+        $observacao = new TEntry('observacao');
 
 
         $id->setSize(100);
-        $Local->setSize('70%');
-        $chapa->setSize('70%');
         $Descricao->setSize('70%');
-        $responsavel->setSize('70%');
-        $CentrodeCusto_id->setSize('70%');
+        $observacao->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null, '100%'),$id]);
-        $row1->layout = ['col-sm-12'];
-
-        $row2 = $this->form->addFields([new TLabel("Descrição:", null, '14px', null, '100%'),$Descricao]);
-        $row2->layout = ['col-sm-12'];
-
-        $row3 = $this->form->addFields([new TLabel("CentrodeCusto id:", null, '14px', null, '100%'),$CentrodeCusto_id]);
-        $row3->layout = ['col-sm-12'];
-
-        $row4 = $this->form->addFields([new TLabel("Local:", null, '14px', null, '100%'),$Local]);
-        $row4->layout = ['col-sm-12'];
-
-        $row5 = $this->form->addFields([new TLabel("Responsavel:", null, '14px', null, '100%'),$responsavel]);
-        $row5->layout = ['col-sm-12'];
-
-        $row6 = $this->form->addFields([new TLabel("Chapa:", null, '14px', null, '100%'),$chapa]);
-        $row6->layout = ['col-sm-12'];
+        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null)],[$id]);
+        $row2 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)],[$Descricao]);
+        $row3 = $this->form->addFields([new TLabel("Observacao:", null, '14px', null)],[$observacao]);
 
         // keep the form filled during navigation with session data
         $this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
@@ -79,7 +57,7 @@ class LocalList extends TPage
         $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
         $this->btn_onexportcsv = $btn_onexportcsv;
 
-        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['LocalForm', 'onShow']), 'fas:plus #69aa46');
+        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['TipoBaixaForm', 'onShow']), 'fas:plus #69aa46');
         $this->btn_onshow = $btn_onshow;
 
         // creates a Datagrid
@@ -96,7 +74,7 @@ class LocalList extends TPage
         $this->datagrid->style = 'width: 100%';
         $this->datagrid->setHeight(320);
 
-        $action_onEdit = new TDataGridAction(array('LocalForm', 'onEdit'));
+        $action_onEdit = new TDataGridAction(array('TipoBaixaForm', 'onEdit'));
         $action_onEdit->setUseButton(false);
         $action_onEdit->setButtonClass('btn btn-default btn-sm');
         $action_onEdit->setLabel("Editar");
@@ -105,14 +83,7 @@ class LocalList extends TPage
 
         $this->datagrid->addAction($action_onEdit);
 
-        $action_onDelete = new TDataGridAction(array('LocalList', 'onDelete'));
-        $action_onDelete->setUseButton(false);
-        $action_onDelete->setButtonClass('btn btn-default btn-sm');
-        $action_onDelete->setLabel("Excluir");
-        $action_onDelete->setImage('far:trash-alt #dd5a43');
-        $action_onDelete->setField(self::$primaryKey);
-
-        $this->datagrid->addAction($action_onDelete);
+    
 
         // create the datagrid model
         $this->datagrid->createModel();
@@ -136,7 +107,7 @@ class LocalList extends TPage
         $container->style = 'width: 100%';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Locals"]));
+            $container->add(TBreadCrumb::create(["Geral","Tipo baixas"]));
         }
         $container->add($this->form);
         $container->add($panel);
@@ -145,49 +116,7 @@ class LocalList extends TPage
 
     }
 
-    public function onDelete($param = null) 
-    { 
-        if(isset($param['delete']) && $param['delete'] == 1)
-        {
-            try
-            {
-                // get the paramseter $key
-                $key = $param['key'];
-                // open a transaction with database
-                TTransaction::open(self::$database);
-
-                // instantiates object
-                $object = new Local($key, FALSE); 
-
-                // deletes the object from the database
-                $object->delete();
-
-                // close the transaction
-                TTransaction::close();
-
-                // reload the listing
-                $this->onReload( $param );
-                // shows the success message
-                new TMessage('info', AdiantiCoreTranslator::translate('Record deleted'));
-            }
-            catch (Exception $e) // in case of exception
-            {
-                // shows the exception error message
-                new TMessage('error', $e->getMessage());
-                // undo all pending operations
-                TTransaction::rollback();
-            }
-        }
-        else
-        {
-            // define the delete action
-            $action = new TAction(array($this, 'onDelete'));
-            $action->setParameters($param); // pass the key paramseter ahead
-            $action->setParameter('delete', 1);
-            // shows a dialog to the user
-            new TQuestion(AdiantiCoreTranslator::translate('Do you really want to delete ?'), $action);   
-        }
-    }
+  
 
     public function onExportCsv($param = null) 
     {
@@ -272,28 +201,10 @@ class LocalList extends TPage
             $filters[] = new TFilter('Descricao', 'like', "%{$data->Descricao}%");// create the filter 
         }
 
-        if (isset($data->CentrodeCusto_id) AND ( (is_scalar($data->CentrodeCusto_id) AND $data->CentrodeCusto_id !== '') OR (is_array($data->CentrodeCusto_id) AND (!empty($data->CentrodeCusto_id)) )) )
+        if (isset($data->observacao) AND ( (is_scalar($data->observacao) AND $data->observacao !== '') OR (is_array($data->observacao) AND (!empty($data->observacao)) )) )
         {
 
-            $filters[] = new TFilter('CentrodeCusto_id', '=', $data->CentrodeCusto_id);// create the filter 
-        }
-
-        if (isset($data->Local) AND ( (is_scalar($data->Local) AND $data->Local !== '') OR (is_array($data->Local) AND (!empty($data->Local)) )) )
-        {
-
-            $filters[] = new TFilter('Local', 'like', "%{$data->Local}%");// create the filter 
-        }
-
-        if (isset($data->responsavel) AND ( (is_scalar($data->responsavel) AND $data->responsavel !== '') OR (is_array($data->responsavel) AND (!empty($data->responsavel)) )) )
-        {
-
-            $filters[] = new TFilter('responsavel', 'like', "%{$data->responsavel}%");// create the filter 
-        }
-
-        if (isset($data->chapa) AND ( (is_scalar($data->chapa) AND $data->chapa !== '') OR (is_array($data->chapa) AND (!empty($data->chapa)) )) )
-        {
-
-            $filters[] = new TFilter('chapa', '=', $data->chapa);// create the filter 
+            $filters[] = new TFilter('observacao', 'like', "%{$data->observacao}%");// create the filter 
         }
 
         // fill the form with data again
@@ -316,7 +227,7 @@ class LocalList extends TPage
             // open a transaction with database 'controlepatrimonio'
             TTransaction::open(self::$database);
 
-            // creates a repository for Local
+            // creates a repository for TipoBaixa
             $repository = new TRepository(self::$activeRecord);
 
             $criteria = clone $this->filter_criteria;
@@ -418,7 +329,7 @@ class LocalList extends TPage
             TTransaction::open(self::$database);    
         }
 
-        $object = new Local($id);
+        $object = new TipoBaixa($id);
 
         $row = $list->datagrid->addItem($object);
         $row->id = "row_{$object->id}";

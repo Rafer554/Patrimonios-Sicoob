@@ -1,6 +1,6 @@
 <?php
 
-class TipoBaixaList extends TPage
+class CentrodecustoList extends TPage
 {
     private $form; // form
     private $datagrid; // listing
@@ -8,9 +8,9 @@ class TipoBaixaList extends TPage
     private $loaded;
     private $filter_criteria;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'TipoBaixa';
+    private static $activeRecord = 'centrodecusto';
     private static $primaryKey = 'id';
-    private static $formName = 'formList_TipoBaixa';
+    private static $formName = 'formList_Centrodecusto';
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
     private $limit = 20;
 
@@ -31,21 +31,16 @@ class TipoBaixaList extends TPage
         $this->form = new BootstrapFormBuilder(self::$formName);
 
         // define the form title
-        $this->form->setFormTitle("Listagem de tipo baixas");
+        $this->form->setFormTitle("Listagem de centrodecustos");
         $this->limit = 20;
 
-        $id = new TEntry('id');
-        $Descricao = new TEntry('Descricao');
-        $observacao = new TEntry('observacao');
+        $CentroCusto = new TEntry('CentroCusto');
 
 
-        $id->setSize(100);
-        $Descricao->setSize('70%');
-        $observacao->setSize('70%');
+        $CentroCusto->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null)],[$id]);
-        $row2 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)],[$Descricao]);
-        $row3 = $this->form->addFields([new TLabel("Observacao:", null, '14px', null)],[$observacao]);
+        $row1 = $this->form->addFields([new TLabel("Centro de Custo:", null, '14px', null, '100%'),$CentroCusto]);
+        $row1->layout = ['col-sm-12'];
 
         // keep the form filled during navigation with session data
         $this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
@@ -57,7 +52,7 @@ class TipoBaixaList extends TPage
         $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
         $this->btn_onexportcsv = $btn_onexportcsv;
 
-        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['TipoBaixaForm', 'onShow']), 'fas:plus #69aa46');
+        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['CentrodecustoForm', 'onShow']), 'fas:plus #69aa46');
         $this->btn_onshow = $btn_onshow;
 
         // creates a Datagrid
@@ -74,16 +69,16 @@ class TipoBaixaList extends TPage
         $this->datagrid->style = 'width: 100%';
         $this->datagrid->setHeight(320);
 
-        $action_onEdit = new TDataGridAction(array('TipoBaixaForm', 'onEdit'));
+        $action_onEdit = new TDataGridAction(array('CentrodecustoForm', 'onEdit'));
         $action_onEdit->setUseButton(false);
         $action_onEdit->setButtonClass('btn btn-default btn-sm');
         $action_onEdit->setLabel("Editar");
         $action_onEdit->setImage('far:edit #478fca');
         $action_onEdit->setField(self::$primaryKey);
-
+		
         $this->datagrid->addAction($action_onEdit);
 
-        $action_onDelete = new TDataGridAction(array('TipoBaixaList', 'onDelete'));
+        $action_onDelete = new TDataGridAction(array('CentrodecustoList', 'onDelete'));
         $action_onDelete->setUseButton(false);
         $action_onDelete->setButtonClass('btn btn-default btn-sm');
         $action_onDelete->setLabel("Excluir");
@@ -91,10 +86,10 @@ class TipoBaixaList extends TPage
         $action_onDelete->setField(self::$primaryKey);
 
         $this->datagrid->addAction($action_onDelete);
-
+		
         // create the datagrid model
-        $this->datagrid->createModel();
-
+		$this->datagrid->createModel();
+		
         // creates the page navigation
         $this->pageNavigation = new TPageNavigation;
         $this->pageNavigation->enableCounters();
@@ -114,7 +109,7 @@ class TipoBaixaList extends TPage
         $container->style = 'width: 100%';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Tipo baixas"]));
+            $container->add(TBreadCrumb::create(["Geral","Centrodecustos"]));
         }
         $container->add($this->form);
         $container->add($panel);
@@ -135,7 +130,7 @@ class TipoBaixaList extends TPage
                 TTransaction::open(self::$database);
 
                 // instantiates object
-                $object = new TipoBaixa($key, FALSE); 
+                $object = new Centrodecusto($key, FALSE); 
 
                 // deletes the object from the database
                 $object->delete();
@@ -238,22 +233,10 @@ class TipoBaixaList extends TPage
         TSession::setValue(__CLASS__.'_filter_data', NULL);
         TSession::setValue(__CLASS__.'_filters', NULL);
 
-        if (isset($data->id) AND ( (is_scalar($data->id) AND $data->id !== '') OR (is_array($data->id) AND (!empty($data->id)) )) )
+        if (isset($data->CentroCusto) AND ( (is_scalar($data->CentroCusto) AND $data->CentroCusto !== '') OR (is_array($data->CentroCusto) AND (!empty($data->CentroCusto)) )) )
         {
 
-            $filters[] = new TFilter('id', '=', $data->id);// create the filter 
-        }
-
-        if (isset($data->Descricao) AND ( (is_scalar($data->Descricao) AND $data->Descricao !== '') OR (is_array($data->Descricao) AND (!empty($data->Descricao)) )) )
-        {
-
-            $filters[] = new TFilter('Descricao', 'like', "%{$data->Descricao}%");// create the filter 
-        }
-
-        if (isset($data->observacao) AND ( (is_scalar($data->observacao) AND $data->observacao !== '') OR (is_array($data->observacao) AND (!empty($data->observacao)) )) )
-        {
-
-            $filters[] = new TFilter('observacao', 'like', "%{$data->observacao}%");// create the filter 
+            $filters[] = new TFilter('CentroCusto', 'like', "%{$data->CentroCusto}%");// create the filter 
         }
 
         // fill the form with data again
@@ -276,7 +259,7 @@ class TipoBaixaList extends TPage
             // open a transaction with database 'controlepatrimonio'
             TTransaction::open(self::$database);
 
-            // creates a repository for TipoBaixa
+            // creates a repository for Centrodecusto
             $repository = new TRepository(self::$activeRecord);
 
             $criteria = clone $this->filter_criteria;
@@ -311,8 +294,8 @@ class TipoBaixaList extends TPage
                 // iterate the collection of active records
                 foreach ($objects as $object)
                 {
-
-                    $row = $this->datagrid->addItem($object);
+					
+                   	$row = $this->datagrid->addItem($object);
                     $row->id = "row_{$object->id}";
 
                 }
@@ -341,31 +324,12 @@ class TipoBaixaList extends TPage
         }
     }
 
-    public function onShow($param = null)
-    {
-
-    }
 
     /**
      * method show()
      * Shows the page
      */
-    public function show()
-    {
-        // check if the datagrid is already loaded
-        if (!$this->loaded AND (!isset($_GET['method']) OR !(in_array($_GET['method'],  $this->showMethods))) )
-        {
-            if (func_num_args() > 0)
-            {
-                $this->onReload( func_get_arg(0) );
-            }
-            else
-            {
-                $this->onReload();
-            }
-        }
-        parent::show();
-    }
+ 
 
     public static function manageRow($id)
     {
@@ -378,7 +342,7 @@ class TipoBaixaList extends TPage
             TTransaction::open(self::$database);    
         }
 
-        $object = new TipoBaixa($id);
+        $object = new Centrodecusto($id);
 
         $row = $list->datagrid->addItem($object);
         $row->id = "row_{$object->id}";

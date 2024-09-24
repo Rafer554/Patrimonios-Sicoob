@@ -1,6 +1,6 @@
 <?php
 
-class MovimentacaodepreciacaoList extends TPage
+class LocalList extends TPage
 {
     private $form; // form
     private $datagrid; // listing
@@ -8,9 +8,9 @@ class MovimentacaodepreciacaoList extends TPage
     private $loaded;
     private $filter_criteria;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Movimentacaodepreciacao';
+    private static $activeRecord = 'local';
     private static $primaryKey = 'id';
-    private static $formName = 'formList_Movimentacaodepreciacao';
+    private static $formName = 'formList_Local';
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
     private $limit = 20;
 
@@ -31,33 +31,43 @@ class MovimentacaodepreciacaoList extends TPage
         $this->form = new BootstrapFormBuilder(self::$formName);
 
         // define the form title
-        $this->form->setFormTitle("Listagem movimentacao depreciação");
+        $this->form->setFormTitle("Listagem de locals");
         $this->limit = 20;
 
-        $criteria_patrimonioId = new TCriteria();
+        $criteria_CentrodeCusto_id = new TCriteria();
 
         $id = new TEntry('id');
-        $patrimonioId = new TDBCombo('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', '{CodigodoPatrimonio}','CodigodoPatrimonio asc' , $criteria_patrimonioId );
-        $dataDepreciacao = new TEntry('dataDepreciacao');
-        $valor = new TNumeric('valor', '2', ',', '.' );
+        $Descricao = new TEntry('Descricao');
+        $CentrodeCusto_id = new TDBCombo('CentrodeCusto_id', 'controlepatrimonio', 'Centrodecusto', 'id', '{CentroCusto}','CentroCusto asc' , $criteria_CentrodeCusto_id );
+        $Local = new TEntry('Local');
+        $responsavel = new TEntry('responsavel');
+        $chapa = new TEntry('chapa');   
 
 
         $id->setSize(100);
-        $valor->setSize('70%');
-        $patrimonioId->setSize('70%');
-        $dataDepreciacao->setSize('70%');
+        $Local->setSize('70%');
+        $chapa->setSize('70%');
+        $Descricao->setSize('70%');
+        $responsavel->setSize('70%');
+        $CentrodeCusto_id->setSize('70%');
 
         $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null, '100%'),$id]);
         $row1->layout = ['col-sm-12'];
 
-        $row2 = $this->form->addFields([new TLabel("PatrimonioId:", null, '14px', null, '100%'),$patrimonioId]);
+        $row2 = $this->form->addFields([new TLabel("Descrição:", null, '14px', null, '100%'),$Descricao]);
         $row2->layout = ['col-sm-12'];
 
-        $row3 = $this->form->addFields([new TLabel("DataDepreciacao:", null, '14px', null, '100%'),$dataDepreciacao]);
+        $row3 = $this->form->addFields([new TLabel("CentrodeCusto id:", null, '14px', null, '100%'),$CentrodeCusto_id]);
         $row3->layout = ['col-sm-12'];
 
-        $row4 = $this->form->addFields([new TLabel("Valor:", null, '14px', null, '100%'),$valor]);
+        $row4 = $this->form->addFields([new TLabel("Local:", null, '14px', null, '100%'),$Local]);
         $row4->layout = ['col-sm-12'];
+
+        $row5 = $this->form->addFields([new TLabel("Responsavel:", null, '14px', null, '100%'),$responsavel]);
+        $row5->layout = ['col-sm-12'];
+
+        $row6 = $this->form->addFields([new TLabel("Chapa:", null, '14px', null, '100%'),$chapa]);
+        $row6->layout = ['col-sm-12'];
 
         // keep the form filled during navigation with session data
         $this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
@@ -69,11 +79,8 @@ class MovimentacaodepreciacaoList extends TPage
         $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
         $this->btn_onexportcsv = $btn_onexportcsv;
 
-        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['MovimentacaodepreciacaoForm', 'onShow']), 'fas:plus #69aa46');
+        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['LocalForm', 'onShow']), 'fas:plus #69aa46');
         $this->btn_onshow = $btn_onshow;
-
-        $btn_onaction = $this->form->addAction("Rodar Depreciassão", new TAction([$this, 'onAction']), 'far:circle #000000');
-        $this->btn_onaction = $btn_onaction;
 
         // creates a Datagrid
         $this->datagrid = new TDataGrid;
@@ -89,21 +96,7 @@ class MovimentacaodepreciacaoList extends TPage
         $this->datagrid->style = 'width: 100%';
         $this->datagrid->setHeight(320);
 
-        $column_id = new TDataGridColumn('id', "Id", 'center' , '70px');
-        $column_fk_patrimonioId_CodigodoPatrimonio = new TDataGridColumn('fk_patrimonioId->CodigodoPatrimonio', "PatrimonioId", 'left');
-        $column_dataDepreciacao = new TDataGridColumn('dataDepreciacao', "DataDepreciacao", 'left');
-        $column_valor = new TDataGridColumn('valor', "Valor", 'left');
-
-        $order_id = new TAction(array($this, 'onReload'));
-        $order_id->setParameter('order', 'id');
-        $column_id->setAction($order_id);
-
-        $this->datagrid->addColumn($column_id);
-        $this->datagrid->addColumn($column_fk_patrimonioId_CodigodoPatrimonio);
-        $this->datagrid->addColumn($column_dataDepreciacao);
-        $this->datagrid->addColumn($column_valor);
-
-        $action_onEdit = new TDataGridAction(array('MovimentacaodepreciacaoForm', 'onEdit'));
+        $action_onEdit = new TDataGridAction(array('LocalForm', 'onEdit'));
         $action_onEdit->setUseButton(false);
         $action_onEdit->setButtonClass('btn btn-default btn-sm');
         $action_onEdit->setLabel("Editar");
@@ -112,7 +105,7 @@ class MovimentacaodepreciacaoList extends TPage
 
         $this->datagrid->addAction($action_onEdit);
 
-        $action_onDelete = new TDataGridAction(array('MovimentacaodepreciacaoList', 'onDelete'));
+        $action_onDelete = new TDataGridAction(array('LocalList', 'onDelete'));
         $action_onDelete->setUseButton(false);
         $action_onDelete->setButtonClass('btn btn-default btn-sm');
         $action_onDelete->setLabel("Excluir");
@@ -143,7 +136,7 @@ class MovimentacaodepreciacaoList extends TPage
         $container->style = 'width: 100%';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Movimentacaodepreciacaos"]));
+            $container->add(TBreadCrumb::create(["Geral","Locals"]));
         }
         $container->add($this->form);
         $container->add($panel);
@@ -164,7 +157,7 @@ class MovimentacaodepreciacaoList extends TPage
                 TTransaction::open(self::$database);
 
                 // instantiates object
-                $object = new Movimentacaodepreciacao($key, FALSE); 
+                $object = new Local($key, FALSE); 
 
                 // deletes the object from the database
                 $object->delete();
@@ -195,6 +188,7 @@ class MovimentacaodepreciacaoList extends TPage
             new TQuestion(AdiantiCoreTranslator::translate('Do you really want to delete ?'), $action);   
         }
     }
+
     public function onExportCsv($param = null) 
     {
         try
@@ -254,55 +248,6 @@ class MovimentacaodepreciacaoList extends TPage
             TTransaction::rollback(); // undo all pending operations
         }
     }
-    public function onAction($param = null) 
-    {
-        try 
-        {
-
-        $form1 = new TQuickForm('input_form');
-        $form1->style = 'padding:20px';
-
-        $datadepreciacaoVerifica = new TDate('data');
-
-       $form1->addQuickField('datadepreciacaoVerifica', $datadepreciacaoVerifica);
-
-        $form1->addQuickAction('Gerar', new TAction(array($this, 'onConfirm')), 'fa:save green');
-
-        // show the input dialog
-        new TInputDialog('Data de Depreciação', $form1);
-
-          /*   TTransaction::open('controlepatrimonio');
-            $criterio= new TCriteria;
-            $criterio->add(new TFilter('ativo','=',1));
-            $criterio->add(new TFilter('ValorAtual','>',0));
-
-            $repositorio= new TRepository('Patrimonio');
-            $resultados=$repositorio->load($criterio);
-
-            foreach ( $resultados as $result) {
-                $depreciassao= new Movimentacaodepreciacao;
-                $depreciassao->patrimonioId=$result->id;
-                $depreciassao->dataDepreciacao=date('Y-m-d');
-                if($result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao)<0)
-                    $depreciassao->valor=0;
-                else
-                    $depreciassao->valor=$result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao);
-                $depreciassao->store();
-                $result->ValorAtual=$depreciassao->valor;
-                $result->store();
-                 new TMessage('mensage','Depreciação Gerada com Sucesso');
-                // code...
-            }
-            //$patrimonio->descricao='TesteControle';
-            TTransaction::close();
-            */
-
-        }
-        catch (Exception $e) 
-        {
-            new TMessage('error', $e->getMessage());    
-        }
-    }
 
     /**
      * Register the filter in the session
@@ -321,22 +266,34 @@ class MovimentacaodepreciacaoList extends TPage
             $filters[] = new TFilter('id', '=', $data->id);// create the filter 
         }
 
-        if (isset($data->patrimonioId) AND ( (is_scalar($data->patrimonioId) AND $data->patrimonioId !== '') OR (is_array($data->patrimonioId) AND (!empty($data->patrimonioId)) )) )
+        if (isset($data->Descricao) AND ( (is_scalar($data->Descricao) AND $data->Descricao !== '') OR (is_array($data->Descricao) AND (!empty($data->Descricao)) )) )
         {
 
-            $filters[] = new TFilter('patrimonioId', '=', $data->patrimonioId);// create the filter 
+            $filters[] = new TFilter('Descricao', 'like', "%{$data->Descricao}%");// create the filter 
         }
 
-        if (isset($data->dataDepreciacao) AND ( (is_scalar($data->dataDepreciacao) AND $data->dataDepreciacao !== '') OR (is_array($data->dataDepreciacao) AND (!empty($data->dataDepreciacao)) )) )
+        if (isset($data->CentrodeCusto_id) AND ( (is_scalar($data->CentrodeCusto_id) AND $data->CentrodeCusto_id !== '') OR (is_array($data->CentrodeCusto_id) AND (!empty($data->CentrodeCusto_id)) )) )
         {
 
-            $filters[] = new TFilter('dataDepreciacao', '=', $data->dataDepreciacao);// create the filter 
+            $filters[] = new TFilter('CentrodeCusto_id', '=', $data->CentrodeCusto_id);// create the filter 
         }
 
-        if (isset($data->valor) AND ( (is_scalar($data->valor) AND $data->valor !== '') OR (is_array($data->valor) AND (!empty($data->valor)) )) )
+        if (isset($data->Local) AND ( (is_scalar($data->Local) AND $data->Local !== '') OR (is_array($data->Local) AND (!empty($data->Local)) )) )
         {
 
-            $filters[] = new TFilter('valor', '=', $data->valor);// create the filter 
+            $filters[] = new TFilter('Local', 'like', "%{$data->Local}%");// create the filter 
+        }
+
+        if (isset($data->responsavel) AND ( (is_scalar($data->responsavel) AND $data->responsavel !== '') OR (is_array($data->responsavel) AND (!empty($data->responsavel)) )) )
+        {
+
+            $filters[] = new TFilter('responsavel', 'like', "%{$data->responsavel}%");// create the filter 
+        }
+
+        if (isset($data->chapa) AND ( (is_scalar($data->chapa) AND $data->chapa !== '') OR (is_array($data->chapa) AND (!empty($data->chapa)) )) )
+        {
+
+            $filters[] = new TFilter('chapa', '=', $data->chapa);// create the filter 
         }
 
         // fill the form with data again
@@ -359,7 +316,7 @@ class MovimentacaodepreciacaoList extends TPage
             // open a transaction with database 'controlepatrimonio'
             TTransaction::open(self::$database);
 
-            // creates a repository for Movimentacaodepreciacao
+            // creates a repository for Local
             $repository = new TRepository(self::$activeRecord);
 
             $criteria = clone $this->filter_criteria;
@@ -461,7 +418,7 @@ class MovimentacaodepreciacaoList extends TPage
             TTransaction::open(self::$database);    
         }
 
-        $object = new Movimentacaodepreciacao($id);
+        $object = new Local($id);
 
         $row = $list->datagrid->addItem($object);
         $row->id = "row_{$object->id}";
@@ -472,52 +429,6 @@ class MovimentacaodepreciacaoList extends TPage
         }
 
         TDataGrid::replaceRowById(__CLASS__.'_datagrid', $row->id, $row);
-    }
-
-  public  function onConfirm( $param )
-    {
-        $valor=$param['data'];
-
-        /*$dados=json_encode($param);
-
-        $obj = json_decode($dados);
-
-        foreach($obj as $key=>$value){
-
-        if($key=='data')
-                $valor=$value;
-        }*/
-
-        try {
-            TTransaction::open('controlepatrimonio');
-            $criterio= new TCriteria;
-            $criterio->add(new TFilter('ativo','=',1));
-            $criterio->add(new TFilter('ValorAtual','>',0));
-            $criterio->add(new TFilter('dataentrada','<=',$valor));
-
-            $repositorio= new TRepository('Patrimonio');
-            $resultados=$repositorio->load($criterio);
-
-            foreach ( $resultados as $result) {
-                $depreciassao= new Movimentacaodepreciacao;
-                $depreciassao->patrimonioId=$result->id;
-                $depreciassao->dataDepreciacao=$valor;
-                if($result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao)<0)
-                    $depreciassao->valor=0;
-                else
-                    $depreciassao->valor=$result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao);
-                $depreciassao->store();
-                $result->ValorAtual=$depreciassao->valor;
-                $result->store();
-                 new TMessage('info','Depreciação Gerada com Sucesso');
-                // code...
-            }
-            //$patrimonio->descricao='TesteControle';
-            TTransaction::close();
-
-        } catch (Exception  $ex) {
-            new TMessage('error', $ex);
-        }
     }
 
 }

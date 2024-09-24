@@ -1,13 +1,13 @@
 <?php
 
-class TipoBaixaForm extends TPage
+class MovimentacaodepreciacaoForm extends TPage
 {
     protected $form;
     private $formFields = [];
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'TipoBaixa';
+    private static $activeRecord = 'movimentacaodepreciacao';
     private static $primaryKey = 'id';
-    private static $formName = 'form_TipoBaixa';
+    private static $formName = 'form_Movimentacaodepreciacao';
 
     /**
      * Form constructor
@@ -25,23 +25,36 @@ class TipoBaixaForm extends TPage
         // creates the form
         $this->form = new BootstrapFormBuilder(self::$formName);
         // define the form title
-        $this->form->setFormTitle("Cadastro de tipo baixa");
+        $this->form->setFormTitle("Cadastro de movimentacaodepreciacao");
 
+        $criteria_patrimonioId = new TCriteria();
 
         $id = new TEntry('id');
-        $Descricao = new TEntry('Descricao');
-        $observacao = new TEntry('observacao');
+        $patrimonioId = new TDBCombo('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', '{CodigodoPatrimonio}','CodigodoPatrimonio asc' , $criteria_patrimonioId );
+        $dataDepreciacao = new TEntry('dataDepreciacao');
+        $valor = new TNumeric('valor', '9', ',', '.' );
 
-        $Descricao->addValidation("Descricao", new TRequiredValidator()); 
+        $patrimonioId->addValidation("PatrimonioId", new TRequiredValidator()); 
+        $dataDepreciacao->addValidation("DataDepreciacao", new TRequiredValidator()); 
+        $valor->addValidation("Valor", new TRequiredValidator()); 
 
         $id->setEditable(false);
         $id->setSize(100);
-        $Descricao->setSize('70%');
-        $observacao->setSize('70%');
+        $valor->setSize('70%');
+        $patrimonioId->setSize('70%');
+        $dataDepreciacao->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null)],[$id]);
-        $row2 = $this->form->addFields([new TLabel("Descricao:", '#ff0000', '14px', null)],[$Descricao]);
-        $row3 = $this->form->addFields([new TLabel("Observacao:", null, '14px', null)],[$observacao]);
+        $row1 = $this->form->addFields([new TLabel("ID:", null, '14px', null, '100%'),$id]);
+        $row1->layout = ['col-sm-12'];
+
+        $row2 = $this->form->addFields([new TLabel("Patrimonio:", '#ff0000', '14px', null, '100%'),$patrimonioId]);
+        $row2->layout = ['col-sm-12'];
+
+        $row3 = $this->form->addFields([new TLabel("Data da Depreciacao:", '#ff0000', '14px', null, '100%'),$dataDepreciacao]);
+        $row3->layout = ['col-sm-12'];
+
+        $row4 = $this->form->addFields([new TLabel("Valor:", '#ff0000', '14px', null, '100%'),$valor]);
+        $row4->layout = ['col-sm-12'];
 
         // create the form actions
         $btn_onsave = $this->form->addAction("Salvar", new TAction([$this, 'onSave']), 'far:save #ffffff');
@@ -57,7 +70,7 @@ class TipoBaixaForm extends TPage
         $container->class = 'form-container';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Cadastro de tipo baixa"]));
+            $container->add(TBreadCrumb::create(["Geral","Cadastro de movimentacaodepreciacao"]));
         }
         $container->add($this->form);
 
@@ -81,7 +94,7 @@ class TipoBaixaForm extends TPage
 
             $this->form->validate(); // validate form data
 
-            $object = new TipoBaixa(); // create an empty object 
+            $object = new Movimentacaodepreciacao(); // create an empty object 
 
             $data = $this->form->getData(); // get form data as array
             $object->fromArray( (array) $data); // load the object with data
@@ -121,7 +134,7 @@ class TipoBaixaForm extends TPage
                 $key = $param['key'];  // get the parameter $key
                 TTransaction::open(self::$database); // open a transaction
 
-                $object = new TipoBaixa($key); // instantiates the Active Record 
+                $object = new Movimentacaodepreciacao($key); // instantiates the Active Record 
 
                 $this->form->setData($object); // fill the form 
 

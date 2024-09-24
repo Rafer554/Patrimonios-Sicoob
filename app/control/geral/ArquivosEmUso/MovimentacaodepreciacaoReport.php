@@ -7,7 +7,7 @@ class MovimentacaodepreciacaoReport extends TPage
     private $form; // form
     private $loaded;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Movimentacaodepreciacao';
+    private static $activeRecord = 'movimentacaodepreciacao';
     private static $primaryKey = 'id';
     private static $formName = 'formReport_Movimentacaodepreciacao';
 

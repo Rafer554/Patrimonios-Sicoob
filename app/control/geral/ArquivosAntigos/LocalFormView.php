@@ -4,7 +4,7 @@ class LocalFormView extends TPage
 {
     protected $form; // form
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Local';
+    private static $activeRecord = 'local';
     private static $primaryKey = 'id';
     private static $formName = 'formView_Local';
 

@@ -6,7 +6,7 @@ class MoVimentacaoPatrimonial extends TPage
     {
         parent::__construct();
       $this->form   = new TForm('form_SaleMultiValue');
-        $panel_master = new TPanelGroup( 'Movimentações Patrimoniais' );
+        $panel_master = new TPanelGroup( 'movimentações Patrimoniais' );
         $vbox = new TVBox;
         $vbox->style = 'width: 100%';
         $this->form->add($panel_master);

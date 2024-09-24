@@ -8,7 +8,7 @@ class PatrimonioList extends TPage
     private $loaded;
     private $filter_criteria;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Patrimonio';
+    private static $activeRecord = 'patrimonio';
     private static $primaryKey = 'id';
     private static $formName = 'formList_Patrimonio';
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
@@ -75,7 +75,7 @@ class PatrimonioList extends TPage
         $column_responsavel = new TDataGridColumn('responsavel', "Responsavel", 'center');
         $column_ValorOriginal = new TDataGridColumn('ValorOriginal', "Valor Original", 'center');
         $column_DataEntrada = new TDataGridColumn('DataEntrada', "Data Entrada", 'center');
-        $column_ValorAtual = new TDataGridColumn('ValorAtual', "Valor Atual", 'center');
+        $column_ValorAtual = new TDataGridColumn('ValorAtual', "Valor Atual", 'center   ');
 
         $order_CodigodoPatrimonio = new TAction(array($this, 'onReload'));
         $order_CodigodoPatrimonio->setParameter('order', 'CodigodoPatrimonio');

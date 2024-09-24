@@ -4,21 +4,23 @@
   <menuitem label="Patrimonio">
     <icon>fas:barcode fa-fw </icon>
   <menu> 
+
+  <menuitem label="Ler Código de Patrimônio">
+  		 <icon>fa:eye fa-fw</icon>	
+  		 <action>Visualizar#method=onLerCodigo</action>
+	  </menuitem>
+
   <menuitem label="Cadastrar Patrimônio">
         <icon>fa:plus fa-fw</icon>
         <action>PatrimonioForm#method=onShow</action>
       </menuitem>
 
-    <menuitem label="Ler Código de Patrimônio">
-  		 <icon>fa:eye fa-fw</icon>	
-  		 <action>Visualizar#method=onLerCodigo</action>
-	  </menuitem>
-
 		 <menuitem label="Listagem de Patrimônios">
         <icon>fa:book fa-fw </icon>
         <action>PatrimonioList#method=onShow</action>
       </menuitem>
-
+<menuitem label = "----------------------------------------------------------" enabled="false">
+      </menuitem>
       <menuitem label="Movimentação Patrimonial">
         <icon>fa:exchange fa-fw</icon>
         <action>EscolhaRegistro#method=onShow</action>
@@ -36,26 +38,55 @@
   <icon>fa:scroll fa-fw</icon>
   <menu> 
 
-      <menuitem label="Movimentação de Depreciação">
-        <icon>far:circle fa-fw </icon>
+      <menuitem label="Cadastrar Movimentação de Depreciação">
+        <icon>fa:receipt fa-fw </icon>
+        <action>MovimentacaodepreciacaoForm#method=onShow</action>
+      </menuitem>
+      <menuitem label="Listagem de Depreciação">
+        <icon>fa:book fa-fw </icon>
         <action>MovimentacaodepreciacaoList#method=onShow</action>
       </menuitem>
-      <menuitem label="Grupos">
-        <icon>far:circle fa-fw </icon>
+       <menuitem label = "----------------------------------------------------------">
+      </menuitem>
+      <menuitem label="Cadastro de Grupos">
+        <icon>fa:user-group fa-fw </icon>
+        <action>GrupoForm#method=onShow</action>
+      </menuitem>
+       <menuitem label="Listagem de Grupos">
+        <icon>fa:book fa-fw </icon>
         <action>GrupoList#method=onShow</action>
       </menuitem>
-      <menuitem label="Tipo baixas">
-        <icon>far:circle fa-fw </icon>
-        <action>TipoBaixaList#method=onShow</action>
+
+      <menuitem label = "----------------------------------------------------------">
       </menuitem>
-      <menuitem label="Centrodecustos">
-        <icon>far:circle fa-fw </icon>
-        <action>CentrodecustoList#method=onShow</action>
+      <menuitem label="Cadastro Tipos de Baixas">
+        <icon>fa:arrow-down-short-wide fa-fw </icon>
+        <action>TipoBaixaForm#method=onShow</action>
       </menuitem>
-      <menuitem label="Locals">
-        <icon>far:circle fa-fw </icon>
-        <action>LocalList#method=onShow</action>
+      <menuitem label="Listagem de Tipos de Baixas">
+        <icon>fa:book fa-fw </icon>
+        <action>Baixas#method=onShow</action>
       </menuitem>
+      <menuitem label = "----------------------------------------------------------">
+      </menuitem>
+      <menuitem label = "Cadastro Centro de Custos">
+        <icon>fa:shop fa-fw </icon>
+        <action>CentrodecustoForm#method=onShow</action>
+      </menuitem>
+      <menuitem label="Listagem Centro de Custos">
+        <icon>fa:book fa-fw </icon>
+        <action>Centro_list#method=onShow</action>
+      </menuitem>
+      <menuitem label = "----------------------------------------------------------">
+      </menuitem>
+      <menuitem label = "Cadastro de Local">
+        <icon>fa:location-dot fa-fw </icon>
+        <action>LocalForm#method=onShow</action>
+      </menuitem>
+      <menuitem label="Listagem de Locais">
+        <icon>fa:book fa-fw </icon>
+        <action>Locais#method=onShow</action>
+      </menuitem> 
 
   </menu>
   </menuitem>
@@ -76,27 +107,7 @@
   </menu>
   </menuitem>
 
-<menuitem label = "Testes">
-  <icon>far:circle fa-fw </icon>
-  <menu> 
-      <menuitem label="LeitorCod">
-        <icon>fa:adjust fa-fw #6a2c2c</icon>
-        <action>Leitor#method=onShow</action>
-      </menuitem>
-      <menuitem label="Teste">
-        <icon>fab:adn fa-fw #8e5b5b</icon>
-        <action>Teste2#method=onShow</action>
-      </menuitem>
-      <menuitem label="Movimentação Patrimonial">
-        <icon>fas:university fa-fw #131111</icon>
-        <action>MoVimentacaoPatrimonial#method=onShow</action>
-      </menuitem>
-      <menuitem label="LeitorCodigo">
-        <icon>far:circle fa-fw </icon>
-        <action>LocalFormView#method=onShow</action>
-      </menuitem>
-    </menu>
-  </menuitem>
+
   <menuitem label="_t{Administration}">
     <icon>fas:home fa-fw</icon>
     <menu>

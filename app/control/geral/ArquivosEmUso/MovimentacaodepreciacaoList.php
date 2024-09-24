@@ -1,6 +1,6 @@
 <?php
 
-class GrupoList extends TPage
+class MovimentacaodepreciacaoList extends TPage
 {
     private $form; // form
     private $datagrid; // listing
@@ -8,9 +8,9 @@ class GrupoList extends TPage
     private $loaded;
     private $filter_criteria;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Grupo';
+    private static $activeRecord = 'movimentacaodepreciacao';
     private static $primaryKey = 'id';
-    private static $formName = 'formList_Grupo';
+    private static $formName = 'formList_Movimentacaodepreciacao';
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
     private $limit = 20;
 
@@ -31,30 +31,32 @@ class GrupoList extends TPage
         $this->form = new BootstrapFormBuilder(self::$formName);
 
         // define the form title
-        $this->form->setFormTitle("Listagem de grupos");
+        $this->form->setFormTitle("Listagem movimentacao depreciação");
         $this->limit = 20;
 
+        $criteria_patrimonioId = new TCriteria();
+
         $id = new TEntry('id');
-        $CodGrupoPatrimonio = new TEntry('CodGrupoPatrimonio');
-        $tipoDepreciacao = new TEntry('tipoDepreciacao');
-        $valorDepreciacao = new TNumeric('valorDepreciacao', '9', ',', '.' );
+        $patrimonioId = new TDBCombo('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', '{CodigodoPatrimonio}','CodigodoPatrimonio asc' , $criteria_patrimonioId );
+        $dataDepreciacao = new TEntry('dataDepreciacao');
+        $valor = new TNumeric('valor', '2', ',', '.' );
 
 
         $id->setSize(100);
-        $tipoDepreciacao->setSize('70%');
-        $valorDepreciacao->setSize('70%');
-        $CodGrupoPatrimonio->setSize('70%');
+        $valor->setSize('70%');
+        $patrimonioId->setSize('70%');
+        $dataDepreciacao->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null, '100%'),$id]);
+        $row1 = $this->form->addFields([new TLabel("ID:", null, '14px', null, '100%'),$id]);
         $row1->layout = ['col-sm-12'];
 
-        $row2 = $this->form->addFields([new TLabel("CodGrupoPatrimonio:", null, '14px', null, '100%'),$CodGrupoPatrimonio]);
+        $row2 = $this->form->addFields([new TLabel("Patrimonio:", null, '14px', null, '100%'),$patrimonioId]);
         $row2->layout = ['col-sm-12'];
 
-        $row3 = $this->form->addFields([new TLabel("TipoDepreciacao:", null, '14px', null, '100%'),$tipoDepreciacao]);
+        $row3 = $this->form->addFields([new TLabel("Data da Depreciacao:", null, '14px', null, '100%'),$dataDepreciacao]);
         $row3->layout = ['col-sm-12'];
 
-        $row4 = $this->form->addFields([new TLabel("ValorDepreciacao:", null, '14px', null, '100%'),$valorDepreciacao]);
+        $row4 = $this->form->addFields([new TLabel("Valor:", null, '14px', null, '100%'),$valor]);
         $row4->layout = ['col-sm-12'];
 
         // keep the form filled during navigation with session data
@@ -67,8 +69,11 @@ class GrupoList extends TPage
         $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
         $this->btn_onexportcsv = $btn_onexportcsv;
 
-        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['GrupoForm', 'onShow']), 'fas:plus #69aa46');
+        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['MovimentacaodepreciacaoForm', 'onShow']), 'fas:plus #69aa46');
         $this->btn_onshow = $btn_onshow;
+
+        $btn_onaction = $this->form->addAction("Rodar Depreciassão", new TAction([$this, 'onAction']), 'far:circle #000000');
+        $this->btn_onaction = $btn_onaction;
 
         // creates a Datagrid
         $this->datagrid = new TDataGrid;
@@ -85,20 +90,20 @@ class GrupoList extends TPage
         $this->datagrid->setHeight(320);
 
         $column_id = new TDataGridColumn('id', "Id", 'center' , '70px');
-        $column_CodGrupoPatrimonio = new TDataGridColumn('CodGrupoPatrimonio', "CodGrupoPatrimonio", 'left');
-        $column_tipoDepreciacao = new TDataGridColumn('tipoDepreciacao', "TipoDepreciacao", 'left');
-        $column_valorDepreciacao = new TDataGridColumn('valorDepreciacao', "ValorDepreciacao", 'left');
+        $column_fk_patrimonioId_CodigodoPatrimonio = new TDataGridColumn('fk_patrimonioId->CodigodoPatrimonio', "PatrimonioId", 'left');
+        $column_dataDepreciacao = new TDataGridColumn('dataDepreciacao', "DataDepreciacao", 'left');
+        $column_valor = new TDataGridColumn('valor', "Valor", 'left');
 
         $order_id = new TAction(array($this, 'onReload'));
         $order_id->setParameter('order', 'id');
         $column_id->setAction($order_id);
 
         $this->datagrid->addColumn($column_id);
-        $this->datagrid->addColumn($column_CodGrupoPatrimonio);
-        $this->datagrid->addColumn($column_tipoDepreciacao);
-        $this->datagrid->addColumn($column_valorDepreciacao);
+        $this->datagrid->addColumn($column_fk_patrimonioId_CodigodoPatrimonio);
+        $this->datagrid->addColumn($column_dataDepreciacao);
+        $this->datagrid->addColumn($column_valor);
 
-        $action_onEdit = new TDataGridAction(array('GrupoForm', 'onEdit'));
+        $action_onEdit = new TDataGridAction(array('MovimentacaodepreciacaoForm', 'onEdit'));
         $action_onEdit->setUseButton(false);
         $action_onEdit->setButtonClass('btn btn-default btn-sm');
         $action_onEdit->setLabel("Editar");
@@ -107,7 +112,7 @@ class GrupoList extends TPage
 
         $this->datagrid->addAction($action_onEdit);
 
-        $action_onDelete = new TDataGridAction(array('GrupoList', 'onDelete'));
+        $action_onDelete = new TDataGridAction(array('MovimentacaodepreciacaoList', 'onDelete'));
         $action_onDelete->setUseButton(false);
         $action_onDelete->setButtonClass('btn btn-default btn-sm');
         $action_onDelete->setLabel("Excluir");
@@ -138,7 +143,7 @@ class GrupoList extends TPage
         $container->style = 'width: 100%';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Grupos"]));
+            $container->add(TBreadCrumb::create(["Geral","Movimentacaodepreciacaos"]));
         }
         $container->add($this->form);
         $container->add($panel);
@@ -159,7 +164,7 @@ class GrupoList extends TPage
                 TTransaction::open(self::$database);
 
                 // instantiates object
-                $object = new Grupo($key, FALSE); 
+                $object = new Movimentacaodepreciacao($key, FALSE); 
 
                 // deletes the object from the database
                 $object->delete();
@@ -190,7 +195,6 @@ class GrupoList extends TPage
             new TQuestion(AdiantiCoreTranslator::translate('Do you really want to delete ?'), $action);   
         }
     }
-
     public function onExportCsv($param = null) 
     {
         try
@@ -250,6 +254,55 @@ class GrupoList extends TPage
             TTransaction::rollback(); // undo all pending operations
         }
     }
+    public function onAction($param = null) 
+    {
+        try 
+        {
+
+        $form1 = new TQuickForm('input_form');
+        $form1->style = 'padding:20px';
+
+        $datadepreciacaoVerifica = new TDate('data');
+
+       $form1->addQuickField('datadepreciacaoVerifica', $datadepreciacaoVerifica);
+
+        $form1->addQuickAction('Gerar', new TAction(array($this, 'onConfirm')), 'fa:save green');
+
+        // show the input dialog
+        new TInputDialog('Data de Depreciação', $form1);
+
+          /*   TTransaction::open('controlepatrimonio');
+            $criterio= new TCriteria;
+            $criterio->add(new TFilter('ativo','=',1));
+            $criterio->add(new TFilter('ValorAtual','>',0));
+
+            $repositorio= new TRepository('Patrimonio');
+            $resultados=$repositorio->load($criterio);
+
+            foreach ( $resultados as $result) {
+                $depreciassao= new Movimentacaodepreciacao;
+                $depreciassao->patrimonioId=$result->id;
+                $depreciassao->dataDepreciacao=date('Y-m-d');
+                if($result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao)<0)
+                    $depreciassao->valor=0;
+                else
+                    $depreciassao->valor=$result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao);
+                $depreciassao->store();
+                $result->ValorAtual=$depreciassao->valor;
+                $result->store();
+                 new TMessage('mensage','Depreciação Gerada com Sucesso');
+                // code...
+            }
+            //$patrimonio->descricao='TesteControle';
+            TTransaction::close();
+            */
+
+        }
+        catch (Exception $e) 
+        {
+            new TMessage('error', $e->getMessage());    
+        }
+    }
 
     /**
      * Register the filter in the session
@@ -268,22 +321,22 @@ class GrupoList extends TPage
             $filters[] = new TFilter('id', '=', $data->id);// create the filter 
         }
 
-        if (isset($data->CodGrupoPatrimonio) AND ( (is_scalar($data->CodGrupoPatrimonio) AND $data->CodGrupoPatrimonio !== '') OR (is_array($data->CodGrupoPatrimonio) AND (!empty($data->CodGrupoPatrimonio)) )) )
+        if (isset($data->patrimonioId) AND ( (is_scalar($data->patrimonioId) AND $data->patrimonioId !== '') OR (is_array($data->patrimonioId) AND (!empty($data->patrimonioId)) )) )
         {
 
-            $filters[] = new TFilter('CodGrupoPatrimonio', 'like', "%{$data->CodGrupoPatrimonio}%");// create the filter 
+            $filters[] = new TFilter('patrimonioId', '=', $data->patrimonioId);// create the filter 
         }
 
-        if (isset($data->tipoDepreciacao) AND ( (is_scalar($data->tipoDepreciacao) AND $data->tipoDepreciacao !== '') OR (is_array($data->tipoDepreciacao) AND (!empty($data->tipoDepreciacao)) )) )
+        if (isset($data->dataDepreciacao) AND ( (is_scalar($data->dataDepreciacao) AND $data->dataDepreciacao !== '') OR (is_array($data->dataDepreciacao) AND (!empty($data->dataDepreciacao)) )) )
         {
 
-            $filters[] = new TFilter('tipoDepreciacao', '=', $data->tipoDepreciacao);// create the filter 
+            $filters[] = new TFilter('dataDepreciacao', '=', $data->dataDepreciacao);// create the filter 
         }
 
-        if (isset($data->valorDepreciacao) AND ( (is_scalar($data->valorDepreciacao) AND $data->valorDepreciacao !== '') OR (is_array($data->valorDepreciacao) AND (!empty($data->valorDepreciacao)) )) )
+        if (isset($data->valor) AND ( (is_scalar($data->valor) AND $data->valor !== '') OR (is_array($data->valor) AND (!empty($data->valor)) )) )
         {
 
-            $filters[] = new TFilter('valorDepreciacao', '=', $data->valorDepreciacao);// create the filter 
+            $filters[] = new TFilter('valor', '=', $data->valor);// create the filter 
         }
 
         // fill the form with data again
@@ -306,7 +359,7 @@ class GrupoList extends TPage
             // open a transaction with database 'controlepatrimonio'
             TTransaction::open(self::$database);
 
-            // creates a repository for Grupo
+            // creates a repository for Movimentacaodepreciacao
             $repository = new TRepository(self::$activeRecord);
 
             $criteria = clone $this->filter_criteria;
@@ -408,7 +461,7 @@ class GrupoList extends TPage
             TTransaction::open(self::$database);    
         }
 
-        $object = new Grupo($id);
+        $object = new Movimentacaodepreciacao($id);
 
         $row = $list->datagrid->addItem($object);
         $row->id = "row_{$object->id}";
@@ -419,6 +472,52 @@ class GrupoList extends TPage
         }
 
         TDataGrid::replaceRowById(__CLASS__.'_datagrid', $row->id, $row);
+    }
+
+  public  function onConfirm( $param )
+    {
+        $valor=$param['data'];
+
+        /*$dados=json_encode($param);
+
+        $obj = json_decode($dados);
+
+        foreach($obj as $key=>$value){
+
+        if($key=='data')
+                $valor=$value;
+        }*/
+
+        try {
+            TTransaction::open('controlepatrimonio');
+            $criterio= new TCriteria;
+            $criterio->add(new TFilter('ativo','=',1));
+            $criterio->add(new TFilter('ValorAtual','>',0));
+            $criterio->add(new TFilter('dataentrada','<=',$valor));
+
+            $repositorio= new TRepository('Patrimonio');
+            $resultados=$repositorio->load($criterio);
+
+            foreach ( $resultados as $result) {
+                $depreciassao= new Movimentacaodepreciacao;
+                $depreciassao->patrimonioId=$result->id;
+                $depreciassao->dataDepreciacao=$valor;
+                if($result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao)<0)
+                    $depreciassao->valor=0;
+                else
+                    $depreciassao->valor=$result->ValorAtual-($result->ValorOriginal*$result->Grupo->valorDepreciacao);
+                $depreciassao->store();
+                $result->ValorAtual=$depreciassao->valor;
+                $result->store();
+                 new TMessage('info','Depreciação Gerada com Sucesso');
+                // code...
+            }
+            //$patrimonio->descricao='TesteControle';
+            TTransaction::close();
+
+        } catch (Exception  $ex) {
+            new TMessage('error', $ex);
+        }
     }
 
 }

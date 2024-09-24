@@ -5,7 +5,7 @@ class PatrimonioReport extends TPage
     private $form; // form
     private $loaded;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Patrimonio';
+    private static $activeRecord = 'patrimonio';
     private static $primaryKey = 'id';
     private static $formName = 'formReport_Patrimonio';
 

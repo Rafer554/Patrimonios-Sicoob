@@ -1269,3 +1269,85 @@ Stack trace:
 [19-Sep-2024 10:34:03 America/Sao_Paulo] PHP Warning:  Undefined variable $column_CodigodoPatrimonio in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 74
 [19-Sep-2024 11:17:18 America/Sao_Paulo] PHP Warning:  Undefined variable $local in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 43
 [19-Sep-2024 13:38:45 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 171
+[23-Sep-2024 07:45:35 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\ArquivosAntigos\LocalFormView.php on line 29
+[23-Sep-2024 07:45:38 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\ArquivosAntigos\LocalFormView.php on line 29
+[23-Sep-2024 08:30:04 America/Sao_Paulo] PHP Warning:  Undefined variable $column_id in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 78
+[23-Sep-2024 08:59:25 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "->", expecting ";" in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 67
+[23-Sep-2024 09:37:03 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "{", expecting "function" or "const" in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 315
+[23-Sep-2024 10:33:30 America/Sao_Paulo] PHP Warning:  Undefined array key "key" in C:\xampp\htdocs\patrimonio\app\control\geral\ArquivosAntigos\LocalFormView.php on line 29
+[23-Sep-2024 11:10:00 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare Locais::show() in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 325
+[23-Sep-2024 13:46:30 America/Sao_Paulo] PHP Warning:  Undefined variable $column_CodigodoPatrimonio in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 36
+[23-Sep-2024 13:53:07 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare Centro_list::show() in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 190
+[23-Sep-2024 14:57:42 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 130
+[23-Sep-2024 14:59:57 America/Sao_Paulo] PHP Fatal error:  Declaration of Centro_list::show($param) must be compatible with Adianti\Control\TPage::show() in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 94
+[23-Sep-2024 15:01:05 America/Sao_Paulo] PHP Fatal error:  Declaration of Centro_list::show($param) must be compatible with Adianti\Control\TPage::show() in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 90
+[23-Sep-2024 15:01:13 America/Sao_Paulo] PHP Fatal error:  Declaration of Centro_list::show($param) must be compatible with Adianti\Control\TPage::show() in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 90
+[23-Sep-2024 15:30:10 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "=" in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Centro_list.php on line 64
+[23-Sep-2024 15:57:47 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare Baixas::onReload() in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Baixas.php on line 212
+[23-Sep-2024 16:11:56 America/Sao_Paulo] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\patrimonio\app\control\geral\Funções\Locais.php on line 295
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 47: parser error : Opening and ending tag mismatch: menu line 37 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():       &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():                  ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 81: parser error : Extra content at the end of the document in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 09:35:44 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:10:39 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "PatrimonioForm" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('PatrimonioForm')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[24-Sep-2024 10:11:40 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "PatrimonioReport" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('PatrimonioRepor...')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[24-Sep-2024 10:11:42 America/Sao_Paulo] PHP Fatal error:  Uncaught ReflectionException: Class "PatrimonioReport" does not exist in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php:59
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php(59): ReflectionClass->__construct('PatrimonioRepor...')
+#1 C:\xampp\htdocs\patrimonio\engine.php(43): Adianti\Core\AdiantiCoreApplication::run('0')
+#2 C:\xampp\htdocs\patrimonio\engine.php(100): TApplication::run()
+#3 {main}
+  thrown in C:\xampp\htdocs\patrimonio\lib\adianti\core\AdiantiCoreApplication.php on line 59
+[24-Sep-2024 10:22:16 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 227: parser error : EndTag: '&lt;/' not found in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:16 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():  in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:16 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 113: parser error : Opening and ending tag mismatch: menu line 112 and menuitem in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():   &lt;/menuitem&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():              ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 225: parser error : Opening and ending tag mismatch: menuitem line 112 and menu in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): &lt;/menu&gt; in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():        ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): Entity: line 227: parser error : EndTag: '&lt;/' not found in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct():  in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Warning:  SimpleXMLElement::__construct(): ^ in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24
+[24-Sep-2024 10:22:45 America/Sao_Paulo] PHP Fatal error:  Uncaught Exception: String could not be parsed as XML in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php:24
+Stack trace:
+#0 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php(24): SimpleXMLElement->__construct('<?xml version="...')
+#1 C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenuFactory.php(12): BuilderMenu->__construct('menu.xml')
+#2 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(103): BuilderMenuFactory::getInstance('theme4', 'menu.xml')
+#3 C:\xampp\htdocs\patrimonio\app\lib\builder\BuilderTemplateParser.php(249): BuilderTemplateParser::parse('<!DOCTYPE html>...', 'theme4')
+#4 C:\xampp\htdocs\patrimonio\index.php(13): BuilderTemplateParser::init('layout')
+#5 {main}
+  thrown in C:\xampp\htdocs\patrimonio\app\lib\menu\BuilderMenu.php on line 24

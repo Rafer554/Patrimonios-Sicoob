@@ -1,15 +1,13 @@
 <?php
 
-class MovimentacaoForm extends TPage
+class CentrodecustoForm extends TPage
 {
     protected $form;
     private $formFields = [];
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Movimentacao';
+    private static $activeRecord = 'centrodecusto';
     private static $primaryKey = 'id';
-    private static $formName = 'form_Movimentacao';
-
-    use Adianti\Base\AdiantiFileSaveTrait;
+    private static $formName = 'form_Centrodecusto';
 
     /**
      * Form constructor
@@ -27,40 +25,27 @@ class MovimentacaoForm extends TPage
         // creates the form
         $this->form = new BootstrapFormBuilder(self::$formName);
         // define the form title
-        $this->form->setFormTitle("Cadastro de movimentacao");
+        $this->form->setFormTitle("Cadastro de centrodecusto");
 
-        $criteria_localAntigo = new TCriteria();
-        $criteria_patrimonioId = new TCriteria();
 
         $id = new TEntry('id');
-        $localAntigo = new TDBCombo('localAntigo', 'controlepatrimonio', 'Local', 'id', '{Descricao}','id asc' , $criteria_localAntigo );
-        $patrimonioId = new TDBCombo('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', '{CodigodoPatrimonio}','CodigodoPatrimonio asc' , $criteria_patrimonioId );
-        $dataInspecao = new TDate('dataInspecao');
-        $Descricao = new THtmlEditor('Descricao');
-        $imagem = new TFile('imagem');
+        $CentroCusto = new TEntry('CentroCusto');
+        $Descricao = new TEntry('Descricao');
 
-        $localAntigo->addValidation("LocalAntigo", new TRequiredValidator()); 
-        $patrimonioId->addValidation("PatrimonioId", new TRequiredValidator()); 
-        $dataInspecao->addValidation("DataInspecao", new TRequiredValidator()); 
 
         $id->setEditable(false);
-        $dataInspecao->setMask('dd/mm/yyyy');
-        $dataInspecao->setDatabaseMask('yyyy-mm-dd');
-        $imagem->enableFileHandling();
-        $imagem->setAllowedExtensions(["jpeg","png","gif","jpg"]);
         $id->setSize(100);
-        $imagem->setSize('70%');
-        $dataInspecao->setSize(110);
-        $localAntigo->setSize('70%');
-        $patrimonioId->setSize('70%');
-        $Descricao->setSize('70%', 110);
+        $Descricao->setSize('70%');
+        $CentroCusto->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null)],[$id]);
-        $row2 = $this->form->addFields([new TLabel("LocalAntigo:", '#ff0000', '14px', null)],[$localAntigo]);
-        $row3 = $this->form->addFields([new TLabel("PatrimonioId:", '#ff0000', '14px', null)],[$patrimonioId]);
-        $row4 = $this->form->addFields([new TLabel("DataInspecao:", '#ff0000', '14px', null)],[$dataInspecao]);
-        $row5 = $this->form->addFields([new TLabel("Descricao:", null, '14px', null)],[$Descricao]);
-        $row6 = $this->form->addFields([new TLabel("Imagem:", null, '14px', null)],[$imagem]);
+        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null, '100%'),$id]);
+        $row1->layout = ['col-sm-12'];
+
+        $row2 = $this->form->addFields([new TLabel("Centro de Custo:", null, '14px', null, '100%'),$CentroCusto]);
+        $row2->layout = ['col-sm-12'];
+
+        $row3 = $this->form->addFields([new TLabel("Descrição:", null, '14px', null, '100%'),$Descricao]);
+        $row3->layout = ['col-sm-12'];
 
         // create the form actions
         $btn_onsave = $this->form->addAction("Salvar", new TAction([$this, 'onSave']), 'far:save #ffffff');
@@ -76,7 +61,7 @@ class MovimentacaoForm extends TPage
         $container->class = 'form-container';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Cadastro de movimentacao"]));
+            $container->add(TBreadCrumb::create(["Geral","Cadastro de centrodecusto"]));
         }
         $container->add($this->form);
 
@@ -100,16 +85,12 @@ class MovimentacaoForm extends TPage
 
             $this->form->validate(); // validate form data
 
-            $object = new Movimentacao(); // create an empty object 
+            $object = new Centrodecusto(); // create an empty object 
 
             $data = $this->form->getData(); // get form data as array
             $object->fromArray( (array) $data); // load the object with data
 
-            $imagem_dir = 'imagens'; 
-
             $object->store(); // save the object 
-
-            $this->saveFile($object, $data, 'imagem', $imagem_dir); 
 
             // get the generated {PRIMARY_KEY}
             $data->id = $object->id; 
@@ -144,7 +125,7 @@ class MovimentacaoForm extends TPage
                 $key = $param['key'];  // get the parameter $key
                 TTransaction::open(self::$database); // open a transaction
 
-                $object = new Movimentacao($key); // instantiates the Active Record 
+                $object = new Centrodecusto($key); // instantiates the Active Record 
 
                 $this->form->setData($object); // fill the form 
 

@@ -5,7 +5,7 @@ class CadastraMovimentacaoForm extends TPage
     protected $form;
     private $formFields = [];
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Movimentacao';
+    private static $activeRecord = 'movimentacao';
     private static $primaryKey = 'id';
     private static $formName = 'form_Movimentacao';
 

@@ -1,6 +1,6 @@
 <?php
 
-class CentrodecustoList extends TPage
+class MovimentacaoList extends TPage
 {
     private $form; // form
     private $datagrid; // listing
@@ -8,9 +8,9 @@ class CentrodecustoList extends TPage
     private $loaded;
     private $filter_criteria;
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Centrodecusto';
+    private static $activeRecord = 'movimentacao';
     private static $primaryKey = 'id';
-    private static $formName = 'formList_Centrodecusto';
+    private static $formName = 'formList_Movimentacao';
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
     private $limit = 20;
 
@@ -31,16 +31,26 @@ class CentrodecustoList extends TPage
         $this->form = new BootstrapFormBuilder(self::$formName);
 
         // define the form title
-        $this->form->setFormTitle("Listagem de centrodecustos");
+        $this->form->setFormTitle("Listagem de movimentações");
         $this->limit = 20;
 
-        $CentroCusto = new TEntry('CentroCusto');
+        $criteria_localAntigo = new TCriteria();
+        $criteria_patrimonioId = new TCriteria();
+
+        $localAntigo = new TDBCombo('localAntigo', 'controlepatrimonio', 'Local', 'id', '{Descricao}','id asc' , $criteria_localAntigo );
+        $patrimonioId = new TDBCombo('patrimonioId', 'controlepatrimonio', 'Patrimonio', 'id', '{CodigodoPatrimonio}','CodigodoPatrimonio asc' , $criteria_patrimonioId );
+        $dataInspecao = new TDate('dataInspecao');
 
 
-        $CentroCusto->setSize('70%');
+        $dataInspecao->setMask('dd/mm/yyyy');
+        $dataInspecao->setDatabaseMask('yyyy-mm-dd');
+        $dataInspecao->setSize(110);
+        $localAntigo->setSize('70%');
+        $patrimonioId->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Centro de Custo:", null, '14px', null, '100%'),$CentroCusto]);
-        $row1->layout = ['col-sm-12'];
+        $row1 = $this->form->addFields([new TLabel("Local Antigo:", null, '14px', null)],[$localAntigo]);
+        $row2 = $this->form->addFields([new TLabel("Patrimonio:", null, '14px', null)],[$patrimonioId]);
+        $row3 = $this->form->addFields([new TLabel("Data Inspecao:", null, '14px', null)],[$dataInspecao]);
 
         // keep the form filled during navigation with session data
         $this->form->setData( TSession::getValue(__CLASS__.'_filter_data') );
@@ -52,7 +62,7 @@ class CentrodecustoList extends TPage
         $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
         $this->btn_onexportcsv = $btn_onexportcsv;
 
-        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['CentrodecustoForm', 'onShow']), 'fas:plus #69aa46');
+        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['MovimentacaoForm', 'onShow']), 'fas:plus #69aa46');
         $this->btn_onshow = $btn_onshow;
 
         // creates a Datagrid
@@ -69,16 +79,34 @@ class CentrodecustoList extends TPage
         $this->datagrid->style = 'width: 100%';
         $this->datagrid->setHeight(320);
 
-        $action_onEdit = new TDataGridAction(array('CentrodecustoForm', 'onEdit'));
+        $column_id = new TDataGridColumn('id', "Id", 'center' , '70px');
+        $column_localAntigo = new TDataGridColumn('localAntigo', "LocalAntigo", 'left');
+        $column_fk_patrimonioId_CodigodoPatrimonio = new TDataGridColumn('fk_patrimonioId->CodigodoPatrimonio', "PatrimonioId", 'left');
+        $column_dataInspecao = new TDataGridColumn('dataInspecao', "DataInspecao", 'left');
+        $column_Descricao = new TDataGridColumn('Descricao', "Descricao", 'left');
+        $column_imagem = new TDataGridColumn('imagem', "Imagem", 'left');
+
+        $order_id = new TAction(array($this, 'onReload'));
+        $order_id->setParameter('order', 'id');
+        $column_id->setAction($order_id);
+
+        $this->datagrid->addColumn($column_id);
+        $this->datagrid->addColumn($column_localAntigo);
+        $this->datagrid->addColumn($column_fk_patrimonioId_CodigodoPatrimonio);
+        $this->datagrid->addColumn($column_dataInspecao);
+        $this->datagrid->addColumn($column_Descricao);
+        $this->datagrid->addColumn($column_imagem);
+
+        $action_onEdit = new TDataGridAction(array('MovimentacaoForm', 'onEdit'));
         $action_onEdit->setUseButton(false);
         $action_onEdit->setButtonClass('btn btn-default btn-sm');
         $action_onEdit->setLabel("Editar");
         $action_onEdit->setImage('far:edit #478fca');
         $action_onEdit->setField(self::$primaryKey);
-		
+
         $this->datagrid->addAction($action_onEdit);
 
-        $action_onDelete = new TDataGridAction(array('CentrodecustoList', 'onDelete'));
+        $action_onDelete = new TDataGridAction(array('MovimentacaoList', 'onDelete'));
         $action_onDelete->setUseButton(false);
         $action_onDelete->setButtonClass('btn btn-default btn-sm');
         $action_onDelete->setLabel("Excluir");
@@ -86,10 +114,10 @@ class CentrodecustoList extends TPage
         $action_onDelete->setField(self::$primaryKey);
 
         $this->datagrid->addAction($action_onDelete);
-		
+
         // create the datagrid model
-		$this->datagrid->createModel();
-		
+        $this->datagrid->createModel();
+
         // creates the page navigation
         $this->pageNavigation = new TPageNavigation;
         $this->pageNavigation->enableCounters();
@@ -109,7 +137,7 @@ class CentrodecustoList extends TPage
         $container->style = 'width: 100%';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Centrodecustos"]));
+            $container->add(TBreadCrumb::create(["Geral","Movimentacaos"]));
         }
         $container->add($this->form);
         $container->add($panel);
@@ -130,7 +158,7 @@ class CentrodecustoList extends TPage
                 TTransaction::open(self::$database);
 
                 // instantiates object
-                $object = new Centrodecusto($key, FALSE); 
+                $object = new Movimentacao($key, FALSE); 
 
                 // deletes the object from the database
                 $object->delete();
@@ -233,10 +261,22 @@ class CentrodecustoList extends TPage
         TSession::setValue(__CLASS__.'_filter_data', NULL);
         TSession::setValue(__CLASS__.'_filters', NULL);
 
-        if (isset($data->CentroCusto) AND ( (is_scalar($data->CentroCusto) AND $data->CentroCusto !== '') OR (is_array($data->CentroCusto) AND (!empty($data->CentroCusto)) )) )
+        if (isset($data->localAntigo) AND ( (is_scalar($data->localAntigo) AND $data->localAntigo !== '') OR (is_array($data->localAntigo) AND (!empty($data->localAntigo)) )) )
         {
 
-            $filters[] = new TFilter('CentroCusto', 'like', "%{$data->CentroCusto}%");// create the filter 
+            $filters[] = new TFilter('localAntigo', '=', $data->localAntigo);// create the filter 
+        }
+
+        if (isset($data->patrimonioId) AND ( (is_scalar($data->patrimonioId) AND $data->patrimonioId !== '') OR (is_array($data->patrimonioId) AND (!empty($data->patrimonioId)) )) )
+        {
+
+            $filters[] = new TFilter('patrimonioId', '=', $data->patrimonioId);// create the filter 
+        }
+
+        if (isset($data->dataInspecao) AND ( (is_scalar($data->dataInspecao) AND $data->dataInspecao !== '') OR (is_array($data->dataInspecao) AND (!empty($data->dataInspecao)) )) )
+        {
+
+            $filters[] = new TFilter('dataInspecao', '=', $data->dataInspecao);// create the filter 
         }
 
         // fill the form with data again
@@ -259,7 +299,7 @@ class CentrodecustoList extends TPage
             // open a transaction with database 'controlepatrimonio'
             TTransaction::open(self::$database);
 
-            // creates a repository for Centrodecusto
+            // creates a repository for Movimentacao
             $repository = new TRepository(self::$activeRecord);
 
             $criteria = clone $this->filter_criteria;
@@ -294,8 +334,8 @@ class CentrodecustoList extends TPage
                 // iterate the collection of active records
                 foreach ($objects as $object)
                 {
-					
-                   	$row = $this->datagrid->addItem($object);
+
+                    $row = $this->datagrid->addItem($object);
                     $row->id = "row_{$object->id}";
 
                 }
@@ -361,7 +401,7 @@ class CentrodecustoList extends TPage
             TTransaction::open(self::$database);    
         }
 
-        $object = new Centrodecusto($id);
+        $object = new Movimentacao($id);
 
         $row = $list->datagrid->addItem($object);
         $row->id = "row_{$object->id}";

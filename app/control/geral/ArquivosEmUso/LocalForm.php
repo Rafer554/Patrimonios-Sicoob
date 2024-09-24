@@ -5,7 +5,7 @@ class LocalForm extends TPage
     protected $form;
     private $formFields = [];
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Local';
+    private static $activeRecord = 'local';
     private static $primaryKey = 'id';
     private static $formName = 'form_Local';
 
@@ -52,7 +52,7 @@ class LocalForm extends TPage
         $row2 = $this->form->addFields([new TLabel("Descrição:", null, '14px', null, '100%'),$Descricao]);
         $row2->layout = ['col-sm-12'];
 
-        $row3 = $this->form->addFields([new TLabel("CentrodeCusto id:", '#ff0000', '14px', null, '100%'),$CentrodeCusto_id]);
+        $row3 = $this->form->addFields([new TLabel("Centro de Custo", '#ff0000', '14px', null, '100%'),$CentrodeCusto_id]);
         $row3->layout = ['col-sm-12'];
 
         $row4 = $this->form->addFields([new TLabel("Local:", null, '14px', null, '100%'),$Local]);

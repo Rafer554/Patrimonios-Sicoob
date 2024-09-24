@@ -5,7 +5,7 @@ class PatrimonioForm extends TPage
     protected $form;
     private $formFields = [];
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Patrimonio';
+    private static $activeRecord = 'patrimonio';
     private static $primaryKey = 'id';
     private static $formName = 'form_Patrimonio';
 

@@ -1,13 +1,13 @@
 <?php
 
-class GrupoForm extends TPage
+class TipoBaixaForm extends TPage
 {
     protected $form;
     private $formFields = [];
     private static $database = 'controlepatrimonio';
-    private static $activeRecord = 'Grupo';
+    private static $activeRecord = 'tipobaixa';
     private static $primaryKey = 'id';
-    private static $formName = 'form_Grupo';
+    private static $formName = 'form_TipoBaixa';
 
     /**
      * Form constructor
@@ -25,32 +25,23 @@ class GrupoForm extends TPage
         // creates the form
         $this->form = new BootstrapFormBuilder(self::$formName);
         // define the form title
-        $this->form->setFormTitle("Cadastro de grupo");
+        $this->form->setFormTitle("Cadastro de tipo baixa");
 
 
         $id = new TEntry('id');
-        $CodGrupoPatrimonio = new TEntry('CodGrupoPatrimonio');
-        $tipoDepreciacao = new TEntry('tipoDepreciacao');
-        $valorDepreciacao = new TNumeric('valorDepreciacao', '9', ',', '.' );
+        $Descricao = new TEntry('Descricao');
+        $observacao = new TEntry('observacao');
 
+        $Descricao->addValidation("Descricao", new TRequiredValidator()); 
 
         $id->setEditable(false);
         $id->setSize(100);
-        $tipoDepreciacao->setSize('70%');
-        $valorDepreciacao->setSize('70%');
-        $CodGrupoPatrimonio->setSize('70%');
+        $Descricao->setSize('70%');
+        $observacao->setSize('70%');
 
-        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null, '100%'),$id]);
-        $row1->layout = ['col-sm-12'];
-
-        $row2 = $this->form->addFields([new TLabel("CodGrupoPatrimonio:", null, '14px', null, '100%'),$CodGrupoPatrimonio]);
-        $row2->layout = ['col-sm-12'];
-
-        $row3 = $this->form->addFields([new TLabel("TipoDepreciacao:", null, '14px', null, '100%'),$tipoDepreciacao]);
-        $row3->layout = ['col-sm-12'];
-
-        $row4 = $this->form->addFields([new TLabel("ValorDepreciacao:", null, '14px', null, '100%'),$valorDepreciacao]);
-        $row4->layout = ['col-sm-12'];
+        $row1 = $this->form->addFields([new TLabel("Id:", null, '14px', null)],[$id]);
+        $row2 = $this->form->addFields([new TLabel("Descricao:", '#ff0000', '14px', null)],[$Descricao]);
+        $row3 = $this->form->addFields([new TLabel("Observacao:", null, '14px', null)],[$observacao]);
 
         // create the form actions
         $btn_onsave = $this->form->addAction("Salvar", new TAction([$this, 'onSave']), 'far:save #ffffff');
@@ -66,7 +57,7 @@ class GrupoForm extends TPage
         $container->class = 'form-container';
         if(empty($param['target_container']))
         {
-            $container->add(TBreadCrumb::create(["Geral","Cadastro de grupo"]));
+            $container->add(TBreadCrumb::create(["Geral","Cadastro de tipo baixa"]));
         }
         $container->add($this->form);
 
@@ -90,7 +81,7 @@ class GrupoForm extends TPage
 
             $this->form->validate(); // validate form data
 
-            $object = new Grupo(); // create an empty object 
+            $object = new TipoBaixa(); // create an empty object 
 
             $data = $this->form->getData(); // get form data as array
             $object->fromArray( (array) $data); // load the object with data
@@ -130,7 +121,7 @@ class GrupoForm extends TPage
                 $key = $param['key'];  // get the parameter $key
                 TTransaction::open(self::$database); // open a transaction
 
-                $object = new Grupo($key); // instantiates the Active Record 
+                $object = new TipoBaixa($key); // instantiates the Active Record 
 
                 $this->form->setData($object); // fill the form 
 

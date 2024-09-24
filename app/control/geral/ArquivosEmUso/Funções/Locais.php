@@ -12,6 +12,10 @@ class Locais extends TPage{
     private $showMethods = ['onReload', 'onSearch', 'onRefresh', 'onClearFilters'];
     private $limit = 20;
     private static $formName = 'form_Local';
+    const TABLENAME = 'locais';
+    const PRIMARYKEY = 'id';
+    const IDPOLICY = 'serial';
+    
 
 
     public function __construct($param){
@@ -26,10 +30,13 @@ class Locais extends TPage{
 
         $Local = new TEntry('Local');
             $Local->setSize('35%');
-      
+
+
         $row1 = $this->form->addFields([new TLabel("Local:", null, '14px', null)],[$Local]);
         $row1->layout = ['col-sm-12'];
         
+
+
         $this->datagrid = new TDataGrid;
         $this->datagrid->disableHtmlConversion();
         $this->datagrid->setId(__CLASS__.'_datagrid');
@@ -57,12 +64,33 @@ class Locais extends TPage{
 
         //Colunas
         $grid1 = $this->datagrid->addColumn($column_CodigodoPatrimonio);
-        $grid2 = $this->datagrid->addColumn($column_Descricao);
-        $grid3 = $this->datagrid->addColumn($column_Local);
+        $grid2 = $this->datagrid->addColumn($column_Local);
+        $grid3 = $this->datagrid->addColumn($column_Descricao);
         $grid4 = $this->datagrid->addColumn($column_CentrodeCusto);
         $grid5 = $this->datagrid->addColumn($column_responsavel);
         $grid6 = $this->datagrid->addColumn($column_chapa);
         
+        //Actions
+
+        $action_onEdit = new TDataGridAction(array('LocalForm', 'onEdit'));
+        $action_onEdit->setUseButton(false);
+        $action_onEdit->setButtonClass('btn btn-default btn-sm');
+        $action_onEdit->setLabel("Editar");
+        $action_onEdit->setImage('far:edit #478fca');
+        $action_onEdit->setField(self::$primaryKey);
+
+        $this->datagrid->addAction($action_onEdit);
+
+
+        $action_onDelete = new TDataGridAction(array('Locais', 'onDelete'));
+        $action_onDelete->setUseButton(false);
+        $action_onDelete->setButtonClass('btn btn-default btn-sm');
+        $action_onDelete->setLabel("Excluir");
+        $action_onDelete->setImage('far:trash-alt #dd5a43');
+        $action_onDelete->setField(self::$primaryKey);
+
+        $this->datagrid->addAction($action_onDelete);
+
         $this->datagrid->createModel();
 
 
@@ -71,16 +99,16 @@ class Locais extends TPage{
         $this->btn_onsearch = $btn_onsearch;
         $btn_onsearch->addStyleClass('btn-primary'); 
 
-      /*  $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
+        $btn_onexportcsv = $this->form->addAction("Exportar como CSV", new TAction([$this, 'onExportCsv']), 'far:file-alt #000000');
         $this->btn_onexportcsv = $btn_onexportcsv;
 
-        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['PatrimonioForm', 'onShow']), 'fas:plus #69aa46');
-        $this->btn_onshow = $btn_onshow; */
+        $btn_onshow = $this->form->addAction("Cadastrar", new TAction(['LocalForm', 'onShow']), 'fas:plus #69aa46');
+        $this->btn_onshow = $btn_onshow;
 
-        //Actions
+            
+
 
         //Panel
-
         $panel = new TPanelGroup();
         $panel->datagrid = 'datagrid-container';
         $this->datagridPanel = $panel;
@@ -98,7 +126,49 @@ class Locais extends TPage{
         parent::add($container);
 
     }
+    public function onDelete($param = null) 
+    { 
+        if(isset($param['delete']) && $param['delete'] == 1)
+        {
+            try
+            {
+                // get the paramseter $key
+                $key = $param['key'];
+                // open a transaction with database
+                TTransaction::open(self::$database);
 
+                // instantiates object
+                $object = new Local($key, FALSE); 
+
+                // deletes the object from the database
+                $object->delete();
+
+                // close the transaction
+                TTransaction::close();
+
+                // reload the listing
+                $this->onReload( $param );
+                // shows the success message
+                new TMessage('info', AdiantiCoreTranslator::translate('Record deleted'));
+            }
+            catch (Exception $e) // in case of exception
+            {
+                // shows the exception error message
+                new TMessage('error', $e->getMessage());
+                // undo all pending operations
+                TTransaction::rollback();
+            }
+        }
+        else
+        {
+            // define the delete action
+            $action = new TAction(array($this, 'onDelete'));
+            $action->setParameters($param); // pass the key paramseter ahead
+            $action->setParameter('delete', 1);
+            // shows a dialog to the user
+            new TQuestion(AdiantiCoreTranslator::translate('Do you really want to delete ?'), $action);   
+        }
+    }
 
 
     public function onReload($param = null) {
@@ -129,7 +199,7 @@ class Locais extends TPage{
             }
     
             // Cria a nova consulta
-            $repository = new TRepository('Local');
+            $repository = new TRepository('local');
             $objects = $repository->load($this->filter_criteria);
     
             // Limpa o DataGrid
@@ -192,5 +262,90 @@ class Locais extends TPage{
         }
         parent::show();
     }
-    
+
+    public function onExportCsv($param = null) 
+    {
+        try
+        {
+            $this->onSearch();
+
+            TTransaction::open(self::$database); // open a transaction
+            $repository = new TRepository(self::$activeRecord); // creates a repository for Customer
+            $criteria = $this->filter_criteria;
+
+            if($filters = TSession::getValue(__CLASS__.'_filters'))
+            {
+                foreach ($filters as $filter) 
+                {
+                    $criteria->add($filter);       
+                }
+            }
+
+            $records = $repository->load($criteria); // load the objects according to criteria
+            if ($records)
+            {
+                $file = 'tmp/'.uniqid().'.csv';
+                $handle = fopen($file, 'w');
+                $columns = $this->datagrid->getColumns();
+
+                $csvColumns = [];
+                foreach($columns as $column)
+                {
+                    $csvColumns[] = $column->getLabel();
+                }
+                fputcsv($handle, $csvColumns, ';');
+
+                foreach ($records as $record)
+                {
+                    $csvColumns = [];
+                    foreach($columns as $column)
+                    {
+                        $name = $column->getName();
+                        $csvColumns[] = $record->{$name};
+                    }
+                    fputcsv($handle, $csvColumns, ';');
+                }
+                fclose($handle);
+
+                TPage::openFile($file);
+            }
+            else
+            {
+                new TMessage('info', _t('No records found'));       
+            }
+
+            TTransaction::close(); // close the transaction
+        }
+        catch (Exception $e) // in case of exception
+        {
+            new TMessage('error', $e->getMessage()); // shows the exception error message
+            TTransaction::rollback(); // undo all pending operations
+        }
+    }
+  
+
+    public static function manageRow($id)
+    {
+        $list = new self([]);
+
+        $openTransaction = TTransaction::getDatabase() != self::$database ? true : false;
+
+        if($openTransaction)
+        {
+            TTransaction::open(self::$database);    
+        }
+
+        $object = new Local($id);
+
+        $row = $list->datagrid->addItem($object);
+        $row->id = "row_{$object->id}";
+
+        if($openTransaction)
+        {
+            TTransaction::close();    
+        }
+
+        TDataGrid::replaceRowById(__CLASS__.'_datagrid', $row->id, $row);
+    }
+
 } 
